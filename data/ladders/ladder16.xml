@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<game>
+<ladder_name>Expansion Kit</ladder_name>
+<description><ul><li>Please read the <a href="/viewtopic.php?t=826">Time Submission Rules</a> before submitting your times to this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li></ul></description>
+<hasspeed>Yes</hasspeed>
+<haslap>Yes</haslap>
+<hassettings>Yes</hassettings>
+<timeformat>Thousandths</timeformat>
+<graphics_available>Yes</graphics_available>
+<palpossible>No</palpossible>
+<pal_numerator>6</pal_numerator>
+<pal_denominator>5</pal_denominator>
+	<cups>
+	<cup cupid="1">
+<cupname>DD-1 Cup</cupname>
+	<courses>
+	<course courseid="1">
+<name>Silence 3</name>
+</course>
+	<course courseid="2">
+<name>Sand Ocean 3</name>
+</course>
+	<course courseid="3">
+<name>Devil's Forest 4</name>
+</course>
+	<course courseid="4">
+<name>Port Town 3</name>
+</course>
+	<course courseid="5">
+<name>Devil's Forest 5</name>
+</course>
+	<course courseid="6">
+<name>Big Blue 3</name>
+</course>
+</courses>
+</cup>
+	<cup cupid="2">
+<cupname>DD-2 Cup</cupname>
+	<courses>
+	<course courseid="1">
+<name>Mute City 4</name>
+</course>
+	<course courseid="2">
+<name>Space Plant 2</name>
+</course>
+	<course courseid="3">
+<name>Port Town 4</name>
+</course>
+	<course courseid="4">
+<name>Fire Field 2</name>
+</course>
+	<course courseid="5">
+<name>White Land 3</name>
+</course>
+	<course courseid="6">
+<name>Big Foot</name>
+</course>
+</courses>
+</cup>
+</cups>
+	<ships>
+<ship>Blue Falcon</ship>
+<ship>Golden Fox</ship>
+<ship>Wild Goose</ship>
+<ship>Fire Stingray</ship>
+<ship>White Cat</ship>
+<ship>Red Gazelle</ship>
+<ship>Iron Tiger</ship>
+<ship>Deep Claw</ship>
+<ship>Great Star</ship>
+<ship>Crazy Bear</ship>
+<ship>Big Fang</ship>
+<ship>Mad Wolf</ship>
+<ship>Night Thunder</ship>
+<ship>Twin Noritta</ship>
+<ship>Wonder Wasp</ship>
+<ship>Queen Meteor</ship>
+<ship>Blood Hawk</ship>
+<ship>Astro Robin</ship>
+<ship>Little Wyvern</ship>
+<ship>Death Anchor</ship>
+<ship>Wild Boar</ship>
+<ship>King Meteor</ship>
+<ship>Super Piranha</ship>
+<ship>Mighty Hurricane</ship>
+<ship>Space Angler</ship>
+<ship>Mighty Typhoon</ship>
+<ship>Hyper Speeder</ship>
+<ship>Green Panther</ship>
+<ship>Black Bull</ship>
+<ship>Sonic Phantom</ship>
+<ship>Super Falcon</ship>
+<ship>Super Stingray</ship>
+<ship>Super Cat</ship>
+<ship>Custom Ship</ship>
+</ships>
+</game>

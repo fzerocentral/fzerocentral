@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+	<ladder_name>SNES</ladder_name>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=841"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;All European PAL times are converted to NTSC using the formula NTSC = (PAL / 4) * 3 and the converse PAL = (NTSC * 4) / 3&lt;/li&gt;&lt;/ul&gt;</description>
+	<hasspeed>No</hasspeed>
+	<haslap>Yes</haslap>
+	<hassettings>No</hassettings>
+	<timeformat>Hundredths</timeformat>
+	<graphics_available>Yes</graphics_available>
+	<palpossible>Yes</palpossible>
+	<pal_numerator>4</pal_numerator>
+	<pal_denominator>3</pal_denominator>
+	<numtracks>15</numtracks>
+	<cups>
+	<cup cupid="1">   
+	<cupname>Knight Cup</cupname>
+	<courses>
+	<course courseid="1">
+	 <name>Mute City I</name>
+	</course>
+	<course courseid="2">
+	 <name>Big Blue</name>
+	</course>
+	<course courseid="3">
+	 <name>Sand Ocean</name>
+	</course>
+	<course courseid="4">
+	 <name>Death Wind I </name>
+	</course>
+	<course courseid="5">
+	 <name>Silence </name>
+	</course>
+	</courses>
+	</cup>
+	<cup cupid="2">   
+	<cupname>Queen Cup</cupname>
+	<courses>
+	<course courseid="1">
+	 <name>Mute City II</name>
+	</course>
+	<course courseid="2">
+	 <name>Port Town I</name>
+	</course>
+	<course courseid="3">
+	 <name>Red Canyon I</name>
+	</course>
+	<course courseid="4">
+	 <name>White Land I</name>
+	</course>
+	<course courseid="5">
+	 <name>White Land II</name>
+	</course>
+	</courses>
+	</cup>
+	<cup cupid="3">   
+	<cupname>King Cup</cupname>
+	<courses>
+	<course courseid="1">
+	 <name>Mute City III</name>
+	</course>
+	<course courseid="2">
+	 <name>Death Wind II</name>
+	</course>
+	<course courseid="3">
+	 <name>Port Town II</name>
+	</course>
+	<course courseid="4">
+	 <name>Red Canyon II</name>
+	</course>
+	<course courseid="5">
+	 <name>Fire Field</name>
+	</course>
+	</courses>
+	</cup>
+	</cups>
+	<ships>
+	<ship>Blue Falcon</ship>
+	<ship>Golden Fox</ship>
+	<ship>Wild Goose</ship>
+	<ship>Fire Stingray</ship>
+	</ships>
+</game>

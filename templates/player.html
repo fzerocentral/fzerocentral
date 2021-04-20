@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+  <h2 style="font-weight: bold; text-align: center; color: black">
+    {{ username|e }}'s F-Zero Summary
+  </h2>
+</div>
+
+<div style="text-align: center; color: #f7f7f7; font-weight: bold">
+  <p>Championship Performance</p>
+</div>
+
+<table class="scoreboard championship-performance">
+  <thead>
+    <tr>
+      <td>Ladder</td>
+      <td class='laddercellborder'>AF Score</td>
+      <td class='laddercellborder'>AF Rank</td>
+      <td class='laddercellborder'>SRPR Score</td>
+      <td class='laddercellborder'>SRPR Rank</td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for championship in performance.championships %}
+      <tr>
+        <td>{{ performance.championship_titles[championship]|e }}</td>
+        <td class="laddercellborder">{{ performance.score_f[championship] }}</td>
+        <td class="laddercellborder">{{ performance.rank_f[championship] }}</td>
+        <td class="laddercellborder">{{ performance.score_t[championship] }}</td>
+        <td class="laddercellborder">{{ performance.rank_t[championship] }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div style="text-align: center; color: #f7f7f7; font-weight: bold">
+  <p>Ladder Performance</p>
+</div>
+
+<table class="scoreboard ladder-performance">
+  <thead>
+    <tr>
+      <td>Ladder</td>
+      <td class='laddercellborder'>AF Score</td>
+      <td class='laddercellborder'>AF Rank</td>
+      <td class='laddercellborder'>SRPR Score</td>
+      <td class='laddercellborder'>SRPR Rank</td>
+      <td class='laddercellborder'>Course Total</td>
+      <td class='laddercellborder'>Course Rank</td>
+      <td class='laddercellborder'>Lap Total</td>
+      <td class='laddercellborder'>Lap Rank</td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for ladder in performance.ladders %}
+      <tr>
+        <td>{{ performance.ladder_titles[ladder]|e }}</td>
+        <td class="laddercellborder">{{ performance.score_f[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.rank_f[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.score_t[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.rank_t[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.total_c[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.rank_c[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.total_l[ladder] ?? 'none' }}</td>
+        <td class="laddercellborder">{{ performance.rank_l[ladder] ?? 'none' }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

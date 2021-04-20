@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+  <p style="font-weight: bold; text-align: center">
+    F-Zero Series Overall Ladder
+  </p>
+
+  <p style="font-weight: bold; text-align: center">
+    {% if key == 't' %}
+      Site Record/Player Record
+    {% else %}
+      Average Finish
+    {% endif %}
+    Scores
+  </p>
+
+  <p>
+    For information on how this ladder works, please read our
+    <a href="/forum/viewtopic.php?p=75346#75346">2010 F-Zero Time Attack Championship FAQ</a>.
+  </p>
+
+  <p>
+    You can click on any game name to sort by that game.  Clicking SRPR (Site
+    Record/Player Record) or AF (Average Finish) will sort by that scoring
+    system.
+  </p>
+
+  <p style="text-align: center">
+    <a href="/overall_ladder.php?g={{ selected_ladder }}&key=t">SRPR</a> |
+    <a href="/overall_ladder.php?g={{ selected_ladder }}&key=f">AF</a>
+  </p>
+</div>
+
+<table class="scoreboard">
+  <thead>
+    <tr>
+      <td colspan="2">Player</td>
+      <td class='laddercellborder'><a href="{{ links.overall_total }}">Total</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_sns }}">SNES</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_x }}">X</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_mv }}">MV</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_gx }}">GX</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_gpl }}">GP Legend</a></td>
+      <td class='laddercellborder'><a href="{{ links.overall_clmx }}">Climax</a></td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for entry in entries %}
+      <tr>
+        <td class='indexcell'>{{ entry.index }}</td>
+        <td class="namecell">
+          <img class='flag' src='images/flags/{{ entry.flag }}.gif' title='{{ entry.flag }}' />
+          <a class="nounderline" href="/player.php?id={{ entry.id }}">{{ entry.name }}</a>
+        </td>
+          {% for board in entry.boards %}
+            <td class="laddercellborder">
+              {% if board.score == 0 %}
+                <span style="color: #808080; font-size: 7pt">{{ board.score }}</span>
+              {% else %}
+                {{ board.score }}
+              {% endif %}
+              <span class='diff'>{{ board.diff }}</span></td>
+          {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

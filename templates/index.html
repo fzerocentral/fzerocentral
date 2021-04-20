@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <div id="home-page-column-container">
+        <div style="flex: 1 0 230px;">
+          <div class="home-page-box">
+            <div class="home-page-box-header-bar">
+              <span>News</span>
+            </div>
+            <div class="home-page-box-body news">
+              <a href="/forum/viewtopic.php?t=14425">FZC Community Update March 2021</a><br>
+              <small>March 31, 2021<br><br></small>
+              <a href="/forum/viewtopic.php?t=14419">FZC Community Update February 2021</a><br>
+              <small>February 28, 2021<br><br></small>
+              <a href="/forum/viewtopic.php?t=14416">FZC Community Update January 2021</a><br>
+              <small>January 31, 2021<br><br></small>
+              <a href="/forum/viewtopic.php?t=14406">FZC Community Update December 2020</a><br>
+              <small>December 30, 2020<br><br></small>
+              <a href="/forum/viewtopic.php?t=14399">FZC Community Update November 2020</a><br>
+              <small>November 29, 2020<br><br></small>
+            </div>
+          </div>
+          <div class="home-page-box">
+            <div class="home-page-box-header-bar">
+              <span>Competition related links</span>
+            </div>
+            <div class="home-page-box-body links">
+              <a href="https://www.speedrun.com/f-zero">Speedrun.com RTA rankings</a><br>
+              <a href="http://fzerowrs.com/">WR histories and stats</a><br>
+              <a href="http://kabedori.blog33.fc2.com/">RichardTaro's WR blog (JP)</a><br>
+              <a href="https://www.cyberscore.me.uk/scoreboard.php?board=1&series=18">Cyberscore rankings</a>
+            </div>
+          </div>
+          <div class="home-page-box">
+            <div class="home-page-box-header-bar">
+              <span>Other F-Zero links</span>
+            </div>
+            <div class="home-page-box-body links">
+              <a href="https://discord.gg/qrnK7zk">Discord - F-Zero Nexus</a><br>
+              <a href="https://www.reddit.com/r/Fzero/">Reddit - /r/Fzero</a><br>
+              <a href="https://gamebanana.com/games/5899">GX mods at GameBanana</a><br>
+              <a href="http://backup.segakore.fr/f-zero.jp/">GX/AX official site (archived)</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1 0 500px;">
+          <div class="home-page-box">
+            <div class="home-page-box-header-bar" style="text-align: center; background-color: hsl(0,0%,92%); background-image: none;">
+              <img src="/images/welcome_banner.png" />
+            </div>
+            <div class="home-page-box-body">
+              Welcome to F-Zero Central! We are a competition and fan community for the high-speed, futuristic racing game series known as F-Zero. Our site features Time Attack ladders for each of the 6 F-Zero games released on console.
+              <br><br>
+              We are proud to represent F-Zero pilots of all skill levels here, from world record holders to those completely new to the series. At our forums, we welcome competitive discussion as well as general chat about F-Zero. <a href="/profile.php?mode=register">Register an account</a> to join us in the ladders and forums. You can also find a lot of our members at the <a href="https://discord.gg/qrnK7zk">F-Zero Nexus Discord chat</a>.
+              <br><br>
+              F-Zero Central is one of the oldest speedrun or time attack communities on the Internet, with over 15 years of history. <a href="/viewtopic.php?t=14179">Learn more about us here</a>. If you need any assistance with the site, feel free to ask us on the forums, <a href="https://www.facebook.com/fzerocentral/">Facebook</a>, or <a href="https://twitter.com/fzerocentral">Twitter</a>.
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1 0 250px;">
+          <div class="home-page-box">
+            <!-- Info on data-* attributes: https://dev.twitter.com/web/embedded-timelines/parameters -->
+            <a class="twitter-timeline" data-chrome="nofooter" href="https://twitter.com/fzerocentral" data-widget-id="501910691037470721" data-height="420px">Tweets by @fzerocentral</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+{% endblock %}

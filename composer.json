@@ -1,0 +1,9 @@
+{
+  "name": "fzerocentral/fzerocentral",
+  "description": "F-Zero Central",
+  "type": "project",
+  "homepage": "https://fzerocentral.org",
+  "require": {
+    "twig/twig": "^3.0"
+  }
+}

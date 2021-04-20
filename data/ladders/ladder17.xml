@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<game>
+<ladder_name>X Death Race</ladder_name>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=826"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;All European PAL times are converted to NTSC using the formula NTSC = (PAL / 6) * 5 and the converse PAL = (NTSC * 6) / 5&lt;/li&gt;&lt;/ul&gt;</description>
+<hasspeed>no</hasspeed>
+<haslap>no</haslap>
+<hassettings>no</hassettings>
+<timeformat>Thousandths</timeformat>
+<graphics_available>Yes</graphics_available>
+<palpossible>Yes</palpossible>
+<pal_numerator>6</pal_numerator>
+<pal_denominator>5</pal_denominator>
+<cups>
+<cup cupid="1">
+<cupname>Death Race Mode</cupname>
+	 <courses>
+	 <course courseid="1">
+		<name>Death Race</name>
+	</course>
+	</courses>
+</cup>
+</cups>
+<ships>
+<ship>Blue Falcon</ship>
+<ship>Golden Fox</ship>
+<ship>Wild Goose</ship>
+<ship>Fire Stingray</ship>
+<ship>White Cat</ship>
+<ship>Red Gazelle</ship>
+<ship>Iron Tiger</ship>
+<ship>Deep Claw</ship>
+<ship>Great Star</ship>
+<ship>Crazy Bear</ship>
+<ship>Big Fang</ship>
+<ship>Mad Wolf</ship>
+<ship>Night Thunder</ship>
+<ship>Twin Noritta</ship>
+<ship>Wonder Wasp</ship>
+<ship>Queen Meteor</ship>
+<ship>Blood Hawk</ship>
+<ship>Astro Robin</ship>
+<ship>Little Wyvern</ship>
+<ship>Death Anchor</ship>
+<ship>Wild Boar</ship>
+<ship>King Meteor</ship>
+<ship>Super Piranha</ship>
+<ship>Mighty Hurricane</ship>
+<ship>Space Angler</ship>
+<ship>Mighty Typhoon</ship>
+<ship>Hyper Speeder</ship>
+<ship>Green Panther</ship>
+<ship>Black Bull</ship>
+<ship>Sonic Phantom</ship>
+</ships>
+</game>

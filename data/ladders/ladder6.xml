@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+	<ladder_name>GP Legend</ladder_name>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=174"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;/ul&gt;</description>
+	<hasspeed>No</hasspeed>
+	<haslap>Yes</haslap>
+	<hassettings>No</hassettings>
+	<timeformat>Hundredths</timeformat>
+	<graphics_available>Yes</graphics_available>
+	<palpossible>No</palpossible>
+ <cups>
+  <cup cupid="1">   
+   <cupname>Bronze Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Mute City - Tradition Park</name>
+    </course>
+	<course courseid="2">
+     <name>Red Canyon - Junction</name>
+    </course>
+	<course courseid="3">
+     <name>Mist Flow - Clip Oval</name>
+    </course>
+	<course courseid="4">
+     <name>Lightning - Volute</name>
+    </course>
+	<course courseid="5">
+     <name>Fire Field - Blast Track</name>
+    </course>
+	<course courseid="6">
+     <name>Mute City - Tradition Park 2</name>
+    </course>
+	<course courseid="7">
+     <name>Red Canyon - Junction 2</name>
+    </course>
+	<course courseid="8">
+     <name>Mist Flow - Clip Oval 2</name>
+    </course>
+	<course courseid="9">
+     <name>Lightning - Volute 2</name>
+    </course>
+	<course courseid="10">
+     <name>Fire Field - Blast Track 2</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="2">   
+   <cupname>Silver Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Silence - Box Rink</name>
+    </course>
+	<course courseid="2">
+     <name>Sand Ocean - Caterpillar</name>
+    </course>
+	<course courseid="3">
+     <name>Mute City - Expansion Park</name>
+    </course>
+	<course courseid="4">
+     <name>Big Blue - Slip Highway</name>
+    </course>
+	<course courseid="5">
+     <name>Mist Flow - Front and Back</name>
+    </course>
+	<course courseid="6">
+     <name>Silence - Box Rink 2</name>
+    </course>
+	<course courseid="7">
+     <name>Sand Ocean - Caterpillar 2</name>
+    </course>
+	<course courseid="8">
+     <name>Mute City - Expansion Park 2</name>
+    </course>
+	<course courseid="9">
+     <name>Big Blue - Slip Highway 2</name>
+    </course>
+	<course courseid="10">
+     <name>Mist Flow - Front and Back 2</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="3">   
+   <cupname>Gold Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Port Town - Forked Road</name>
+    </course>
+	<course courseid="2">
+     <name>Silence - Honeycomb Rink</name>
+    </course>
+	<course courseid="3">
+     <name>White Land - Flower</name>
+    </course>
+	<course courseid="4">
+     <name>Fire Field - Wreckage Circuit</name>
+    </course>
+	<course courseid="5">
+     <name>Red Canyon - Peak Jump</name>
+    </course>
+	<course courseid="6">
+     <name>Illusion - Abyss Drop</name>
+    </course>
+	<course courseid="7">
+     <name>Port Town - Forked Road 2</name>
+    </course>
+	<course courseid="8">
+     <name>Silence - Honeycomb Rink 2</name>
+    </course>
+	<course courseid="9">
+     <name>White Land - Flower 2</name>
+    </course>
+	<course courseid="10">
+     <name>Fire Field - Wreckage Circuit 2</name>
+    </course>
+	<course courseid="11">
+     <name>Red Canyon - Peak Jump 2</name>
+    </course>
+	<course courseid="12">
+     <name>Illusion - Abyss Drop 2</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="4">   
+   <cupname>Platinum Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Mute City - Mute City</name>
+    </course>
+	<course courseid="2">
+     <name>Big Blue - Big Blue</name>
+    </course>
+	<course courseid="3">
+     <name>Silence - Silence</name>
+    </course>
+	<course courseid="4">
+     <name>Port Town - Port Town 2</name>
+    </course>
+	<course courseid="5">
+     <name>Red Canyon - Red Canyon</name>
+    </course>
+	<course courseid="6">
+     <name>Sand Ocean - Sand Ocean</name>
+    </course>
+	<course courseid="7">
+     <name>White Land - White Land 2</name>
+    </course>
+	<course courseid="8">
+     <name>Fire Field - Fire Field</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="5">   
+   <cupname>Championship</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Mute City - Championship</name>
+    </course>
+   </courses>
+  </cup>
+ </cups>
+ <ships>
+  <ship>Dragon Bird</ship>
+  <ship>Blue Falcon</ship>
+  <ship>Golden Fox</ship>
+  <ship>Wild Goose</ship>
+  <ship>Fire Stingray</ship>
+  <ship>White Cat</ship>
+  <ship>Astro Robin</ship>
+  <ship>Death Anchor</ship>
+  <ship>Panzer Emerald</ship>
+  <ship>Red Gazelle</ship>
+  <ship>Iron Tiger</ship>
+  <ship>Deep Claw</ship>
+  <ship>Crazy Bear</ship>
+  <ship>Big Fang</ship>
+  <ship>Mad Wolf</ship>
+  <ship>Wonder Wasp</ship>
+  <ship>Wild Boar</ship>
+  <ship>Super Piranha</ship>
+  <ship>Mighty Hurricane</ship>
+  <ship>Space Angler</ship>
+  <ship>Mighty Typhoon</ship>
+  <ship>Green Panther</ship>
+  <ship>Blood Hawk</ship>
+  <ship>Black Bull</ship>
+  <ship>Great Star</ship>
+  <ship>Twin Noritta</ship>
+  <ship>Queen Meteor</ship>
+  <ship>Little Wyvern</ship>
+  <ship>King Meteor</ship>
+  <ship>Hyper Speeder</ship>
+  <ship>Night Thunder</ship>
+  <ship>Sonic Phantom</ship>
+  <ship>Elegance Liberty</ship>
+  <ship>Moon Shadow</ship>
+ </ships>
+</game>

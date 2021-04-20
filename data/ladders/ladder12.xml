@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+ <ladder_name>GX Story Mode - Snaking</ladder_name>
+ <description>&lt;ul&gt;&lt;li&gt;Submit your Story Mode times on this ladder, you can compete on any difficulty setting.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - but snaking IS allowed in this ladder.&lt;/li&gt;&lt;li&gt;All times in this ladder must be set while at 0% settings&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+ <hasspeed>No</hasspeed>
+ <haslap>No</haslap>
+ <hassettings>No</hassettings>
+  <timeformat>Thousandths</timeformat>
+<graphics_available>Yes</graphics_available>
+  <palpossible>No</palpossible>
+ <cups>
+  <cup cupid="1">   
+   <cupname>Normal</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Chapter 1</name>
+    </course>
+ <course courseid="2">
+     <name>Chapter 2</name>
+    </course>
+ <course courseid="3">
+     <name>Chapter 3</name>
+    </course>
+ <course courseid="4">
+     <name>Chapter 4</name>
+    </course>
+ <course courseid="5">
+     <name>Chapter 5</name>
+    </course>
+        <course courseid="6">
+     <name>Chapter 6</name>
+    </course>
+ <course courseid="7">
+     <name>Chapter 7</name>
+    </course>
+ <course courseid="8">
+     <name>Chapter 8</name>
+    </course>
+ <course courseid="9">
+     <name>Chapter 9</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="2">   
+   <cupname>Hard</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Chapter 1</name>
+    </course>
+ <course courseid="2">
+     <name>Chapter 2</name>
+    </course>
+ <course courseid="3">
+     <name>Chapter 3</name>
+    </course>
+ <course courseid="4">
+     <name>Chapter 4</name>
+    </course>
+ <course courseid="5">
+     <name>Chapter 5</name>
+    </course>
+        <course courseid="6">
+     <name>Chapter 6</name>
+    </course>
+ <course courseid="7">
+     <name>Chapter 7</name>
+    </course>
+ <course courseid="8">
+     <name>Chapter 8</name>
+    </course>
+ <course courseid="9">
+     <name>Chapter 9</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="3">   
+   <cupname>Very Hard</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Chapter 1</name>
+    </course>
+ <course courseid="2">
+     <name>Chapter 2</name>
+    </course>
+ <course courseid="3">
+     <name>Chapter 3</name>
+    </course>
+ <course courseid="4">
+     <name>Chapter 4</name>
+    </course>
+ <course courseid="5">
+     <name>Chapter 5</name>
+    </course>
+        <course courseid="6">
+     <name>Chapter 6</name>
+    </course>
+ <course courseid="7">
+     <name>Chapter 7</name>
+    </course>
+ <course courseid="8">
+     <name>Chapter 8</name>
+    </course>
+ <course courseid="9">
+     <name>Chapter 9</name>
+    </course>
+   </courses>
+  </cup>
+ </cups>
+ <ships>
+  <ship>Blue Falcon</ship>
+ </ships>
+</game>

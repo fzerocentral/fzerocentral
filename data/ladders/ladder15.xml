@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+<ladder_name>Climax Survival</ladder_name>
+<description>&lt;ul&gt;&lt;li&gt;Submit your Climax Survival Mode times on this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;The same general Climax &lt;a href="/viewtopic.php?t=824"&gt;rules&lt;/a&gt; apply to this ladder&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+<hasspeed>No</hasspeed>
+<haslap>No</haslap>
+<hassettings>No</hassettings>
+<timeformat>Hundredths</timeformat>
+<graphics_available>Yes</graphics_available>
+<palpossible>No</palpossible>
+<cups>
+	<cup cupid="1">   
+		<cupname>Tour</cupname>
+		<courses>
+			<course courseid="1">
+				<name>Tour</name>
+			</course>
+		</courses>
+	</cup>
+	<cup cupid="2">   
+		<cupname>Challenge</cupname>
+		<courses>
+			<course courseid="1">
+				<name>Challenge</name>
+			</course>
+		</courses>
+	</cup>
+	<cup cupid="3">   
+		<cupname>Battle</cupname>
+		<courses>
+			<course courseid="1">
+				<name>Battle</name>
+			</course>
+		</courses>
+	</cup>
+	<cup cupid="4">   
+		<cupname>Violence</cupname>
+		<courses>
+			<course courseid="1">
+				<name>Violence</name>
+			</course>
+		</courses>
+	</cup>
+</cups>
+<ships>
+	<ship>Dragon Bird Ex</ship>
+	<ship>Mad Wolf</ship>
+	<ship>Space Angler</ship>
+	<ship>Night Thunder</ship>
+	<ship>Red Gazelle</ship>
+	<ship>Mighty Typhoon</ship>
+	<ship>Mighty Hurricane</ship>
+	<ship>Queen Meteor</ship>
+	<ship>King Meteor</ship>
+	<ship>Super Piranha</ship>
+	<ship>Wonder Wasp</ship>
+	<ship>Great Star</ship>
+	<ship>Crazy Bear</ship>
+	<ship>Elegance Liberty</ship>
+	<ship>Astro Robin</ship>
+	<ship>White Cat</ship>
+	<ship>Golden Fox</ship>
+	<ship>Dragon Bird</ship>
+	<ship>Blue Falcon</ship>
+	<ship>Blue Falcon 2</ship>
+	<ship>Red Bull</ship>
+	<ship>Wild Goose</ship>
+	<ship>Fire Stingray</ship>
+	<ship>Panzer Emerald</ship>
+	<ship>Death Anchor</ship>
+	<ship>Hyper Death Anchor</ship>
+	<ship>Deep Claw</ship>
+	<ship>Big Fang</ship>
+	<ship>Moon Shadow</ship>
+	<ship>Sonic Phantom</ship>
+	<ship>Iron Tiger</ship>
+	<ship>Green Panther</ship>
+	<ship>Wild Boar</ship>
+	<ship>Twin Noritta</ship>
+	<ship>Soldier Anchor</ship>
+	<ship>Blood Hawk</ship>
+	<ship>Black Bull</ship>
+	<ship>Hyper Speeder</ship>
+	<ship>Little Wyvern</ship>
+</ships>
+ <platforms>
+  <platform>GBA</platform>
+	<platform>Wii U VC</platform>
+	<platform>mGBA 0.8.x</platform>
+ </platforms>
+</game>

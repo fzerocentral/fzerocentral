@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+    <p style="font-weight: bold; text-align: center">
+      F-Zero {{ ladder.ladder_name|e }} Ladder
+    </p>
+  </div>
+
+  <table class='scoreboard'>
+    <thead>
+      <tr>
+        <td>Player</td>
+        <td>Last update</td>
+        <td>AF score</td>
+        <td>SRPR score</td>
+        <td>Course total</td>
+        <td>Lap total</td>
+      </tr>
+    </thead>
+
+    <tbody class='entries'>
+      {% for entry in entries %}
+        <tr>
+          <td>{{ entry.position }} {{ entry.username|e }}</td>
+          <td>{{ entry.last_change }}</td>
+          <td>{{ entry.af }}</td>
+          <td>{{ entry.srpr }}</td>
+          <td>{{ entry.time|format_time }}</td>
+          <td>{{ entry.lap|format_time }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

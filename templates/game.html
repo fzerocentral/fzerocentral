@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for ladder in ladders %}
+    <div class="ladder-home-section">
+      <a class='ladder-home-image' href="/ladder.php?id={{ ladder }}">
+        <img class="ladder-home-image" src="/images/ladders/{{ ladder }}.gif" width="442px" height="207px" />
+      </a>
+
+      <div class="ladder-leaders">
+        <div class='ladder-home-section-header'>Ladder Leaders</div>
+        <div class='ladder-home-section-body'>
+          {% if ladder_types[ladder] == 'courses_and_laps' %}
+            <div>
+              <span style="padding-left: 15px;">COURSE</span>
+              {% for position in [1, 2, 3] %}
+                <span>
+                  {{ position }})
+                  <a href='player.php?ladder={{ ladder }}&id={{ leaderboard.time[ladder][position].user_id }}'>
+                    {{ leaderboard.time[ladder][position].username|e }}
+                  </a>
+                </span>
+              {% endfor %}
+              <span>x) me</span>
+            </div>
+
+            <div>
+              <span style="padding-left: 15px;">LAP</span>
+              {% for position in [1, 2, 3] %}
+                <span>
+                  {{ position }})
+                  <a href='viewplayer.php?ladder={{ ladder }}&user={{ leaderboard.lap[ladder][position].user_id }}'>
+                    {{ leaderboard.lap[ladder][position].username|e }}
+                  </a>
+                </span>
+              {% endfor %}
+              <span>x) me</span>
+            </div>
+          {% else %}
+            <div>
+              {% for position in [1, 2, 3, 4, 5] %}
+                <span>x
+                  {{ position }})
+                  <a href='viewplayer.php?ladder={{ ladder }}&user={{ leaderboard.lap[ladder][position].user_id }}'>
+                    {{ leaderboard.time[ladder][position].username|e }}
+                  </a>
+                </span>
+              {% endfor %}
+            </div>
+
+            <div>
+              {% for position in [6, 7, 8, 9] %}
+                <span>
+                  {{ position }})
+                  <a href='viewplayer.php?ladder={{ ladder }}&user={{ leaderboard.lap[ladder][position].user_id }}'>
+                    {{ leaderboard.time[ladder][position].username|e }}
+                  </a>
+                </span>
+              {% endfor %}
+              <span>x) me</span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="active-players">
+        <div class='ladder-home-section-header'>Active players</div>
+        <div class='ladder-home-section-body'>
+          {% for player in active_players[ladder] %}
+            {% if player.age > 0 %}
+            <a title='Active {{ player.age }} days ago' href='viewplayer.php?ladder={{ ladder }}&user={{ player.user_id }}"'>{{ player.username|e }}</a>
+            {% else %}
+            <a title='Last active today' href='viewplayer.php?ladder={{ ladder }}&user={{ player.user_id }}"'>{{ player.username }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="my-times">
+        <div class='ladder-home-section-header'>Your times</div>
+        <div class='ladder-home-section-body'>
+          {% if ladder_types[ladder] == 'courses_and_laps' %}
+            <div>Course Total: {{ my_times[ladder].time }}</div>
+            <div style="width: 30px;"></div>
+            <div>Lap Total: {{ my_times[ladder].lap }}</div>
+          {% elseif ladder_types[ladder] == 'courses_only' %}
+            <div>Total: {{ my_times[ladder].time }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

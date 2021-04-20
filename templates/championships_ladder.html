@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center; color: #f7f7f7; font-weight: bold">
+  <p>AF Time Attack Ladder</p>
+</div>
+
+<table class="scoreboard af-ladder">
+  <thead>
+    <tr>
+      <td><a href='/overall_ladder.php?g=0&key=f'>Total Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=1&key=f'>SNES Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=2&key=f'>X Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=3&key=f'>MV Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=9&key=f'>GX Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=6&key=f'>GPL Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=7&key=f'>CLIMAX Ladder</a></td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for position in [1, 2, 3] %}
+    <tr>
+      {% for ladder in [0, 1, 2, 3, 9, 6, 7] %}
+        <td>
+          {{ position }})
+          <a href="/player.php?id={{ leaderboard[ladder].f[position].user_id }}">{{ leaderboard[ladder].f[position].username|e }}</a>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div style="text-align: center; color: #f7f7f7; font-weight: bold">
+  <p>SRPR Time Attack Ladder</p>
+</div>
+
+<table class="scoreboard srpr-ladder">
+  <thead>
+    <tr>
+      <td><a href='/overall_ladder.php?g=0&key=t'>Total Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=1&key=t'>SNES Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=2&key=t'>X Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=3&key=t'>MV Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=9&key=t'>GX Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=6&key=t'>GPL Ladder</a></td>
+      <td class='laddercellborder'><a href='/overall_ladder.php?g=7&key=t'>CLIMAX Ladder</a></td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for position in [1, 2, 3] %}
+    <tr>
+      {% for ladder in [0, 1, 2, 3, 9, 6, 7] %}
+        <td>
+          {{ position }})
+          <a href="/player.php?id={{ leaderboard[ladder].t[position].user_id }}">{{ leaderboard[ladder].t[position].username|e }}</a>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div style="text-align: center; color: #f7f7f7; font-weight: bold">
+  <p>F-Zero Extra Championship Ladder</p>
+</div>
+
+<table class="scoreboard extra-ladder">
+  <thead>
+    <tr>
+      <td>Ladder</td>
+      <td colspan='3' class='laddercellborder'>AF</td>
+      <td colspan='3' class='laddercellborder'>SRPR</td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for ladder in [2, 16, 17, 18, 4, 5, 8, 11, 12, 13, 14, 15] %}
+    <tr>
+      <td>X Open</td>
+      {% for position in [1, 2, 3] %}
+        <td>
+          {{ position }})
+          <a href="/player.php?id={{ leaderboard[ladder].f[position].user_id }}">{{ leaderboard[ladder].f[position].username|e }}</a>
+        </td>
+      {% endfor %}
+
+      {% for position in [1, 2, 3] %}
+        <td>
+          {{ position }})
+          <a href="/player.php?id={{ leaderboard[ladder].t[position].user_id }}">{{ leaderboard[ladder].t[position].username|e }}</a>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

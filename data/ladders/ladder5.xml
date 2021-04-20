@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+	<ladder_name>GX Max Speed</ladder_name>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=13683"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - snaking and spaceflying ARE NOT allowed in this ladder.&lt;/li&gt;&lt;li&gt;All times in this ladder must be set while at 100% Max Speed settings&lt;/li&gt;&lt;/ul&gt;</description>
+	<hasspeed>Yes</hasspeed>
+	<haslap>Yes</haslap>
+	<hassettings>Yes</hassettings>
+	<timeformat>Thousandths</timeformat>
+	<palpossible>No</palpossible>
+	<graphics_available>Yes</graphics_available>
+ <cups>
+  <cup cupid="1">   
+   <cupname>Ruby Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Mute City - Twist Road</name>
+    </course>
+	<course courseid="2">
+     <name>Casino Palace - Split Oval</name>
+    </course>
+	<course courseid="3">
+     <name>Sand Ocean - Surface Slide</name>
+    </course>
+	<course courseid="4">
+     <name>Lightning - Loop Cross</name>
+    </course>
+	<course courseid="5">
+     <name>Aeropolis - Multiplex</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="2">   
+   <cupname>Sapphire Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Big Blue - Drift Highway</name>
+    </course>
+	<course courseid="2">
+     <name>Port Town - Aero Dive</name>
+    </course>
+	<course courseid="3">
+     <name>Green Plant - Mobius Ring</name>
+    </course>
+	<course courseid="4">
+     <name>Port Town - Long Pipe</name>
+    </course>
+	<course courseid="5">
+     <name>Mute City - Serial Gaps</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="3">   
+   <cupname>Emerald Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Fire Field - Cylinder Knot</name>
+    </course>
+	<course courseid="2">
+     <name>Green Plant - Intersection</name>
+    </course>
+	<course courseid="3">
+     <name>Casino Palace - Double Branches</name>
+    </course>
+	<course courseid="4">
+     <name>Lightning - Half Pipe</name>
+    </course>
+	<course courseid="5">
+     <name>Big Blue - Ordeal</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="4">   
+   <cupname>Diamond Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Cosmo Terminal - Trident</name>
+    </course>
+	<course courseid="2">
+     <name>Sand Ocean - Lateral Shift</name>
+    </course>
+	<course courseid="3">
+     <name>Fire Field - Undulation</name>
+    </course>
+	<course courseid="4">
+     <name>Aeropolis - Dragon Slope</name>
+    </course>
+	<course courseid="5">
+     <name>Phantom Road - Slim Line Slits</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="5">   
+   <cupname>AX Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Aeropolis - Screw Drive</name>
+    </course>
+	<course courseid="2">
+     <name>Outer Space - Meteor Stream</name>
+    </course>
+	<course courseid="3">
+     <name>Port Town - Cylinder Wave</name>
+    </course>
+	<course courseid="4">
+     <name>Lightning - Thunder Road</name>
+    </course>
+	<course courseid="5">
+     <name>Green Plant - Spiral</name>
+    </course>
+	<course courseid="6">
+     <name>Mute City - Sonic Oval</name>
+    </course>
+   </courses>
+  </cup>
+ </cups>
+ <ships>
+ </ships>
+</game>

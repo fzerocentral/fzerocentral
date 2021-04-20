@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+	<ladder_name>Maximum Velocity</ladder_name>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=188"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;/ul&gt;</description>
+	<hasspeed>No</hasspeed>
+	<haslap>Yes</haslap>
+	<hassettings>No</hassettings>
+	<timeformat>Hundredths</timeformat>
+	<palpossible>No</palpossible>
+	<graphics_available>Yes</graphics_available>
+ <cups>
+  <cup cupid="1">   
+   <cupname>Pawn Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Bianca City - Stretch</name>
+    </course>
+	<course courseid="2">
+     <name>Stark Farm - First</name>
+    </course>
+	<course courseid="3">
+     <name>Empyrean Colony - Dash</name>
+    </course>
+	<course courseid="4">
+     <name>Stark Farm - Second</name>
+    </course>
+	<course courseid="5">
+     <name>Cloud Carpet - Long Jump</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="2">   
+   <cupname>Knight Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Tenth Zone East - Snake</name>
+    </course>
+	<course courseid="2">
+     <name>Beacon Port - Crossroad</name>
+    </course>
+	<course courseid="3">
+     <name>Synobazz - Explosive</name>
+    </course>
+	<course courseid="4">
+     <name>Ancient Mesa - Split</name>
+    </course>
+	<course courseid="5">
+     <name>Stark Farm - Third</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="3">   
+   <cupname>Bishop Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Bianca City - Tightrope</name>
+    </course>
+	<course courseid="2">
+     <name>Ancient Mesa - Skating</name>
+    </course>
+	<course courseid="3">
+     <name>Crater Land - Skid Zone</name>
+    </course>
+	<course courseid="4">
+     <name>Cloud Carpet - Icarus</name>
+    </course>
+	<course courseid="5">
+     <name>Bianca City - Ultimate</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="4">   
+   <cupname>Queen Cup</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Crater Land - Loop</name>
+    </course>
+	<course courseid="2">
+     <name>Tenth Zone East - Plummet</name>
+    </course>
+	<course courseid="3">
+     <name>Empyrean Colony - Twist</name>
+    </course>
+	<course courseid="4">
+     <name>Fire Field - Land Mine</name>
+    </course>
+	<course courseid="5">
+     <name>Fire Field - Warrior</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="5">   
+   <cupname>Championship</cupname>
+   <courses>
+	<course courseid="1">
+     <name>Championship - Synobazz</name>
+    </course>
+   </courses>
+  </cup>
+ </cups>
+ <ships>
+  <ship>Hot Violet</ship>
+  <ship>Fireball</ship>
+  <ship>JB Crystal</ship>
+  <ship>Wind Walker</ship>
+  <ship>Sly Joker</ship>
+  <ship>The Stingray</ship>
+  <ship>Silver Thunder</ship>
+  <ship>Falcon MK-II</ship>
+  <ship>Fighting Comet</ship>
+  <ship>Jet Vermilion</ship>
+ </ships>
+</game>

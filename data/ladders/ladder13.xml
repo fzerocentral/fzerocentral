@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+ <ladder_name>GP Legend Zero Test</ladder_name>
+ <description>&lt;ul&gt;&lt;li&gt;Submit your GP Legend Zero Test times on this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;The same general GP Legend &lt;a href="/viewtopic.php?t=13683"&gt;rules&lt;/a&gt; apply to this ladder&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+ <hasspeed>No</hasspeed>
+ <haslap>No</haslap>
+ <hassettings>No</hassettings>
+  <timeformat>Hundredths</timeformat>
+<graphics_available>Yes</graphics_available>
+  <palpossible>No</palpossible>
+ <cups>
+  <cup cupid="1">   
+   <cupname>Class C</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Test 1</name>
+    </course>
+ <course courseid="2">
+     <name>Test 2</name>
+    </course>
+ <course courseid="3">
+     <name>Test 3</name>
+    </course>
+ <course courseid="4">
+     <name>Test 4</name>
+    </course>
+ <course courseid="5">
+     <name>Test 5</name>
+    </course>
+        <course courseid="6">
+     <name>Test 6</name>
+    </course>
+ <course courseid="7">
+     <name>Test 7</name>
+    </course>
+ <course courseid="8">
+     <name>Test 8</name>
+    </course>
+ <course courseid="9">
+     <name>Test 9</name>
+    </course>
+ <course courseid="10">
+     <name>Test 10</name>
+    </course>
+        <course courseid="11">
+     <name>Test 11</name>
+    </course>
+ <course courseid="12">
+     <name>Test 12</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="2">   
+   <cupname>Class B</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Test 1</name>
+    </course>
+ <course courseid="2">
+     <name>Test 2</name>
+    </course>
+ <course courseid="3">
+     <name>Test 3</name>
+    </course>
+ <course courseid="4">
+     <name>Test 4</name>
+    </course>
+ <course courseid="5">
+     <name>Test 5</name>
+    </course>
+        <course courseid="6">
+     <name>Test 6</name>
+    </course>
+ <course courseid="7">
+     <name>Test 7</name>
+    </course>
+ <course courseid="8">
+     <name>Test 8</name>
+    </course>
+ <course courseid="9">
+     <name>Test 9</name>
+    </course>
+ <course courseid="10">
+     <name>Test 10</name>
+    </course>
+        <course courseid="11">
+     <name>Test 11</name>
+    </course>
+ <course courseid="12">
+     <name>Test 12</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="3">   
+   <cupname>Class A</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Test 1</name>
+    </course>
+ <course courseid="2">
+     <name>Test 2</name>
+    </course>
+ <course courseid="3">
+     <name>Test 3</name>
+    </course>
+ <course courseid="4">
+     <name>Test 4</name>
+    </course>
+ <course courseid="5">
+     <name>Test 5</name>
+    </course>
+        <course courseid="6">
+     <name>Test 6</name>
+    </course>
+ <course courseid="7">
+     <name>Test 7</name>
+    </course>
+ <course courseid="8">
+     <name>Test 8</name>
+    </course>
+ <course courseid="9">
+     <name>Test 9</name>
+    </course>
+ <course courseid="10">
+     <name>Test 10</name>
+    </course>
+        <course courseid="11">
+     <name>Test 11</name>
+    </course>
+ <course courseid="12">
+     <name>Test 12</name>
+    </course>
+   </courses>
+  </cup>
+  <cup cupid="4">   
+      <cupname>Class S</cupname>
+   <courses>
+ <course courseid="1">
+     <name>Test 1</name>
+    </course>
+ <course courseid="2">
+     <name>Test 2</name>
+    </course>
+ <course courseid="3">
+     <name>Test 3</name>
+    </course>
+ <course courseid="4">
+     <name>Test 4</name>
+    </course>
+ <course courseid="5">
+     <name>Test 5</name>
+    </course>
+        <course courseid="6">
+     <name>Test 6</name>
+    </course>
+ <course courseid="7">
+     <name>Test 7</name>
+    </course>
+ <course courseid="8">
+     <name>Test 8</name>
+    </course>
+ <course courseid="9">
+     <name>Test 9</name>
+    </course>
+ <course courseid="10">
+     <name>Test 10</name>
+    </course>
+        <course courseid="11">
+     <name>Test 11</name>
+    </course>
+ <course courseid="12">
+     <name>Test 12</name>
+    </course>
+   </courses>
+  </cup>
+ </cups>
+ <ships>
+  <ship>Dragon Bird</ship> 
+  <ship>Blue Falcon</ship> 
+  <ship>Golden Fox</ship> 
+  <ship>Wild Goose</ship> 
+  <ship>Fire Stingray</ship> 
+  <ship>White Cat</ship> 
+  <ship>Astro Robin</ship> 
+  <ship>Death Anchor</ship> 
+  <ship>Panzer Emerald</ship> 
+  <ship>Red Gazelle</ship> 
+  <ship>Iron Tiger</ship> 
+  <ship>Deep Claw</ship> 
+  <ship>Crazy Bear</ship> 
+  <ship>Big Fang</ship> 
+  <ship>Mad Wolf</ship> 
+  <ship>Wonder Wasp</ship> 
+  <ship>Wild Boar</ship> 
+  <ship>Super Piranha</ship> 
+  <ship>Mighty Hurricane</ship> 
+  <ship>Space Angler</ship> 
+  <ship>Mighty Typhoon</ship> 
+  <ship>Green Panther</ship> 
+  <ship>Blood Hawk</ship> 
+  <ship>Black Bull</ship> 
+  <ship>Great Star</ship> 
+  <ship>Twin Noritta</ship> 
+  <ship>Queen Meteor</ship> 
+  <ship>Little Wyvern</ship> 
+  <ship>King Meteor</ship> 
+  <ship>Hyper Speeder</ship> 
+  <ship>Night Thunder</ship> 
+  <ship>Sonic Phantom</ship> 
+  <ship>Elegance Liberty</ship> 
+  <ship>Moon Shadow</ship> 
+ </ships>
+</game>
