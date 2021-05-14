@@ -1,0 +1,26 @@
+version: '3'
+services:
+  database:
+    image: mariadb:10.3-focal
+    environment:
+      - MYSQL_USER=mfo
+      - MYSQL_PASSWORD=mfo
+      - MYSQL_DATABASE=phpbb
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    ports:
+      - 3306:3306
+    volumes:
+      - ../databases/phpbb:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/srv/www/phpbb
+      - ../mfo:/srv/www/phpbb20
+    environment:
+      DATABASE_URL: mysql://mfo:mfo@database/phpbb
+    ports:
+      - 8080:80
