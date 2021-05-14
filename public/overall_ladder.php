@@ -45,7 +45,7 @@ $gxdiff='';
 while ($row = mysqli_fetch_assoc($result)) {
   $user_id = $row['user_id'];
   $user_name = $row['username'];
-  $user_flag = strtolower($row['location'] ?? 'undefined');
+  $user_flag = strtolower($row['location'] != '' ? $row['location'] : 'undefined');
 
   ## Get the comparison for the currently selected ladder
   $fz_value = $row['value'];
