@@ -22,10 +22,13 @@
     {% for position in [1, 2, 3] %}
     <tr>
       {% for ladder in [0, 1, 2, 3, 9, 6, 7] %}
+        {% with { user: leaderboard[ladder].f[position] } %}
         <td>
           {{ position }})
-          <a href="/player.php?id={{ leaderboard[ladder].f[position].user_id }}">{{ leaderboard[ladder].f[position].username|e }}</a>
+          {{ user.location|flag }}
+          <a href="/player.php?id={{ user.user_id }}">{{ user.username|e }}</a>
         </td>
+        {% endwith %}
       {% endfor %}
     </tr>
     {% endfor %}
@@ -53,10 +56,13 @@
     {% for position in [1, 2, 3] %}
     <tr>
       {% for ladder in [0, 1, 2, 3, 9, 6, 7] %}
+        {% with { user: leaderboard[ladder].t[position] } %}
         <td>
           {{ position }})
-          <a href="/player.php?id={{ leaderboard[ladder].t[position].user_id }}">{{ leaderboard[ladder].t[position].username|e }}</a>
+          {{ user.location|flag }}
+          <a href="/player.php?id={{ user.user_id }}">{{ user.username|e }}</a>
         </td>
+        {% endwith %}
       {% endfor %}
     </tr>
     {% endfor %}
@@ -81,17 +87,23 @@
     <tr>
       <td>X Open</td>
       {% for position in [1, 2, 3] %}
-        <td>
-          {{ position }})
-          <a href="/player.php?id={{ leaderboard[ladder].f[position].user_id }}">{{ leaderboard[ladder].f[position].username|e }}</a>
-        </td>
+        {% with { user: leaderboard[ladder].f[position] } %}
+          <td>
+            {{ position }})
+            {{ user.location|flag }}
+            <a href="/player.php?id={{ user.user_id }}">{{ user.username|e }}</a>
+          </td>
+        {% endwith %}
       {% endfor %}
 
       {% for position in [1, 2, 3] %}
-        <td>
-          {{ position }})
-          <a href="/player.php?id={{ leaderboard[ladder].t[position].user_id }}">{{ leaderboard[ladder].t[position].username|e }}</a>
-        </td>
+        {% with { user: leaderboard[ladder].t[position] } %}
+          <td>
+            {{ position }})
+            {{ user.location|flag }}
+            <a href="/player.php?id={{ user.user_id }}">{{ user.username|e }}</a>
+          </td>
+        {% endwith %}
       {% endfor %}
     </tr>
     {% endfor %}

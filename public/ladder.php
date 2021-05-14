@@ -46,14 +46,18 @@ $result = db_query("
 
 $index = 1;
 while ($row = mysqli_fetch_assoc($result)) {
-  $entries []= array_merge($row, ['position' => $index]);
+  $entries []= array_merge($row, [
+    'position' => $index,
+    'flag' => strtolower($row['location'] == '' ? 'undefined' : $row['location']),
+  ]);
   $index++;
 }
 
 $template = $twig->load('ladder.html');
 echo $template->render([
-  'page_class' => 'page-player-summary',
-  'PAGE_TITLE' => 'Player summary',
+  'page_class' => 'page-ladder',
+  'PAGE_TITLE' => $ladder->ladder_name . " Ladder",
   'entries' => $entries,
   'ladder' => $ladder,
+  'ladder_id' => $ladder_id,
 ]);

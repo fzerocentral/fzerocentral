@@ -98,8 +98,8 @@ foreach ($ladders as $ladder) {
 
 $template = $twig->load('game.html');
 echo $template->render([
-  'page_class' => 'page-championships-ladder',
-  'PAGE_TITLE' => 'Championships Ladder',
+  'page_class' => 'page-game',
+  'PAGE_TITLE' => "$game Home",
   'ladders' => $ladders,
   'leaderboard' => $leaderboard,
   'ladder_types' => $ladder_types,

@@ -1,13 +1,8 @@
 <?php
 
-require_once 'vendor/autoload.php';
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader, [
-      'cache' => 'cache',
-      'debug' => true,
-]);
+require_once '../common.php';
 
 $template = $twig->load('index.html');
-
-echo $template->render(['PAGE_TITLE' => 'Home', 'go' => 'here']);
+echo $template->render([
+  'PAGE_TITLE' => 'Home',
+]);

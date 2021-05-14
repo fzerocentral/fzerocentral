@@ -4,12 +4,16 @@
     <p style="font-weight: bold; text-align: center">
       F-Zero {{ ladder.ladder_name|e }} Ladder
     </p>
+
+    <p>
+      Click on a flag to view Country ladders
+    </p>
   </div>
 
   <table class='scoreboard'>
     <thead>
       <tr>
-        <td>Player</td>
+        <td colspan='2'>Player</td>
         <td>Last update</td>
         <td>AF score</td>
         <td>SRPR score</td>
@@ -21,7 +25,12 @@
     <tbody class='entries'>
       {% for entry in entries %}
         <tr>
-          <td>{{ entry.position }} {{ entry.username|e }}</td>
+          <td>{{ entry.position }}</td>
+          <td>
+            <a href='?id={{ ladder_id }}&country={{ entry.location|e }}'>{{ entry.location|flag }}</a>
+
+            {{ entry.username|e }}
+          </td>
           <td>{{ entry.last_change }}</td>
           <td>{{ entry.af }}</td>
           <td>{{ entry.srpr }}</td>
