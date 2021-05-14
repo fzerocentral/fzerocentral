@@ -23,4 +23,4 @@ services:
     environment:
       DATABASE_URL: mysql://mfo:mfo@database/phpbb
     ports:
-      - 8080:80
+      - 8081:80

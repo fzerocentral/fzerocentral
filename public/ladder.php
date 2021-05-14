@@ -1,25 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require_once 'fzero.php';
-require_once 'database.php';
-
-db_open();
-
-class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
-  public function getFilters() {
-    return [
-      new \Twig\TwigFilter('format_time', function($v) { return format_time($v, ''); }),
-    ];
-  }
-}
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader, [
-      'cache' => 'cache',
-      'debug' => true,
-]);
-$twig->AddExtension(new Project_Twig_Extension());
+require_once '../common.php';
 
 $ladder_id = intval($_GET['id'] ?? 0);
 $ladder = FserverLadder($ladder_id);

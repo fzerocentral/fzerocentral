@@ -3,7 +3,7 @@ FROM php:7.4-apache
 VOLUME /srv/www/phpbb
 VOLUME /srv/www/phpbb20
 
-ENV APACHE_DOCUMENT_ROOT /srv/www/phpbb
+ENV APACHE_DOCUMENT_ROOT /srv/www/phpbb/public
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf

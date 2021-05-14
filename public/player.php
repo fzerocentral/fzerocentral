@@ -1,18 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require_once 'fzero.php';
-require_once 'database.php';
-
-db_open();
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader, [
-      'cache' => 'cache',
-      'debug' => true,
-]);
-
-$template = $twig->load('player.html');
+require_once '../common.php';
 
 $user_id = intval($_GET['id'] ?? 0);
 
@@ -126,6 +114,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   $rank_l[$row['ladder_id']] = $row['rank'];
 }
 
+$template = $twig->load('player.html');
 echo $template->render([
   'page_class' => 'page-player-summary',
   'PAGE_TITLE' => 'Player summary',

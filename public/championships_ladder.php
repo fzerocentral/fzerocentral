@@ -1,15 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require_once 'database.php';
-
-db_open();
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader, [
-      'cache' => 'cache',
-      'debug' => true,
-]);
+require_once '../common.php';
 
 $result = db_query("
   SELECT t.*, phpbb_users.username

@@ -42,7 +42,7 @@ function FserverGetActivePlayers($ladder_id) {
 }
 
 function FserverLadder($ladder_id) {
-  $file = "data/ladders/ladder$ladder_id.xml";
+  $file = __DIR__ . "/data/ladders/ladder$ladder_id.xml";
   $ladder = simplexml_load_file($file);
 
   return $ladder;

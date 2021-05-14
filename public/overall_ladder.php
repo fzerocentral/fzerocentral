@@ -1,21 +1,8 @@
 <?php
 
-require_once 'vendor/autoload.php';
-require_once 'database.php';
-
-db_open();
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader, [
-      'cache' => 'cache',
-      'debug' => true,
-]);
-
-$template = $twig->load('overall_ladder.html');
+require_once '../common.php';
 
 $key = ($_GET['key'] ?? 't') == 't' ? 't' : 'f';
-$rows_per_page = intval($_GET['rows'] ?? 500);
-$start = intval($_GET['start'] ?? 0);
 $selected_ladder = intval($_GET['g'] ?? 0);
 
 $add_vars = "&g=$selected_ladder&key=$key";
@@ -30,18 +17,6 @@ $result = db_query("
 $query_data = mysqli_fetch_assoc($result);
 $numrows = $query_data[0];
 
-if ($start > $numrows - 1) $start = 0;
-
-$fSkipFirst = false;
-$fetch_start = $start;
-$fetch_count = $rows_per_page;
-
-if ($start > 0) {
-  $fSkipFirst = true;
-  $fetch_start = $start-1;
-  $fetch_count = $rows_per_page+1;
-}
-
 $sql = "
   SELECT user_id, value, username, pf_phpbb_location AS location
   FROM phpbb_f0_champs_10
@@ -49,14 +24,13 @@ $sql = "
   LEFT JOIN phpbb_profile_fields_data USING (user_id)
   WHERE champ_type = '$key' AND ladder_id = $selected_ladder
   ORDER BY value DESC
-  LIMIT $fetch_start, $fetch_count
 ";
 
 $result = db_query($sql);
 if (!$result) die("Cannot get challenges: " . $sql);
 
 $fz = [];
-$index = $start;
+$index = 0;
 $compareToPrevious = '';
 $fz_value='';
 $fz_diff='';
@@ -139,8 +113,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   ];
 }
 
-// $navigation_html = get_navigation($_SERVER['PHP_SELF'], $numrows, $start, $rows_per_page, $add_vars);
-
+$template = $twig->load('overall_ladder.html');
 echo $template->render([
   'page_class' => 'page-overall-ladder',
   'PAGE_TITLE' => 'Overall Ladder',
