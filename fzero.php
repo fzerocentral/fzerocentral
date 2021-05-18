@@ -47,3 +47,21 @@ function FserverLadder($ladder_id) {
 
   return $ladder;
 }
+
+function ship_image_url($ship_name) {
+{
+  $ship_base_url = '/f0/images/ships';
+  $ship_base_filepath = $phpbb_root_path . 'f0/images/ships';
+
+  # When matching a ship name to a ship image filename, strip
+  # anything besides word characters (A-Za-z0-9_), and ignore case.
+  $ship_filename = strtolower(preg_replace('/\W/', '', $ship_name)) . '.gif';
+
+  # Check if ship image exists, otherwise use default.gif.
+  if (!file_exists(__DIR__ . "/public/images/ships/$ship_filename") ) {
+    return '/images/ships/default.gif';
+  }
+
+  return "/images/ships/$ship_filename";
+}
+}

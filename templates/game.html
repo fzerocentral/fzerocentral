@@ -16,7 +16,7 @@
               {% for position in [1, 2, 3] %}
                 <span>
                   {{ position }})
-                  <a href='player.php?ladder={{ ladder }}&id={{ leaderboard.time[ladder][position].user_id }}'>
+                  <a href='viewplayer.php?ladder={{ ladder }}&user={{ leaderboard.time[ladder][position].user_id }}'>
                     {{ leaderboard.time[ladder][position].username|e }}
                   </a>
                 </span>

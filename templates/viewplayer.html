@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+  <p style="font-weight: bold; text-align: center">
+    {{ username|e }}'s times in the F-Zero {{ ladder.ladder_name|e }} Ladder
+  </p>
+</div>
+
+{% for cup in ladder.cups.cup %}
+<table class='scoreboard'>
+  <thead>
+    <tr>
+      <td>{{ cup.cupname|e }}</td>
+      <td></td>
+    </tr>
+  </thead>
+
+  <tbody class='entries'>
+    {% for course in cup.courses.course %}
+      {% with { record: entries[cup.attributes.cupid.__toString][course.attributes.courseid.__toString] } %}
+        <tr>
+          <td>
+            {{ course.name|e }}
+          </td>
+          <td>
+            <div class='player-ladder-score'>
+              <div class='course-label'>
+                Course time:
+              </div>
+              <div class='course-value'>
+                <span>{{ record.C.value | format_time }}</span>
+                <img src="{{ record.C.ship_image|e }}" />
+              </div>
+
+              {% if ladder.haslap != 'No' %}
+              <div class='lap-label'>
+                Lap time:
+              </div>
+              <div class='lap-value'>
+                <span>{{ record.L.value|format_time }}</span>
+                <img src="{{ record.L.ship_image|e }}" />
+              </div>
+
+              <div class='splits'>
+                {{ record.C.notes|e }}
+              </div>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+      {% endwith %}
+    {% endfor %}
+    <tr>
+      <td>{{ cup.cupname|e }} totals</td>
+      <td>
+        <div class='player-ladder-score'>
+          <div class='course-label'>
+            Course total:
+          </div>
+          <div class='course-value'>
+            <span>{{ totals[cup.attributes.cupid.__toString].C|format_time }}</span>
+          </div>
+
+          {% if ladder.haslap != 'No' %}
+          <div class='lap-label'>
+            Lap total:
+          </div>
+          <div class='lap-value'>
+            <span>{{ totals[cup.attributes.cupid.__toString].L|format_time }}</span>
+          </div>
+
+          <div class='splits'>
+          </div>
+          {% endif %}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+{% endfor %}
+
+<table class='scoreboard'>
+  <thead>
+    <tr><td>Totals</td><td></td></tr>
+  </thead>
+
+  <tbody class='entries'>
+    <tr>
+      <td>{{ ladder.ladder_name|e }} totals</td>
+      <td>
+        <div>Course total: {{ totals[0].C | format_time }}</div>
+        {% if ladder.haslap != 'No' %}
+          <div>Lap total: {{ totals[0].L | format_time }}</div>
+        {% endif %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
