@@ -21,7 +21,7 @@
       {% with { record: entries[cup.attributes.cupid.__toString][course.attributes.courseid.__toString] } %}
         <tr>
           <td>
-            {{ course.name|e }}
+            <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ course.name|e }}</a>
           </td>
           <td>
             <div class='player-ladder-score'>

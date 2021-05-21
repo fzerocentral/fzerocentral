@@ -35,6 +35,7 @@ echo $template->render([
   'PAGE_TITLE' => 'Player ladder scores',
   'username' => $username,
   'ladder' => $ladder,
+  'ladder_id' => $ladder_id,
   'entries' => $entries,
   'totals' => $totals,
 ]);
