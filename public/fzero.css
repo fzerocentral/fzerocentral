@@ -1051,3 +1051,16 @@ div.ladder-leaders > div > div > span {
 .page-player-ladder .lap-value { grid-area: lap-value; display: flex; gap: 10px; }
 .page-player-ladder .splits { grid-area: splits; }
 .page-player-ladder .scoreboard { margin-bottom: 20px; }
+
+.section-box {
+  font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px;
+}
+
+.page-login .section-box.login {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-login .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
