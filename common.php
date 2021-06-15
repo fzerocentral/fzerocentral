@@ -4,6 +4,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/fzero.php';
 require_once __DIR__ . '/database.php';
 
+$config = parse_ini_file('config.ini', true);
+
 db_open();
 
 class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
@@ -25,5 +27,3 @@ $twig = new \Twig\Environment($loader, [
       'debug' => true,
 ]);
 $twig->AddExtension(new Project_Twig_Extension());
-
-
