@@ -80,15 +80,13 @@ while ($row = mysqli_fetch_assoc($result)) {
   $leaderboard['lap'][$row['ladder_id']][$row['rank']] = $row;
 }
 
-$user_id = 29918;
-
 $my_times = [];
 $active_players = [];
 
 foreach ($ladders as $ladder) {
   $result = db_query("SELECT lap, time
       FROM phpbb_f0_totals
-      WHERE ladder_id = $ladder AND cup_id = 0 AND user_id = $user_id");
+      WHERE ladder_id = $ladder AND cup_id = 0 AND user_id = $current_user_id");
   $row = mysqli_fetch_assoc($result);
 
   $my_times[$ladder] = ['time' => format_time($row['time'], ''), 'lap' => format_time($row['lap'], '')];

@@ -144,8 +144,9 @@
 
     <div style='color: black; background-color: pink; padding: 10px; font-size: 10pt'>
       <p style='margin: 0px;'>
-        We've got some urgent cleanup we have to do. Sorry for the inconvenience. We're bringing the website back up page by page, so most links won't work.
-        The forum is offline and there's currently no way to log in.
+        We've got some urgent cleanup we have to do. Sorry for the inconvenience.
+        We're bringing the website back up page by page, so some links won't work.
+        The forum is offline and there's currently no way to create a new account.
       </p>
     </div>
 
@@ -163,6 +164,22 @@
       <a href="https://www.twitch.tv/fzerocentral">
         <img src="/images/social/twitch.png" alt="Twitch" title="Twitch" />
       </a>
+      |
+      {% if current_user %}
+        <span>Logged in as {{ current_user.username|e }}</span>
+
+        <a href="/profile.php">Profile</a>
+
+        <form action="/logout.php" method="post" style="display: inline-block">
+          <input type="submit" value="Logout" />
+        </form>
+      {% else %}
+        <a href="/login.php">Login</a>
+        <!--
+        or
+        <a href="/login.php">Sign-up</a>
+        -->
+      {% endif %}
     </div>
 
     <div style="height: 20px;"></div>

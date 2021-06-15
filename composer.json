@@ -4,6 +4,7 @@
   "type": "project",
   "homepage": "https://fzerocentral.org",
   "require": {
-    "twig/twig": "^3.0"
+    "twig/twig": "^3.0",
+    "aws/aws-sdk-php": "^3.184"
   }
 }

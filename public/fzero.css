@@ -571,50 +571,19 @@ div.home-page-box-header-bar {
 
 div#button-bar {
   display: flex;
-  height: 24px;
+  height: 30px;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
 }
 div#button-bar > a {
   margin: 2px;
 }
 
-div#button-bar-menu {
-  display: flex;
-  align-items: center;
+#button-bar form {
+  margin: 0px;
 }
-div#button-bar-menu > * {
-  flex-shrink: 0;  /* Don't allow elements to shrink */
-}
-div#button-bar-menu > span,
-div.home-page-box-header-bar > span {
-  font-family: Verdana;
-  font-weight: bold;
-  font-size: 0.8em;
-  text-shadow: 1px 1px 1px hsla(0, -1%, -1%, 0.6);
-  color: black;
-}
-div#button-bar-menu > a {
-  border-width: 1px 1px 2px 1px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 100px;
-  padding: 0 5px;
-  margin: 0 3px;
-  min-width: 60px;
-  
-  text-decoration: none;  /* No underline */
-  text-align: center;
-  font-family: Verdana;
-  font-weight: bold;
-  font-size: 0.7em;
-  text-shadow: 1px 1px 1px hsla(0, -1%, -1%, 0.6);
-  color: black;
-  
-  background-image: linear-gradient(to bottom, white, hsl(210, 50%, 50%));
-}
-div#button-bar-menu > a:hover {
-  border-width: 2px 1px 1px 1px;
-  background-image: linear-gradient(to bottom, hsl(210, 50%, 50%), white);
-}
+
 
 /*Topic Preview Tooltip Styles */
 #previewtooltip {
@@ -1064,3 +1033,18 @@ div.ladder-leaders > div > div > span {
 }
 
 .page-login .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
+
+.page-password-reset .section-box.password-reset {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-password-change .section-box.password-change {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-password-change .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }

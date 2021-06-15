@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="section-box login">
+  <p style="font-weight: bold; text-align: center">
+    Login
+  </p>
+
+  {% if error %}
+  <p class='error'>{{ error|e }}</p>
+  {% endif %}
+
+  <form method='post'>
+    <p>Username: <input type='text' name='username' /></p>
+    <p>Password: <input type='password' name='password' /></p>
+    <p><input type='submit' value='Login' /></p>
+
+    <p><a href='/password_reset.php'>Reset your password via email</a></p>
+  </form>
+</div>
+
+{% endblock %}
