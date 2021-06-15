@@ -1,0 +1,1 @@
+ALTER TABLE phpbb_users ADD COLUMN moderator BOOLEAN NOT NULL DEFAULT false;
