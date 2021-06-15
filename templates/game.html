@@ -78,15 +78,21 @@
 
       <div class="my-times">
         <div class='ladder-home-section-header'>Your times</div>
-        <div class='ladder-home-section-body'>
-          {% if ladder_types[ladder] == 'courses_and_laps' %}
-            <div>Course Total: {{ my_times[ladder].time }}</div>
-            <div style="width: 30px;"></div>
-            <div>Lap Total: {{ my_times[ladder].lap }}</div>
-          {% elseif ladder_types[ladder] == 'courses_only' %}
-            <div>Total: {{ my_times[ladder].time }}</div>
-          {% endif %}
-        </div>
+        {% if current_user %}
+          <div class='ladder-home-section-body'>
+            {% if ladder_types[ladder] == 'courses_and_laps' %}
+              <div>Course Total: {{ my_times[ladder].time }}</div>
+              <div style="width: 30px;"></div>
+              <div>Lap Total: {{ my_times[ladder].lap }}</div>
+            {% elseif ladder_types[ladder] == 'courses_only' %}
+              <div>Total: {{ my_times[ladder].time }}</div>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class='ladder-home-section-body'>
+            <div>You are not logged in.</div>
+          </div>
+        {% endif %}
       </div>
     </div>
   {% endfor %}

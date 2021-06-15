@@ -29,7 +29,7 @@
           <td>
             <a href='?id={{ ladder_id }}&country={{ entry.location|e }}'>{{ entry.location|flag }}</a>
 
-            {{ entry.username|e }}
+            <a href='/viewplayer.php?ladder={{ ladder_id }}&user={{ entry.user_id }}'>{{ entry.username|e }}</a>
           </td>
           <td>{{ entry.last_change }}</td>
           <td>{{ entry.af }}</td>
