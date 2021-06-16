@@ -13,8 +13,27 @@ function db_open() {
 }
 
 function db_query($sql) {
-  global $db;
-  return mysqli_query($db, $sql);
+  global $db, $config;
+  $result = mysqli_query($db, $sql);
+
+  if ($config['database']['debug'] && $error = mysqli_error($db)) {
+    echo "<pre>db_query error: ";
+    var_dump(mysqli_error_list($db));
+  }
+
+  return $result;
+}
+
+function db_multi_query($sql) {
+  global $db, $config;
+  $result = mysqli_multi_query($db, $sql);
+
+  if ($config['database']['debug'] && $error = mysqli_error($db)) {
+    echo "<pre>db_query error: ";
+    var_dump(mysqli_error_list($db));
+  }
+
+  return $result;
 }
 
 function db_escape_string($text) {
