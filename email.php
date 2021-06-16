@@ -8,7 +8,7 @@ function send_email($recipients, $template, $subject, $params) {
 
   $ses = new SesClient([
     'version' => '2010-12-01',
-    'region'  => 'eu-central-1',
+    'region'  => $config['email']['aws_region'],
     'credentials' => [
       'key' => $config['email']['aws_access_key_id'],
       'secret' => $config['email']['aws_secret_access_key'],
