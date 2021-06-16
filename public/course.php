@@ -9,8 +9,8 @@ $course_id = intval($_GET['course'] ?? 0);
 $result = db_query("
   SELECT
     course.user_id,
-    username,
-    user_from AS location,
+    phpbb_users.username,
+    phpbb_users.user_from AS location,
 
     course.value AS course_value,
     course.ship AS course_ship,
@@ -19,7 +19,7 @@ $result = db_query("
     course.videourl AS course_videourl,
     course.screenshoturl AS course_screenshoturl,
     course.verified AS course_verified,
-    TO_DAYS(curdate()) - TO_DAYS(course.last_change) as course_age,
+    TO_DAYS(CURDATE()) - TO_DAYS(course.last_change) AS course_age,
 
     lap.value AS lap_value,
     lap.ship AS lap_ship,
@@ -28,11 +28,15 @@ $result = db_query("
     lap.videourl AS lap_videourl,
     lap.screenshoturl AS lap_screenshoturl,
     lap.verified AS lap_verified,
-    TO_DAYS(curdate()) - TO_DAYS(lap.last_change) as lap_age
+    TO_DAYS(CURDATE()) - TO_DAYS(lap.last_change) as lap_age
   FROM phpbb_f0_records course
   LEFT JOIN phpbb_f0_records lap USING (ladder_id, cup_id, course_id, user_id)
   JOIN phpbb_users USING (user_id)
-  WHERE course.ladder_id = $ladder_id AND course.cup_id = $cup_id AND course.course_id = $course_id AND course.record_type = 'C' AND lap.record_type = 'L'
+  WHERE course.ladder_id = $ladder_id
+    AND course.cup_id = $cup_id
+    AND course.course_id = $course_id
+    AND course.record_type = 'C'
+    AND lap.record_type = 'L'
   ORDER BY course.value
 ");
 $entries = [];

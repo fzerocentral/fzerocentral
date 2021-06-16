@@ -7,7 +7,7 @@ $ladder = FserverLadder($ladder_id);
 
 if (isset($_GET['country'])) {
   $country = $_GET['country'];
-  $country_filter = "pf_phpbb_location = '". mysqli_real_escape_string($db, $country) . "'";
+  $country_filter = "phpbb_users.user_from = '". mysqli_real_escape_string($db, $country) . "'";
 } else {
   $country = '';
   $country_filter = '1=1';
@@ -19,8 +19,8 @@ $entries = [];
 $result = db_query("
   SELECT
     phpbb_f0_totals.user_id,
-    username,
-    user_from AS location,
+    phpbb_users.username,
+    phpbb_users.user_from AS location,
     phpbb_f0_totals.time,
     phpbb_f0_totals.lap,
     phpbb_f0_totals.last_change,
@@ -38,10 +38,11 @@ $result = db_query("
     AND phpbb_f0_totals.ladder_id = srpr_score.ladder_id
     AND srpr_score.champ_type = 't'
   )
-  WHERE phpbb_f0_totals.ladder_id = $ladder_id AND cup_id = 0 AND $country_filter
+  WHERE phpbb_f0_totals.ladder_id = $ladder_id
+    AND phpbb_f0_totals.cup_id = 0
+    AND $country_filter
   ORDER BY af DESC
 ");
-// phpbb_f0_champs_10
 
 $index = 1;
 while ($row = mysqli_fetch_assoc($result)) {

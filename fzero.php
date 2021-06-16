@@ -23,13 +23,15 @@ function FserverGetActivePlayers($ladder_id) {
 
   $result = db_query("
     SELECT
-      user_id,
-      username,
-      user_from AS location,
-      TO_DAYS(curdate()) - TO_DAYS(last_change) as age
+      phpbb_users.user_id,
+      phpbb_users.username,
+      phpbb_users.user_from AS location,
+      TO_DAYS(CURDATE()) - TO_DAYS(phpbb_f0_totals.last_change) AS age
     FROM phpbb_f0_totals
     JOIN phpbb_users USING (user_id)
-    WHERE ladder_id = $ladder_id AND cup_id = 0 AND TO_DAYS(curdate()) - TO_DAYS(last_change) < 190
+    WHERE phpbb_f0_totals.ladder_id = $ladder_id
+      AND phpbb_f0_totals.cup_id = 0
+      AND TO_DAYS(CURDATE()) - TO_DAYS(phpbb_f0_totals.last_change) < 190
     ORDER BY age ASC
     LIMIT 6
   ");

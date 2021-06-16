@@ -5,15 +5,25 @@ require_once '../common.php';
 $user_id   = intval($_GET['user'] ?? $_GET['id'] ?? 0);
 $ladder_id = intval($_GET['ladder'] ?? 0);
 
-$username = mysqli_fetch_assoc(db_query("SELECT username FROM phpbb_users WHERE user_id = $user_id"))['username'];
+$username = mysqli_fetch_assoc(db_query("SELECT phpbb_users.username FROM phpbb_users WHERE phpbb_users.user_id = $user_id"))['username'];
 
 $result = db_query("
   SELECT
-    cup_id, course_id, record_type, value, ship, platform, notes, videourl, screenshoturl, verified,
-    TO_DAYS(curdate()) - TO_DAYS(last_change) as age
+    phpbb_f0_records.cup_id,
+    phpbb_f0_records.course_id,
+    phpbb_f0_records.record_type,
+    phpbb_f0_records.value,
+    phpbb_f0_records.ship,
+    phpbb_f0_records.platform,
+    phpbb_f0_records.notes,
+    phpbb_f0_records.videourl,
+    phpbb_f0_records.screenshoturl,
+    phpbb_f0_records.verified,
+    TO_DAYS(CURDATE()) - TO_DAYS(phpbb_f0_records.last_change) as age
   FROM phpbb_f0_records
-  WHERE user_id = $user_id AND ladder_id = $ladder_id
-  ORDER BY cup_id, course_id
+  WHERE phpbb_f0_records.user_id = $user_id
+    AND phpbb_f0_records.ladder_id = $ladder_id
+  ORDER BY phpbb_f0_records.cup_id, phpbb_f0_records.course_id
 ");
 $entries = [];
 $totals = [];

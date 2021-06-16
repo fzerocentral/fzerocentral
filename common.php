@@ -14,7 +14,7 @@ session_start();
 
 if (isset($_SESSION['current_user_id'])) {
   $current_user_id = intval($_SESSION['current_user_id']);
-  $current_user = mysqli_fetch_assoc(db_query("SELECT * FROM phpbb_users WHERE user_id = $current_user_id"));
+  $current_user = mysqli_fetch_assoc(db_query("SELECT * FROM phpbb_users WHERE phpbb_users.user_id = $current_user_id"));
 }
 
 class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {

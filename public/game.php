@@ -52,10 +52,10 @@ $result = db_query("
   SELECT t.*, phpbb_users.username
   FROM (
     SELECT
-      user_id, ladder_id, time,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY time ASC) AS rank
+      phpbb_f0_totals.user_id, phpbb_f0_totals.ladder_id, phpbb_f0_totals.time,
+      RANK() OVER (PARTITION BY phpbb_f0_totals.ladder_id ORDER BY phpbb_f0_totals.time ASC) AS rank
     FROM phpbb_f0_totals
-    WHERE cup_id = 0
+    WHERE phpbb_f0_totals.cup_id = 0
   ) t
   JOIN phpbb_users USING (user_id)
   WHERE rank <= 9
@@ -68,10 +68,10 @@ $result = db_query("
   SELECT t.*, phpbb_users.username
   FROM (
     SELECT
-      user_id, ladder_id, lap,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY lap ASC) AS rank
+      phpbb_f0_totals.user_id, phpbb_f0_totals.ladder_id, phpbb_f0_totals.lap,
+      RANK() OVER (PARTITION BY phpbb_f0_totals.ladder_id ORDER BY phpbb_f0_totals.lap ASC) AS rank
     FROM phpbb_f0_totals
-    WHERE cup_id = 0
+    WHERE phpbb_f0_totals.cup_id = 0
   ) t
   JOIN phpbb_users USING (user_id)
   WHERE rank <= 9
@@ -85,9 +85,13 @@ $active_players = [];
 
 foreach ($ladders as $ladder) {
   if ($current_user) {
-    $result = db_query("SELECT lap, time
-        FROM phpbb_f0_totals
-        WHERE ladder_id = $ladder AND cup_id = 0 AND user_id = $current_user_id");
+    $result = db_query("
+      SELECT phpbb_f0_totals.lap, phpbb_f0_totals.time
+      FROM phpbb_f0_totals
+      WHERE phpbb_f0_totals.ladder_id = $ladder
+        AND phpbb_f0_totals.cup_id = 0
+        AND phpbb_f0_totals.user_id = $current_user_id
+    ");
     $row = mysqli_fetch_assoc($result);
     $my_times[$ladder] = ['time' => format_time($row['time'], ''), 'lap' => format_time($row['lap'], '')];
   }

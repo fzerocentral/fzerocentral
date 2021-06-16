@@ -8,24 +8,28 @@ $selected_ladder = intval($_GET['g'] ?? 0);
 $add_vars = "&g=$selected_ladder&key=$key";
 
 $result = db_query("
-  SELECT count(*)
+  SELECT COUNT(*)
   FROM phpbb_f0_champs_10
-  WHERE champ_type = '$key' AND ladder_id = $selected_ladder
-  ORDER BY value
+  WHERE phpbb_f0_champs_10.champ_type = '$key'
+    AND phpbb_f0_champs_10.ladder_id = $selected_ladder
+  ORDER BY phpbb_f0_champs_10.value
 ");
 
 $query_data = mysqli_fetch_assoc($result);
 $numrows = $query_data[0];
 
-$sql = "
-  SELECT user_id, value, username, user_from AS location
+$result = db_query("
+  SELECT
+    phpbb_users.user_id,
+    phpbb_f0_champs_10.value,
+    phpbb_users.username,
+    phpbb_users.user_from AS location
   FROM phpbb_f0_champs_10
   JOIN phpbb_users USING (user_id)
-  WHERE champ_type = '$key' AND ladder_id = $selected_ladder
-  ORDER BY value DESC
-";
-
-$result = db_query($sql);
+  WHERE phpbb_f0_champs_10.champ_type = '$key'
+    AND phpbb_f0_champs_10.ladder_id = $selected_ladder
+  ORDER BY phpbb_f0_champs_10.value DESC
+");
 if (!$result) die("Cannot get challenges: " . $sql);
 
 $fz = [];
@@ -79,12 +83,13 @@ while ($row = mysqli_fetch_assoc($result)) {
   $scores = [];
 
   foreach ($ladder_scores as $id => $name) {
-    $sql = "
-      SELECT value FROM phpbb_f0_champs_10
-      WHERE champ_type = '$key' AND ladder_id = $id AND user_id = $user_id
-    ";
-
-    $result_total = db_query($sql);
+    $result_total = db_query("
+      SELECT phpbb_f0_champs_10.value
+      FROM phpbb_f0_champs_10
+      WHERE phpbb_f0_champs_10.champ_type = '$key'
+        AND phpbb_f0_champs_10.ladder_id = $id
+        AND phpbb_f0_champs_10.user_id = $user_id
+    ");
     if ($result_total) {
       $row_total = mysqli_fetch_assoc($result_total);
       $scores[$name] = $row_total['value'];

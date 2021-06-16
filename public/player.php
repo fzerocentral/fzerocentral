@@ -4,12 +4,20 @@ require_once '../common.php';
 
 $user_id = intval($_GET['id'] ?? 0);
 
-$username = mysqli_fetch_assoc(db_query("SELECT username FROM phpbb_users WHERE user_id = $user_id"))['username'];
+$username = mysqli_fetch_assoc(db_query("
+  SELECT phpbb_users.username
+  FROM phpbb_users
+  WHERE phpbb_users.user_id = $user_id
+"))['username'];
 
 // SRPR Scores
 $result = db_query("
-  SELECT ladder_id, value FROM phpbb_f0_champs_10
-  WHERE champ_type = 't' AND user_id = $user_id
+  SELECT
+    phpbb_f0_champs_10.ladder_id,
+    phpbb_f0_champs_10.value
+  FROM phpbb_f0_champs_10
+  WHERE phpbb_f0_champs_10.champ_type = 't'
+    AND phpbb_f0_champs_10.user_id = $user_id
 ");
 $score_t = [];
 while ($row = mysqli_fetch_assoc($result)) {
@@ -18,8 +26,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // AF Scores
 $result = db_query("
-  SELECT ladder_id, value FROM phpbb_f0_champs_10
-  WHERE champ_type = 'f' AND user_id = $user_id
+  SELECT phpbb_f0_champs_10.ladder_id, phpbb_f0_champs_10.value
+  FROM phpbb_f0_champs_10
+  WHERE phpbb_f0_champs_10.champ_type = 'f'
+    AND phpbb_f0_champs_10.user_id = $user_id
 ");
 $score_f = [];
 while ($row = mysqli_fetch_assoc($result)) {
@@ -30,11 +40,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 $result = db_query("
   SELECT * FROM (
     SELECT
-      user_id, ladder_id, value,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY value DESC) AS rank
+      phpbb_f0_champs_10.user_id,
+      phpbb_f0_champs_10.ladder_id,
+      phpbb_f0_champs_10.value,
+      RANK() OVER (PARTITION BY phpbb_f0_champs_10.ladder_id ORDER BY phpbb_f0_champs_10.value DESC) AS rank
     FROM phpbb_f0_champs_10
-    WHERE champ_type = 't') x
-  WHERE user_id = $user_id
+    WHERE phpbb_f0_champs_10.champ_type = 't') x
+  WHERE x.user_id = $user_id
 ");
 
 $rank_t = [];
@@ -46,11 +58,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 $result = db_query("
   SELECT * FROM (
     SELECT
-      user_id, ladder_id, value,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY value DESC) AS rank
+      phpbb_f0_champs_10.user_id,
+      phpbb_f0_champs_10.ladder_id,
+      phpbb_f0_champs_10.value,
+      RANK() OVER (PARTITION BY phpbb_f0_champs_10.ladder_id ORDER BY phpbb_f0_champs_10.value DESC) AS rank
     FROM phpbb_f0_champs_10
-    WHERE champ_type = 'f') x
-  WHERE user_id = $user_id
+    WHERE phpbb_f0_champs_10.champ_type = 'f') x
+  WHERE x.user_id = $user_id
 ");
 
 $rank_f = [];
@@ -60,9 +74,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // Course Totals
 $result = db_query("
-  SELECT ladder_id, time
+  SELECT phpbb_f0_totals.ladder_id, phpbb_f0_totals.time
   FROM phpbb_f0_totals
-  WHERE cup_id = 0 AND user_id = $user_id
+  WHERE phpbb_f0_totals.cup_id = 0 AND phpbb_f0_totals.user_id = $user_id
 ");
 
 $total_c = [];
@@ -72,9 +86,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 // Lap Totals
 $result = db_query("
-  SELECT ladder_id, lap
+  SELECT phpbb_f0_totals.ladder_id, phpbb_f0_totals.lap
   FROM phpbb_f0_totals
-  WHERE cup_id = 0 AND user_id = $user_id
+  WHERE phpbb_f0_totals.cup_id = 0 AND phpbb_f0_totals.user_id = $user_id
 ");
 
 $total_l = [];
@@ -86,11 +100,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 $result = db_query("
   SELECT * FROM (
     SELECT
-      user_id, ladder_id, time,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY time ASC) AS rank
+      phpbb_f0_totals.user_id,
+      phpbb_f0_totals.ladder_id,
+      phpbb_f0_totals.time,
+      RANK() OVER (PARTITION BY phpbb_f0_totals.ladder_id ORDER BY phpbb_f0_totals.time ASC) AS rank
     FROM phpbb_f0_totals
-    WHERE cup_id = 0) x
-  WHERE user_id = $user_id
+    WHERE phpbb_f0_totals.cup_id = 0) x
+  WHERE x.user_id = $user_id
 ");
 
 $rank_c = [];
@@ -102,11 +118,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 $result = db_query("
   SELECT * FROM (
     SELECT
-      user_id, ladder_id, lap,
-      RANK() OVER (PARTITION BY ladder_id ORDER BY lap ASC) AS rank
+      phpbb_f0_totals.user_id,
+      phpbb_f0_totals.ladder_id,
+      phpbb_f0_totals.lap,
+      RANK() OVER (PARTITION BY phpbb_f0_totals.ladder_id ORDER BY phpbb_f0_totals.lap ASC) AS rank
     FROM phpbb_f0_totals
-    WHERE cup_id = 0) x
-  WHERE user_id = $user_id
+    WHERE phpbb_f0_totals.cup_id = 0) x
+  WHERE x.user_id = $user_id
 ");
 
 $rank_l = [];

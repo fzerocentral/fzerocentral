@@ -5,7 +5,13 @@ require_once '../common.php';
 $template = $twig->load('password_change.html');
 
 function validate_password_reset($user_id, $token) {
-  $result = db_query("select * from phpbb_users where user_id = $user_id");
+  $result = db_query("
+    SELECT
+      phpbb_users.reset_token,
+      phpbb_users.reset_token_expiration
+    FROM phpbb_users
+    WHERE phpbb_users.user_id = $user_id
+  ");
   $user = mysqli_fetch_assoc($result);
 
   $now = time();
@@ -28,7 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password_too_short = strlen($password) < 8;
 
     if (!$password_mismatch && !$password_too_short) {
-      db_query("UPDATE phpbb_users SET reset_token = '', reset_token_expiration = 0, user_password = '" . db_escape_string(password_hash($password, PASSWORD_DEFAULT)) . "' WHERE user_id = $user_id");
+      db_query("
+        UPDATE phpbb_users
+        SET
+          reset_token = '',
+          reset_token_expiration = 0,
+          user_password = '" . db_escape_string(password_hash($password, PASSWORD_DEFAULT)) . "'
+        WHERE user_id = $user_id
+      ");
       $password_changed = true;
     }
 
