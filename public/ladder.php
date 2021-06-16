@@ -20,7 +20,7 @@ $result = db_query("
   SELECT
     phpbb_f0_totals.user_id,
     username,
-    pf_phpbb_location AS location,
+    user_from AS location,
     phpbb_f0_totals.time,
     phpbb_f0_totals.lap,
     phpbb_f0_totals.last_change,
@@ -28,7 +28,6 @@ $result = db_query("
     srpr_score.value AS srpr
   FROM phpbb_f0_totals
   JOIN phpbb_users USING (user_id)
-  LEFT JOIN phpbb_profile_fields_data USING (user_id)
   LEFT JOIN phpbb_f0_champs_10 af_score ON (
     phpbb_f0_totals.user_id = af_score.user_id
     AND phpbb_f0_totals.ladder_id = af_score.ladder_id

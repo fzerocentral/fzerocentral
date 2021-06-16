@@ -18,10 +18,9 @@ $query_data = mysqli_fetch_assoc($result);
 $numrows = $query_data[0];
 
 $sql = "
-  SELECT user_id, value, username, pf_phpbb_location AS location
+  SELECT user_id, value, username, user_from AS location
   FROM phpbb_f0_champs_10
   JOIN phpbb_users USING (user_id)
-  LEFT JOIN phpbb_profile_fields_data USING (user_id)
   WHERE champ_type = '$key' AND ladder_id = $selected_ladder
   ORDER BY value DESC
 ";

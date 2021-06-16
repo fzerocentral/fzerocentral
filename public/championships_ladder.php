@@ -3,7 +3,10 @@
 require_once '../common.php';
 
 $result = db_query("
-  SELECT t.*, phpbb_users.username, pf_phpbb_location AS location
+  SELECT
+    t.*,
+    phpbb_users.username,
+    user_from AS location
   FROM (
     SELECT
       user_id, ladder_id, champ_type, value,
@@ -11,7 +14,6 @@ $result = db_query("
     FROM phpbb_f0_champs_10
   ) t
   JOIN phpbb_users USING (user_id)
-  LEFT JOIN phpbb_profile_fields_data USING (user_id)
   WHERE rank <= 3
 ");
 $leaderboard = [];

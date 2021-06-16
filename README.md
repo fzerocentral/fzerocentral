@@ -10,7 +10,6 @@ The website requires the following tables:
 - `phpbb_f0_champs_10`
 - `phpbb_f0_records`
 - `phpbb_f0_totals`
-- `phpbb_profile_fields_data`
 - `phpbb_users`
 
 At some point, these will be renamed and simplified to remove the phpbb ties.

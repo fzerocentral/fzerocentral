@@ -10,7 +10,7 @@ $result = db_query("
   SELECT
     course.user_id,
     username,
-    phpbb_profile_fields_data.pf_phpbb_location AS location,
+    user_from AS location,
 
     course.value AS course_value,
     course.ship AS course_ship,
@@ -32,7 +32,6 @@ $result = db_query("
   FROM phpbb_f0_records course
   LEFT JOIN phpbb_f0_records lap USING (ladder_id, cup_id, course_id, user_id)
   JOIN phpbb_users USING (user_id)
-  LEFT JOIN phpbb_profile_fields_data USING (user_id)
   WHERE course.ladder_id = $ladder_id AND course.cup_id = $cup_id AND course.course_id = $course_id AND course.record_type = 'C' AND lap.record_type = 'L'
   ORDER BY course.value
 ");
