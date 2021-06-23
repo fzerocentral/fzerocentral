@@ -1,7 +1,7 @@
 <?php
 
 function db_open() {
-  global $db, $config;
+  global $db, $config, $db_num_queries;
 
   $db = mysqli_connect(
     $config['database']['host'],
@@ -9,12 +9,24 @@ function db_open() {
     $config['database']['password'],
   );
 
+  $db_num_queries = 0;
+
   mysqli_select_db($db, $config['database']['name']);
 }
 
+function db_num_queries() {
+  global $db_num_queries;
+
+  $x = $db_num_queries;
+  $db_num_queries = 0;
+  return $x;
+}
+
 function db_query($sql) {
-  global $db, $config;
+  global $db, $config, $db_num_queries;
   $result = mysqli_query($db, $sql);
+
+  $db_num_queries++;
 
   if ($config['database']['debug'] && $error = mysqli_error($db)) {
     echo "<pre>db_query error: ";
