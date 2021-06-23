@@ -26,4 +26,5 @@ echo $template->render([
   'page_class' => 'page-championships-ladder',
   'PAGE_TITLE' => 'Championships Ladder',
   'leaderboard' => $leaderboard,
+  'current_user' => $current_user,
 ]);

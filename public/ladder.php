@@ -60,4 +60,5 @@ echo $template->render([
   'entries' => $entries,
   'ladder' => $ladder,
   'ladder_id' => $ladder_id,
+  'current_user' => $current_user,
 ]);

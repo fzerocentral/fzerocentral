@@ -80,4 +80,5 @@ echo $template->render([
   'course_id' => $course_id,
   'entries' => $entries,
   'totals' => $totals,
+  'current_user' => $current_user,
 ]);

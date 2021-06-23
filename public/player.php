@@ -182,5 +182,6 @@ echo $template->render([
       6 => 'GPL',
       7 => 'CLMX',
     ],
-  ]
+  ],
+  'current_user' => $current_user,
 ]);
