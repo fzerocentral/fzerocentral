@@ -27,7 +27,6 @@ function db_query($sql) {
   $result = mysqli_query($db, $sql);
 
   $db_num_queries++;
-
   if ($config['database']['debug'] && $error = mysqli_error($db)) {
     echo "<pre>db_query error: ";
     var_dump(mysqli_error_list($db));
@@ -64,8 +63,10 @@ function db_encode($value) {
     return "(" . implode(',', array_map('db_encode', $value)) . ")";
   } elseif ($value instanceof DatabaseLiteral) {
     return $value->sql;
+  } elseif (is_bool($value)) {
+    return $value ? "true" : "false";
   } else {
-    return $value;
+    return strval($value);
   }
 }
 
