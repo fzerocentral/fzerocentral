@@ -1,0 +1,145 @@
+id: 6
+name: 'GP Legend'
+description: '<ul><li>Please read the <a href="/viewtopic.php?t=174">Time Submission Rules</a> before submitting your times to this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Bronze Cup'
+    courses:
+      - id: 1
+        name: 'Mute City - Tradition Park'
+      - id: 2
+        name: 'Red Canyon - Junction'
+      - id: 3
+        name: 'Mist Flow - Clip Oval'
+      - id: 4
+        name: 'Lightning - Volute'
+      - id: 5
+        name: 'Fire Field - Blast Track'
+      - id: 6
+        name: 'Mute City - Tradition Park 2'
+      - id: 7
+        name: 'Red Canyon - Junction 2'
+      - id: 8
+        name: 'Mist Flow - Clip Oval 2'
+      - id: 9
+        name: 'Lightning - Volute 2'
+      - id: 10
+        name: 'Fire Field - Blast Track 2'
+  - id: 2
+    name: 'Silver Cup'
+    courses:
+      - id: 1
+        name: 'Silence - Box Rink'
+      - id: 2
+        name: 'Sand Ocean - Caterpillar'
+      - id: 3
+        name: 'Mute City - Expansion Park'
+      - id: 4
+        name: 'Big Blue - Slip Highway'
+      - id: 5
+        name: 'Mist Flow - Front and Back'
+      - id: 6
+        name: 'Silence - Box Rink 2'
+      - id: 7
+        name: 'Sand Ocean - Caterpillar 2'
+      - id: 8
+        name: 'Mute City - Expansion Park 2'
+      - id: 9
+        name: 'Big Blue - Slip Highway 2'
+      - id: 10
+        name: 'Mist Flow - Front and Back 2'
+  - id: 3
+    name: 'Gold Cup'
+    courses:
+      - id: 1
+        name: 'Port Town - Forked Road'
+      - id: 2
+        name: 'Silence - Honeycomb Rink'
+      - id: 3
+        name: 'White Land - Flower'
+      - id: 4
+        name: 'Fire Field - Wreckage Circuit'
+      - id: 5
+        name: 'Red Canyon - Peak Jump'
+      - id: 6
+        name: 'Illusion - Abyss Drop'
+      - id: 7
+        name: 'Port Town - Forked Road 2'
+      - id: 8
+        name: 'Silence - Honeycomb Rink 2'
+      - id: 9
+        name: 'White Land - Flower 2'
+      - id: 10
+        name: 'Fire Field - Wreckage Circuit 2'
+      - id: 11
+        name: 'Red Canyon - Peak Jump 2'
+      - id: 12
+        name: 'Illusion - Abyss Drop 2'
+  - id: 4
+    name: 'Platinum Cup'
+    courses:
+      - id: 1
+        name: 'Mute City - Mute City'
+      - id: 2
+        name: 'Big Blue - Big Blue'
+      - id: 3
+        name: 'Silence - Silence'
+      - id: 4
+        name: 'Port Town - Port Town 2'
+      - id: 5
+        name: 'Red Canyon - Red Canyon'
+      - id: 6
+        name: 'Sand Ocean - Sand Ocean'
+      - id: 7
+        name: 'White Land - White Land 2'
+      - id: 8
+        name: 'Fire Field - Fire Field'
+  - id: 5
+    name: Championship
+    courses:
+      - id: 1
+        name: 'Mute City - Championship'
+ships:
+  - 'Dragon Bird'
+  - 'Blue Falcon'
+  - 'Golden Fox'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'White Cat'
+  - 'Astro Robin'
+  - 'Death Anchor'
+  - 'Panzer Emerald'
+  - 'Red Gazelle'
+  - 'Iron Tiger'
+  - 'Deep Claw'
+  - 'Crazy Bear'
+  - 'Big Fang'
+  - 'Mad Wolf'
+  - 'Wonder Wasp'
+  - 'Wild Boar'
+  - 'Super Piranha'
+  - 'Mighty Hurricane'
+  - 'Space Angler'
+  - 'Mighty Typhoon'
+  - 'Green Panther'
+  - 'Blood Hawk'
+  - 'Black Bull'
+  - 'Great Star'
+  - 'Twin Noritta'
+  - 'Queen Meteor'
+  - 'Little Wyvern'
+  - 'King Meteor'
+  - 'Hyper Speeder'
+  - 'Night Thunder'
+  - 'Sonic Phantom'
+  - 'Elegance Liberty'
+  - 'Moon Shadow'

@@ -1,0 +1,176 @@
+id: 7
+name: Climax
+description: '<ul><li>Please read the <a href="/viewtopic.php?t=824">Time Submission Rules</a> <b>(ESPECIALLY IF USING EMULATOR)</b> before submitting your times to this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Bronze Cup'
+    courses:
+      - id: 1
+        name: 'Mute City: Six Carat'
+      - id: 2
+        name: 'Sand Ocean: High Speed Edge'
+      - id: 3
+        name: 'Port Town: Sky Highway'
+      - id: 4
+        name: 'White Land: Wolf'
+      - id: 5
+        name: 'Fire Field: Heat Circuit'
+      - id: 6
+        name: 'Mute City: Eight Carat'
+      - id: 7
+        name: 'White Land: White Wolf'
+      - id: 8
+        name: 'Big Blue: Arch Hill'
+      - id: 9
+        name: 'Port Town: Sky Highway 2'
+      - id: 10
+        name: 'Red Canyon: Inside Out 2'
+      - id: 11
+        name: 'Red Canyon: Barrel Roll'
+      - id: 12
+        name: 'Sand Ocean: High Speed Edge 3'
+      - id: 13
+        name: 'Lightning: G Trace'
+      - id: 14
+        name: 'Mute City: Ten Carat'
+      - id: 15
+        name: 'White Land: Last Wolf'
+  - id: 2
+    name: 'Silver Cup'
+    courses:
+      - id: 1
+        name: 'Big Blue: Slalom'
+      - id: 2
+        name: 'Red Canyon: Inside Out'
+      - id: 3
+        name: 'Mist Flow: Double Link'
+      - id: 4
+        name: 'Fire Field: Front Line'
+      - id: 5
+        name: 'Silence: Nightmare'
+      - id: 6
+        name: 'Sand Ocean: High Speed Edge 2'
+      - id: 7
+        name: 'Lightning: Trust Jump'
+      - id: 8
+        name: 'Mist Flow: Mist Ring'
+      - id: 9
+        name: 'Mute City: Cactus Circuit'
+      - id: 10
+        name: 'Fire Field: Burned Out Rink'
+      - id: 11
+        name: 'Mute City: Cactus Circuit 2'
+      - id: 12
+        name: 'Mist Flow: Puzzle Ring'
+      - id: 13
+        name: 'Lightning: Loss Landing'
+      - id: 14
+        name: 'Fire Field: Front Line 2'
+      - id: 15
+        name: 'Silence: Nightmare One'
+  - id: 3
+    name: 'Gold Cup'
+    courses:
+      - id: 1
+        name: 'Lightning: R Trace'
+      - id: 2
+        name: 'Port Town: Half Dome'
+      - id: 3
+        name: 'Sand Ocean: Key Break'
+      - id: 4
+        name: 'Big Blue: Slip Down'
+      - id: 5
+        name: 'Illusion: Lost Way'
+      - id: 6
+        name: 'White Land: Hornet'
+      - id: 7
+        name: 'Silence: Nightmare Fear'
+      - id: 8
+        name: 'Big Blue: Single Course'
+      - id: 9
+        name: 'Sand Ocean: Key Break 2'
+      - id: 10
+        name: 'Illusion: Lost Way 2'
+      - id: 11
+        name: 'Port Town: Half Dome 2'
+      - id: 12
+        name: 'White Land Hornet House'
+      - id: 13
+        name: 'Sand Ocean: Key Break 3'
+      - id: 14
+        name: 'Big Blue: Twin Course'
+      - id: 15
+        name: 'Illusion: Lost Way 3'
+  - id: 4
+    name: 'Platinum Cup'
+    courses:
+      - id: 1
+        name: 'Mute City: Multiply'
+      - id: 2
+        name: 'Big Blue: Big Billow'
+      - id: 3
+        name: 'Silence: Silence 2'
+      - id: 4
+        name: 'Port Town: Great Wings'
+      - id: 5
+        name: 'Red Canyon: Red Canyon 2'
+      - id: 6
+        name: 'Sand Ocean: Sand Ocean'
+      - id: 7
+        name: 'White Land: White Land 2'
+      - id: 8
+        name: 'Fire Field: Fire Field'
+  - id: 5
+    name: Championship
+    courses:
+      - id: 1
+        name: 'White Land: Eagle Circuit'
+ships:
+  - 'Dragon Bird Ex'
+  - 'Mad Wolf'
+  - 'Space Angler'
+  - 'Night Thunder'
+  - 'Red Gazelle'
+  - 'Mighty Typhoon'
+  - 'Mighty Hurricane'
+  - 'Queen Meteor'
+  - 'King Meteor'
+  - 'Super Piranha'
+  - 'Wonder Wasp'
+  - 'Great Star'
+  - 'Crazy Bear'
+  - 'Elegance Liberty'
+  - 'Astro Robin'
+  - 'White Cat'
+  - 'Golden Fox'
+  - 'Dragon Bird'
+  - 'Blue Falcon'
+  - 'Blue Falcon 2'
+  - 'Red Bull'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'Panzer Emerald'
+  - 'Death Anchor'
+  - 'Hyper Death Anchor'
+  - 'Deep Claw'
+  - 'Big Fang'
+  - 'Moon Shadow'
+  - 'Sonic Phantom'
+  - 'Iron Tiger'
+  - 'Green Panther'
+  - 'Wild Boar'
+  - 'Twin Noritta'
+  - 'Soldier Anchor'
+  - 'Blood Hawk'
+  - 'Black Bull'
+  - 'Hyper Speeder'
+  - 'Little Wyvern'

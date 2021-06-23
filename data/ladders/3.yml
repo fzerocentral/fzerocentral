@@ -1,0 +1,85 @@
+id: 3
+name: 'Maximum Velocity'
+description:
+  <ul>
+    <li>Please read the <a href="/viewtopic.php?t=188">Time Submission Rules</a> before submitting your times to this ladder.</li>
+    <li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li>
+  </ul>
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Pawn Cup'
+    courses:
+      - id: 1
+        name: 'Bianca City - Stretch'
+      - id: 2
+        name: 'Stark Farm - First'
+      - id: 3
+        name: 'Empyrean Colony - Dash'
+      - id: 4
+        name: 'Stark Farm - Second'
+      - id: 5
+        name: 'Cloud Carpet - Long Jump'
+  - id: 2
+    name: 'Knight Cup'
+    courses:
+      - id: 1
+        name: 'Tenth Zone East - Snake'
+      - id: 2
+        name: 'Beacon Port - Crossroad'
+      - id: 3
+        name: 'Synobazz - Explosive'
+      - id: 4
+        name: 'Ancient Mesa - Split'
+      - id: 5
+        name: 'Stark Farm - Third'
+  - id: 3
+    name: 'Bishop Cup'
+    courses:
+      - id: 1
+        name: 'Bianca City - Tightrope'
+      - id: 2
+        name: 'Ancient Mesa - Skating'
+      - id: 3
+        name: 'Crater Land - Skid Zone'
+      - id: 4
+        name: 'Cloud Carpet - Icarus'
+      - id: 5
+        name: 'Bianca City - Ultimate'
+  - id: 4
+    name: 'Queen Cup'
+    courses:
+      - id: 1
+        name: 'Crater Land - Loop'
+      - id: 2
+        name: 'Tenth Zone East - Plummet'
+      - id: 3
+        name: 'Empyrean Colony - Twist'
+      - id: 4
+        name: 'Fire Field - Land Mine'
+      - id: 5
+        name: 'Fire Field - Warrior'
+  - id: 5
+    name: Championship
+    courses:
+      - id: 1
+        name: 'Championship - Synobazz'
+ships:
+  - Hot Violet
+  - Fireball
+  - JB Crystal
+  - Wind Walker
+  - Sly Joker
+  - The Stingray
+  - Silver Thunder
+  - Falcon MK-II
+  - Fighting Comet
+  - Jet Vermilion

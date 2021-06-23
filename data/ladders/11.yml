@@ -1,0 +1,78 @@
+id: 11
+name: 'GX Story Mode - Max Speed'
+description: '<ul><li>Submit your Story Mode times on this ladder, you can compete on any difficulty setting.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>Always save proof - save a ghost and replay of your best times.</li><li>Don''t cheat - snaking and spaceflying ARE NOT allowed in this ladder.</li><li>All times in this ladder must be set while at 100% Max Speed settings</li><li>This Ladder does not count towards your championship ladder rank</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: false
+    maxspeed: false
+  settings: false
+  format: thousandths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: Normal
+    courses:
+      - id: 1
+        name: 'Chapter 1'
+      - id: 2
+        name: 'Chapter 2'
+      - id: 3
+        name: 'Chapter 3'
+      - id: 4
+        name: 'Chapter 4'
+      - id: 5
+        name: 'Chapter 5'
+      - id: 6
+        name: 'Chapter 6'
+      - id: 7
+        name: 'Chapter 7'
+      - id: 8
+        name: 'Chapter 8'
+      - id: 9
+        name: 'Chapter 9'
+  - id: 2
+    name: Hard
+    courses:
+      - id: 1
+        name: 'Chapter 1'
+      - id: 2
+        name: 'Chapter 2'
+      - id: 3
+        name: 'Chapter 3'
+      - id: 4
+        name: 'Chapter 4'
+      - id: 5
+        name: 'Chapter 5'
+      - id: 6
+        name: 'Chapter 6'
+      - id: 7
+        name: 'Chapter 7'
+      - id: 8
+        name: 'Chapter 8'
+      - id: 9
+        name: 'Chapter 9'
+  - id: 3
+    name: 'Very Hard'
+    courses:
+      - id: 1
+        name: 'Chapter 1'
+      - id: 2
+        name: 'Chapter 2'
+      - id: 3
+        name: 'Chapter 3'
+      - id: 4
+        name: 'Chapter 4'
+      - id: 5
+        name: 'Chapter 5'
+      - id: 6
+        name: 'Chapter 6'
+      - id: 7
+        name: 'Chapter 7'
+      - id: 8
+        name: 'Chapter 8'
+      - id: 9
+        name: 'Chapter 9'
+ships:
+  - Blue Falcon

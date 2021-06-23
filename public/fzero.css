@@ -1048,3 +1048,20 @@ div.ladder-leaders > div > div > span {
   margin-right: auto;
 }
 .page-password-change .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
+
+.page-client .record-row {
+  display: grid;
+  margin-bottom: 2px;
+  grid-template: auto auto / repeat(5, auto);
+}
+
+.page-client .proof-container {
+  padding: 2px;
+  border: 1px solid #b53b35;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: #fffada;
+  grid-column-start: 1;
+  grid-column-end: span 5;
+  display: none;
+}

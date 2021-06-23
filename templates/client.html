@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  div.main-container-container {
+    display: flex;
+  }
+
+  div.main-container {
+    font: 10pt Verdana;
+    background-color: hsl(0, 0%, 97%);
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  div.cup-name {
+    border-radius: 10px 10px 0 0;
+    background-image: linear-gradient( to bottom,hsl(0,-1%,70%),hsl(0,-1%,60%) 10%,white 40%,white 60%,hsl(0,-1%,50%) 90%,hsl(0,-1%,60%));
+
+    font-weight: bold;
+    padding: 10px 0 10px 22px;
+  }
+
+  div.course-container {
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    border-style: solid;
+    border-color: hsl(45, 25%, 65%);
+    border-width: 0 2px;
+
+    display: flex;
+  }
+  div.course-container:nth-child(odd) {
+    background-color: hsl(0, 0%, 97%);
+  }
+  div.course-container:nth-child(even) {
+    background-color: hsl(0, 0%, 90%);
+  }
+  div.cup-container div.course-container:last-of-type {
+    padding-bottom: 18px;
+
+    border-width: 0 2px 2px 2px;
+    border-radius: 0 0 10px 10px;
+  }
+  div.course-name {
+    width: 140px;
+    padding-right: 10px;
+  }
+
+  div.record-row > div {
+    padding: 0 3px;
+  }
+
+  div.record-row label {
+    padding: 0 3px;
+  }
+
+  div.record-row > div.value-label {
+    /* Ensure the labels are the same width even if the text is different. */
+    width: 100px;
+    text-align: right;
+  }
+
+  div.record-row > div.value-fields {
+    /* Ensure the space for the fields is the same width, whether it's a time
+       or a speed. */
+    width: 120px;
+  }
+
+  div.record-row > div.splits-comments-container {
+    width: 260px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #paldiv {
+    width:160px;
+    float:right;
+    margin: 0 6px;
+    text-align: center;
+  }
+
+  #paldiv h3 {
+    margin: 0 0 6px 0;
+  }
+
+  div.proof-indicator-container {
+    width: 60px;
+  }
+  div.proof-indicator-container a {
+    /* Limit the clickable area to the visible icon / text, rather than letting it expand to the entire div (which has some blank space generally). */
+    display: inline-block;
+    font-size: 7pt;
+    cursor: pointer;
+  }
+  div.proof-indicator.hidden {
+    display: none;
+  }
+</style>
+
+<!-- This outer container only serves to make main-container a flex item. -->
+<div class="main-container-container">
+  <div class="main-container">
+    <h2 style="color:#000000;">
+      {{ current_user.username }}'s times in the F-Zero {{ ladder.ladder_name }} Ladder
+    </h2>
+
+    <form name="user_data" method="post">
+      <input type="hidden" name="ladder" value="{{ ladder_id }}">
+      <input type="hidden" name="user" value="{{ user_id }}">
+
+      <div style="padding-left:30px; overflow: auto;">
+        <div id="paldiv">
+          {% if showing_pal %}
+            <h3>PAL</h3>
+          {% else %}
+            <h3>NTSC</h3>
+          {% endif %}
+        </div>
+        {{ ladder.description|raw }}
+        <h4>Enter your times: </h4>
+      </div>
+
+      <div>
+        {% for cup in ladder.cups.cup %}
+          <div class="cup-container">
+            <div class="cup-name">{{ cup.cupname }}</div>
+            {% for course in cup.courses.course %}
+              <div class='course-container'>
+                <div class="course-name">
+                  <b>{{ course.name }}</b>
+                </div>
+                <div class="course-content">
+                  {% with { course_submissions: submission.cups[cup.attributes.cupid.__toString][course.attributes.courseid.__toString] } %}
+                    {% with { sub: course_submissions.C, sub_type: 'C' } %}
+                      {{ include('submission-entry.html') }}
+                    {% endwith %}
+
+                    {% if haslap %}
+                      {% with { sub: course_submissions.L, sub_type: 'L' } %}
+                        {{ include('submission-entry.html') }}
+                      {% endwith %}
+                    {% endif %}
+
+                    {% if hasspeed %}
+                      {% with { sub: course_submissions.S, sub_type: 'S' } %}
+                        {{ include('submission-entry.html') }}
+                      {% endwith %}
+                    {% endif %}
+                  {% endwith %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <br />
+        {% endfor %}
+
+        <div style="text-align: center;">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script language="JavaScript1.2">
+  function showproof(fieldPrefix) {
+    var proofDivId = fieldPrefix + '-proof';
+    document.getElementById(proofDivId).style.display = "block";
+  }
+
+  function hideproof(fieldPrefix) {
+    var proofDivId = fieldPrefix + '-proof';
+    document.getElementById(proofDivId).style.display = "none";
+  }
+
+  function updateProofIndicator(fieldPrefix, modMode) {
+    var noVideoIndicator = document.getElementById(fieldPrefix + '-proof-indicator-no-video');
+    var unverifiedIndicator = document.getElementById(fieldPrefix + '-proof-indicator-unverified');
+    var verifiedIndicator = document.getElementById(fieldPrefix + '-proof-indicator-verified');
+
+    noVideoIndicator.classList.add('hidden');
+    unverifiedIndicator.classList.add('hidden');
+    verifiedIndicator.classList.add('hidden');
+
+    var videoField = document.querySelector('input[name="' + fieldPrefix + '@video"]');
+    if (videoField.value === '') {
+      // No video
+      noVideoIndicator.classList.remove('hidden');
+      return;
+    }
+
+    if (modMode !== '1') {
+      // Video, but not in mod mode
+      unverifiedIndicator.classList.remove('hidden');
+      return;
+    }
+
+    var verifiedField = document.querySelector('input[name="' + fieldPrefix + '@verified"]');
+    if (verifiedField.checked === true) {
+      // Video, mod mode, and verified
+      verifiedIndicator.classList.remove('hidden');
+      return;
+    }
+
+    // Video, mod mode, and unverified
+    unverifiedIndicator.classList.remove('hidden');
+    return;
+  }
+
+  function togglePal() {
+    if (confirm("You will lose unsaved edits. OK?")) {
+      location.href = '/f0/toggle_pal.php?ladder={{ ladder_id }}&user={{ user_id }}';
+    }
+  }
+</script>
+{% endblock %}

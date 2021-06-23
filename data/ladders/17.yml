@@ -1,0 +1,50 @@
+id: 17
+name: 'X Death Race'
+description: '<ul><li>Please read the <a href="/viewtopic.php?t=826">Time Submission Rules</a> before submitting your times to this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>All European PAL times are converted to NTSC using the formula NTSC = (PAL / 6) * 5 and the converse PAL = (NTSC * 6) / 5</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: false
+    maxspeed: false
+  settings: false
+  format: thousandths
+  graphics_available: true
+  pal_possible: true
+  pal_ratio: 6/5
+cups:
+  - id: 1
+    name: 'Death Race Mode'
+    courses:
+      - id: 1
+        name: 'Death Race'
+ships:
+  - 'Blue Falcon'
+  - 'Golden Fox'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'White Cat'
+  - 'Red Gazelle'
+  - 'Iron Tiger'
+  - 'Deep Claw'
+  - 'Great Star'
+  - 'Crazy Bear'
+  - 'Big Fang'
+  - 'Mad Wolf'
+  - 'Night Thunder'
+  - 'Twin Noritta'
+  - 'Wonder Wasp'
+  - 'Queen Meteor'
+  - 'Blood Hawk'
+  - 'Astro Robin'
+  - 'Little Wyvern'
+  - 'Death Anchor'
+  - 'Wild Boar'
+  - 'King Meteor'
+  - 'Super Piranha'
+  - 'Mighty Hurricane'
+  - 'Space Angler'
+  - 'Mighty Typhoon'
+  - 'Hyper Speeder'
+  - 'Green Panther'
+  - 'Black Bull'
+  - 'Sonic Phantom'

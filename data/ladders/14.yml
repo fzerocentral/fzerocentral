@@ -1,0 +1,137 @@
+id: 14
+name: 'Climax Zero Test'
+description: '<ul><li>Submit your Climax Zero Test times on this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>The same general Climax <a href="/viewtopic.php?t=824">rules</a> apply to this ladder</li><li>This Ladder does not count towards your championship ladder rank</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: false
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Class C'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+  - id: 2
+    name: 'Class B'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+  - id: 3
+    name: 'Class A'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+  - id: 4
+    name: 'Class S'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+ships:
+  - 'Dragon Bird Ex'
+  - 'Mad Wolf'
+  - 'Space Angler'
+  - 'Night Thunder'
+  - 'Red Gazelle'
+  - 'Mighty Typhoon'
+  - 'Mighty Hurricane'
+  - 'Queen Meteor'
+  - 'King Meteor'
+  - 'Super Piranha'
+  - 'Wonder Wasp'
+  - 'Great Star'
+  - 'Crazy Bear'
+  - 'Elegance Liberty'
+  - 'Astro Robin'
+  - 'White Cat'
+  - 'Golden Fox'
+  - 'Dragon Bird'
+  - 'Blue Falcon'
+  - 'Blue Falcon 2'
+  - 'Red Bull'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'Panzer Emerald'
+  - 'Death Anchor'
+  - 'Hyper Death Anchor'
+  - 'Deep Claw'
+  - 'Big Fang'
+  - 'Moon Shadow'
+  - 'Sonic Phantom'
+  - 'Iron Tiger'
+  - 'Green Panther'
+  - 'Wild Boar'
+  - 'Twin Noritta'
+  - 'Soldier Anchor'
+  - 'Blood Hawk'
+  - 'Black Bull'
+  - 'Hyper Speeder'
+  - 'Little Wyvern'

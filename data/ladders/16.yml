@@ -1,0 +1,78 @@
+id: 16
+name: 'Expansion Kit'
+description: ''
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: true
+  settings: true
+  format: thousandths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'DD-1 Cup'
+    courses:
+      - id: 1
+        name: 'Silence 3'
+      - id: 2
+        name: 'Sand Ocean 3'
+      - id: 3
+        name: 'Devil''s Forest 4'
+      - id: 4
+        name: 'Port Town 3'
+      - id: 5
+        name: 'Devil''s Forest 5'
+      - id: 6
+        name: 'Big Blue 3'
+  - id: 2
+    name: 'DD-2 Cup'
+    courses:
+      - id: 1
+        name: 'Mute City 4'
+      - id: 2
+        name: 'Space Plant 2'
+      - id: 3
+        name: 'Port Town 4'
+      - id: 4
+        name: 'Fire Field 2'
+      - id: 5
+        name: 'White Land 3'
+      - id: 6
+        name: 'Big Foot'
+ships:
+  - 'Blue Falcon'
+  - 'Golden Fox'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'White Cat'
+  - 'Red Gazelle'
+  - 'Iron Tiger'
+  - 'Deep Claw'
+  - 'Great Star'
+  - 'Crazy Bear'
+  - 'Big Fang'
+  - 'Mad Wolf'
+  - 'Night Thunder'
+  - 'Twin Noritta'
+  - 'Wonder Wasp'
+  - 'Queen Meteor'
+  - 'Blood Hawk'
+  - 'Astro Robin'
+  - 'Little Wyvern'
+  - 'Death Anchor'
+  - 'Wild Boar'
+  - 'King Meteor'
+  - 'Super Piranha'
+  - 'Mighty Hurricane'
+  - 'Space Angler'
+  - 'Mighty Typhoon'
+  - 'Hyper Speeder'
+  - 'Green Panther'
+  - 'Black Bull'
+  - 'Sonic Phantom'
+  - 'Super Falcon'
+  - 'Super Stingray'
+  - 'Super Cat'
+  - 'Custom Ship'

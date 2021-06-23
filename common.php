@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/fzero.php';
+require_once __DIR__ . '/src/fzero.php';
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/email.php';
 require_once __DIR__ . '/urls.php';

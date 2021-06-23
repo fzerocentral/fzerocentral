@@ -1,0 +1,73 @@
+id: 15
+name: 'Climax Survival'
+description: '<ul><li>Submit your Climax Survival Mode times on this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>The same general Climax <a href="/viewtopic.php?t=824">rules</a> apply to this ladder</li><li>This Ladder does not count towards your championship ladder rank</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: false
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: Tour
+    courses:
+      - id: 1
+        name: Tour
+  - id: 2
+    name: Challenge
+    courses:
+      - id: 1
+        name: Challenge
+  - id: 3
+    name: Battle
+    courses:
+      - id: 1
+        name: Battle
+  - id: 4
+    name: Violence
+    courses:
+      - id: 1
+        name: Violence
+ships:
+  - 'Dragon Bird Ex'
+  - 'Mad Wolf'
+  - 'Space Angler'
+  - 'Night Thunder'
+  - 'Red Gazelle'
+  - 'Mighty Typhoon'
+  - 'Mighty Hurricane'
+  - 'Queen Meteor'
+  - 'King Meteor'
+  - 'Super Piranha'
+  - 'Wonder Wasp'
+  - 'Great Star'
+  - 'Crazy Bear'
+  - 'Elegance Liberty'
+  - 'Astro Robin'
+  - 'White Cat'
+  - 'Golden Fox'
+  - 'Dragon Bird'
+  - 'Blue Falcon'
+  - 'Blue Falcon 2'
+  - 'Red Bull'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'Panzer Emerald'
+  - 'Death Anchor'
+  - 'Hyper Death Anchor'
+  - 'Deep Claw'
+  - 'Big Fang'
+  - 'Moon Shadow'
+  - 'Sonic Phantom'
+  - 'Iron Tiger'
+  - 'Green Panther'
+  - 'Wild Boar'
+  - 'Twin Noritta'
+  - 'Soldier Anchor'
+  - 'Blood Hawk'
+  - 'Black Bull'
+  - 'Hyper Speeder'
+  - 'Little Wyvern'
