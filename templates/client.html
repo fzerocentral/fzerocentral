@@ -113,17 +113,16 @@
       <input type="hidden" name="ladder" value="{{ ladder_id }}">
       <input type="hidden" name="user" value="{{ user_id }}">
 
-      <div style="padding-left:30px; overflow: auto;">
-        <div id="paldiv">
-          {% if showing_pal %}
-            <h3>PAL</h3>
-          {% else %}
-            <h3>NTSC</h3>
-          {% endif %}
-        </div>
-        {{ ladder.description|raw }}
-        <h4>Enter your times: </h4>
-      </div>
+      {{ ladder.description|raw }}
+
+      {% if showing_pal %}
+        <h3>PAL selected</h3>
+      {% else %}
+        <h3>NTSC selected</h3>
+      {% endif %}
+      <p>The NTSC/PAL toggle functionality is currently unavailable.</p>
+
+      <h4>Enter your times: </h4>
 
       <div>
         {% for cup in ladder.cups.cup %}
