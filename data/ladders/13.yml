@@ -1,0 +1,156 @@
+id: 13
+name: 'GP Legend Zero Test'
+description: '<ul><li>Submit your GP Legend Zero Test times on this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>The same general GP Legend <a href="/viewtopic.php?t=13683">rules</a> apply to this ladder</li><li>This Ladder does not count towards your championship ladder rank</li></ul>'
+config:
+  types:
+    complete: true
+    bestlap: false
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Class C'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+      - id: 10
+        name: 'Test 10'
+      - id: 11
+        name: 'Test 11'
+      - id: 12
+        name: 'Test 12'
+  - id: 2
+    name: 'Class B'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+      - id: 10
+        name: 'Test 10'
+      - id: 11
+        name: 'Test 11'
+      - id: 12
+        name: 'Test 12'
+  - id: 3
+    name: 'Class A'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+      - id: 10
+        name: 'Test 10'
+      - id: 11
+        name: 'Test 11'
+      - id: 12
+        name: 'Test 12'
+  - id: 4
+    name: 'Class S'
+    courses:
+      - id: 1
+        name: 'Test 1'
+      - id: 2
+        name: 'Test 2'
+      - id: 3
+        name: 'Test 3'
+      - id: 4
+        name: 'Test 4'
+      - id: 5
+        name: 'Test 5'
+      - id: 6
+        name: 'Test 6'
+      - id: 7
+        name: 'Test 7'
+      - id: 8
+        name: 'Test 8'
+      - id: 9
+        name: 'Test 9'
+      - id: 10
+        name: 'Test 10'
+      - id: 11
+        name: 'Test 11'
+      - id: 12
+        name: 'Test 12'
+ships:
+  - 'Dragon Bird'
+  - 'Blue Falcon'
+  - 'Golden Fox'
+  - 'Wild Goose'
+  - 'Fire Stingray'
+  - 'White Cat'
+  - 'Astro Robin'
+  - 'Death Anchor'
+  - 'Panzer Emerald'
+  - 'Red Gazelle'
+  - 'Iron Tiger'
+  - 'Deep Claw'
+  - 'Crazy Bear'
+  - 'Big Fang'
+  - 'Mad Wolf'
+  - 'Wonder Wasp'
+  - 'Wild Boar'
+  - 'Super Piranha'
+  - 'Mighty Hurricane'
+  - 'Space Angler'
+  - 'Mighty Typhoon'
+  - 'Green Panther'
+  - 'Blood Hawk'
+  - 'Black Bull'
+  - 'Great Star'
+  - 'Twin Noritta'
+  - 'Queen Meteor'
+  - 'Little Wyvern'
+  - 'King Meteor'
+  - 'Hyper Speeder'
+  - 'Night Thunder'
+  - 'Sonic Phantom'
+  - 'Elegance Liberty'
+  - 'Moon Shadow'

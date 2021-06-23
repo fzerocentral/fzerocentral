@@ -1,0 +1,72 @@
+id: 1
+name: SNES
+description:
+  <ul>
+    <li>
+      Please read the <a href="/viewtopic.php?t=841">Time Submission Rules</a>
+      before submitting your times to this ladder.
+    </li>
+    <li>
+      Any track without a time will be given a default Ferris Beuller time for
+      the total calculations.
+    </li>
+    <li>
+      All European PAL times are converted to NTSC using the formula NTSC =
+      (PAL / 4) * 3 and the converse PAL = (NTSC * 4) / 3
+    </li>
+  </ul>
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: false
+  settings: false
+  format: hundredths
+  graphics_available: true
+  pal_possible: true
+  pal_ratio: 4/3
+cups:
+  - id: 1
+    name: Knight Cup
+    courses:
+      - id: 1
+        name: Mute City I
+      - id: 2
+        name: Big Blue
+      - id: 3
+        name: Sand Ocean
+      - id: 4
+        name: Death Wind I
+      - id: 5
+        name: Silence
+  - id: 2
+    name: Queen Cup
+    courses:
+      - id: 1
+        name: Mute City II
+      - id: 2
+        name: Port Town I
+      - id: 3
+        name: Red Canyon I
+      - id: 4
+        name: White Land I
+      - id: 5
+        name: White Land II
+  - id: 3
+    name: King Cup
+    courses:
+      - id: 1
+        name: Mute City III
+      - id: 2
+        name: Death Wind II
+      - id: 3
+        name: Port Town II
+      - id: 4
+        name: Red Canyon II
+      - id: 5
+        name: Fire Field
+ships:
+  - Blue Falcon
+  - Golden Fox
+  - Wild Goose
+  - Fire Stingray

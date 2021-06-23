@@ -1,0 +1,90 @@
+id: 2
+name: X
+description:
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: true
+  settings: true
+  format: thousandths
+  graphics_available: true
+  pal_possible: true
+  pal_ratio: 6/5
+cups:
+  - id: 1
+    name: Jack Cup
+    courses:
+      - id: 1
+        name: Mute City
+      - id: 2
+        name: Silence
+      - id: 3
+        name: Sand Ocean
+      - id: 4
+        name: Devil's Forest
+      - id: 5
+        name: Big Blue
+      - id: 6
+        name: Port Town
+  - id: 2
+    name: Queen Cup
+    courses:
+      - id: 1
+        name: Sector Alpha
+      - id: 2
+        name: Red Canyon
+      - id: 3
+        name: Devil's Forest 2
+      - id: 4
+        name: Mute City 2
+      - id: 5
+        name: Big Blue 2
+      - id: 6
+        name: White Land
+  - id: 3
+    name: King Cup
+    courses:
+      - id: 1
+        name: Fire Field
+      - id: 2
+        name: Silence 2
+      - id: 3
+        name: Sector Beta
+      - id: 4
+        name: Red Canyon 2
+      - id: 5
+        name: White Land 2
+      - id: 6
+        name: Mute City 3
+ships:
+  - Blue Falcon
+  - Golden Fox
+  - Wild Goose
+  - Fire Stingray
+  - White Cat
+  - Red Gazelle
+  - Iron Tiger
+  - Deep Claw
+  - Great Star
+  - Crazy Bear
+  - Big Fang
+  - Mad Wolf
+  - Night Thunder
+  - Twin Noritta
+  - Wonder Wasp
+  - Queen Meteor
+  - Blood Hawk
+  - Astro Robin
+  - Little Wyvern
+  - Death Anchor
+  - Wild Boar
+  - King Meteor
+  - Super Piranha
+  - Mighty Hurricane
+  - Space Angler
+  - Mighty Typhoon
+  - Hyper Speeder
+  - Green Panther
+  - Black Bull
+  - Sonic Phantom

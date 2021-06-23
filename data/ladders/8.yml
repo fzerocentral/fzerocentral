@@ -1,0 +1,80 @@
+id: 8
+name: 'GX Snaking'
+description: '<ul><li>Please read the <a href="/viewtopic.php?t=13683">Time Submission Rules</a> before submitting your times to this ladder.</li><li>Any track without a time will be given a default Ferris Beuller time for the total calculations.</li><li>Always save proof - save a ghost and replay of your best times.</li><li>Don''t cheat - spaceflying is NOT allowed in this ladder.</li><li>All times in this ladder must be set while at 0% settings</li><li>'
+config:
+  types:
+    complete: true
+    bestlap: true
+    maxspeed: true
+  settings: true
+  format: thousandths
+  graphics_available: true
+  pal_possible: false
+cups:
+  - id: 1
+    name: 'Ruby Cup'
+    courses:
+      - id: 1
+        name: 'Mute City - Twist Road'
+      - id: 2
+        name: 'Casino Palace - Split Oval'
+      - id: 3
+        name: 'Sand Ocean - Surface Slide'
+      - id: 4
+        name: 'Lightning - Loop Cross'
+      - id: 5
+        name: 'Aeropolis - Multiplex'
+  - id: 2
+    name: 'Sapphire Cup'
+    courses:
+      - id: 1
+        name: 'Big Blue - Drift Highway'
+      - id: 2
+        name: 'Port Town - Aero Dive'
+      - id: 3
+        name: 'Green Plant - Mobius Ring'
+      - id: 4
+        name: 'Port Town - Long Pipe'
+      - id: 5
+        name: 'Mute City - Serial Gaps'
+  - id: 3
+    name: 'Emerald Cup'
+    courses:
+      - id: 1
+        name: 'Fire Field - Cylinder Knot'
+      - id: 2
+        name: 'Green Plant - Intersection'
+      - id: 3
+        name: 'Casino Palace - Double Branches'
+      - id: 4
+        name: 'Lightning - Half Pipe'
+      - id: 5
+        name: 'Big Blue - Ordeal'
+  - id: 4
+    name: 'Diamond Cup'
+    courses:
+      - id: 1
+        name: 'Cosmo Terminal - Trident'
+      - id: 2
+        name: 'Sand Ocean - Lateral Shift'
+      - id: 3
+        name: 'Fire Field - Undulation'
+      - id: 4
+        name: 'Aeropolis - Dragon Slope'
+      - id: 5
+        name: 'Phantom Road - Slim Line Slits'
+  - id: 5
+    name: 'AX Cup'
+    courses:
+      - id: 1
+        name: 'Aeropolis - Screw Drive'
+      - id: 2
+        name: 'Outer Space - Meteor Stream'
+      - id: 3
+        name: 'Port Town - Cylinder Wave'
+      - id: 4
+        name: 'Lightning - Thunder Road'
+      - id: 5
+        name: 'Green Plant - Spiral'
+      - id: 6
+        name: 'Mute City - Sonic Oval'
