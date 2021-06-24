@@ -85,7 +85,7 @@
   <tbody class='entries'>
     {% for ladder in [2, 16, 17, 18, 4, 5, 8, 11, 12, 13, 14, 15] %}
     <tr>
-      <td>X Open</td>
+      <td>{{ ladders[ladder].ladder_name|e }}</td>
       {% for position in [1, 2, 3] %}
         {% with { user: leaderboard[ladder].f[position] } %}
           <td>
