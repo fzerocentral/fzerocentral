@@ -62,7 +62,7 @@ foreach ($ladder->cups->cup as $cup) {
 }
 foreach ($cup->courses->course as $course) {
   $id = intval($course['courseid']);
-  if ($course_id = $id) {
+  if ($course_id == $id) {
     break;
   }
 }
