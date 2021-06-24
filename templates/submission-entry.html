@@ -63,10 +63,11 @@
     <div class="splits-comments-container">
       {% if sub_type == 'C' %}
         <label for="{{ field_prefix }}@notes">Splits:</label>
+        <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
       {% elseif sub_type == 'L' %}
         <label for="{{ field_prefix }}@notes">Comments:</label>
+        <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
       {% endif %}
-      <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
     </div>
 
     <!-- "Add Proof" button -->
