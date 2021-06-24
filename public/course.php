@@ -30,13 +30,18 @@ $result = db_query("
     lap.verified AS lap_verified,
     TO_DAYS(CURDATE()) - TO_DAYS(lap.last_change) as lap_age
   FROM phpbb_f0_records course
-  LEFT JOIN phpbb_f0_records lap USING (ladder_id, cup_id, course_id, user_id)
   JOIN phpbb_users USING (user_id)
+  LEFT JOIN phpbb_f0_records lap ON (
+    course.ladder_id = lap.ladder_id AND
+    course.cup_id = lap.cup_id AND
+    course.course_id = lap.course_id AND
+    course.user_id = lap.user_id AND
+    lap.record_type = 'L'
+  )
   WHERE course.ladder_id = $ladder_id
     AND course.cup_id = $cup_id
     AND course.course_id = $course_id
     AND course.record_type = 'C'
-    AND lap.record_type = 'L'
   ORDER BY course.value
 ");
 $entries = [];
