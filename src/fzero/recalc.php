@@ -48,7 +48,7 @@ function recalc_ladder_totals($ladder_id) {
       SUM(IF(beuller.record_type = 'C', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS time,
       SUM(IF(beuller.record_type = 'L', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS lap,
       SUM(IF(beuller.record_type = 'S', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS speed,
-      MAX(phpbb_f0_records.last_change),
+      MAX(COALESCE(phpbb_f0_records.last_change, beuller.last_change)),
       0
     FROM (SELECT DISTINCT user_id FROM phpbb_f0_records WHERE ladder_id = $ladder_id) players
     CROSS JOIN (SELECT DISTINCT cup_id, course_id, record_type FROM phpbb_f0_records WHERE ladder_id = $ladder_id) AS courses
