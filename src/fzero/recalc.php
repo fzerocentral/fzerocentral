@@ -45,29 +45,29 @@ function recalc_ladder_totals($ladder_id) {
       players.user_id,
       $ladder_id,
       courses.cup_id,
-      SUM(IF(phpbb_f0_records.record_type = 'C', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS time,
-      SUM(IF(phpbb_f0_records.record_type = 'L', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS lap,
-      SUM(IF(phpbb_f0_records.record_type = 'S', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS speed,
+      SUM(IF(beuller.record_type = 'C', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS time,
+      SUM(IF(beuller.record_type = 'L', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS lap,
+      SUM(IF(beuller.record_type = 'S', COALESCE(phpbb_f0_records.value, beuller.value), 0)) AS speed,
       MAX(phpbb_f0_records.last_change),
       0
     FROM (SELECT DISTINCT user_id FROM phpbb_f0_records WHERE ladder_id = $ladder_id) players
     CROSS JOIN (SELECT DISTINCT cup_id, course_id, record_type FROM phpbb_f0_records WHERE ladder_id = $ladder_id) AS courses
+    JOIN phpbb_f0_records beuller ON (
+      beuller.ladder_id   = $ladder_id AND
+      beuller.cup_id      = courses.cup_id AND
+      beuller.course_id   = courses.course_id AND
+      beuller.record_type = courses.record_type AND
+      beuller.user_id     = $ferris_beuller_id
+    )
     LEFT JOIN phpbb_f0_records ON (
-      $ladder_id = phpbb_f0_records.ladder_id AND
-      players.user_id = phpbb_f0_records.user_id AND
-      courses.cup_id = phpbb_f0_records.cup_id AND
-      courses.course_id = phpbb_f0_records.course_id AND
-      courses.record_type = phpbb_f0_records.record_type
+      phpbb_f0_records.ladder_id   = $ladder_id AND
+      phpbb_f0_records.user_id     = players.user_id AND
+      phpbb_f0_records.cup_id      = courses.cup_id AND
+      phpbb_f0_records.course_id   = courses.course_id AND
+      phpbb_f0_records.record_type = courses.record_type AND
+      phpbb_f0_records.value != 0
     )
-    LEFT JOIN phpbb_f0_records beuller ON (
-      $ladder_id = beuller.ladder_id AND
-      players.user_id = beuller.user_id AND
-      courses.cup_id = beuller.cup_id AND
-      courses.course_id = beuller.course_id AND
-      courses.record_type = beuller.record_type AND
-      beuller.user_id = $ferris_beuller_id
-    )
-    GROUP BY courses.cup_id, phpbb_f0_records.user_id
+    GROUP BY courses.cup_id, players.user_id
   ");
 
   db_query("

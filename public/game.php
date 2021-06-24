@@ -27,7 +27,6 @@ default:
   exit;
 }
 
-
 $ladder_types = [
   4 => 'courses_and_laps',
   5 => 'courses_and_laps',
