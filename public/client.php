@@ -121,11 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   recalc_af($ladder_id);
   recalc_srpr($ladder_id);
 
-  if ($user_id != $current_user['user_id']) {
-    header("Location: /ladder.php?ladder=$ladder_id&user=$user_id");
-  } else {
-    header("Location: /ladder.php?ladder=$ladder_id");
-  }
+  header("Location: /ladder.php?id=$ladder_id");
 } else {
   $ladder_id = intval($_GET['ladder']);
   $user_id = intval($_GET['user'] ?? $current_user['user_id']);
