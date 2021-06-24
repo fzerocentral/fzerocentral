@@ -15,8 +15,20 @@ require_once __DIR__ . '/../../database.php';
  * recalc_af($ladder_id):
  * computes AF, stored in phpbb_f0_champs_10 with champ_type = 'f'
  *
+ * recalc_af_9():
+ * computes AF for the pseudo-ladder 9 (best GX)
+ *
+ * recalc_af_totals():
+ * computes AF totals for ladders 1, 2, 3, 6, 7, 9
+ *
  * recalc_srpr($ladder_id):
  * computes SRPR, stored in phpbb_f0_champs_10 with champ_type = 't'
+ *
+ * recalc_srpr_9():
+ * computes SRPR for the pseudo-ladder 9 (best GX)
+ *
+ * recalc_srpr_totals():
+ * computes SRPR totals for ladders 1, 2, 3, 6, 7, 9
  */
 
 $ferris_beuller_id = 222;
@@ -69,6 +81,11 @@ function recalc_ladder_totals($ladder_id) {
 }
 
 function recalc_af($ladder_id) {
+  if ($ladder_id == 9) {
+    recalc_af_9();
+    return;
+  }
+
   // grab all possible cup_id/course_id/record_type combinations for this ladder
   $result = db_query("
     SELECT DISTINCT ladder_id, cup_id, course_id, record_type
@@ -166,6 +183,60 @@ function recalc_af_user($fzaf, $number_players, $player_records, $values) {
   return $af_score;
 }
 
+function recalc_af_9() {
+  $ladder_id = 9;
+
+  $result = db_query("
+    SELECT
+      MAX(value) AS value,
+      user_id,
+      $ladder_id as ladder_id,
+      champ_type
+    FROM phpbb_f0_champs_10
+    WHERE champ_type = 'f' AND ladder_id IN (4, 5, 8)
+    GROUP by user_id
+    ORDER BY 1 DESC
+  ");
+
+  $entries = [];
+  $rank = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+    $entries []= array_merge($row, ['rank' => $rank]);
+    $rank++;
+  }
+
+  db_delete_by('phpbb_f0_champs_10', ['ladder_id' => $ladder_id, 'champ_type' => 'f']);
+  foreach ($entries as $entry) {
+    db_insert('phpbb_f0_champs_10', $entry);
+  }
+}
+
+function recalc_af_totals() {
+  $result = db_query("
+    SELECT
+      SUM(value) AS value,
+      user_id,
+      0 as ladder_id,
+      champ_type
+    FROM phpbb_f0_champs_10
+    WHERE champ_type = 'f' AND ladder_id IN (1, 2, 3, 6, 7, 9)
+    GROUP BY user_id
+    ORDER BY 1 DESC
+  ");
+
+  $entries = [];
+  $rank = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+    $entries []= array_merge($row, ['rank' => $rank]);
+    $rank++;
+  }
+
+  db_delete_by('phpbb_f0_champs_10', ['ladder_id' => 0, 'champ_type' => 'f']);
+  foreach ($entries as $entry) {
+    db_insert('phpbb_f0_champs_10', $entry);
+  }
+}
+
 // TODO: this feels like it's splitting the score
 // in half if there are splits, and putting all the
 // weight into 'C' when there aren't. This can probably
@@ -192,6 +263,11 @@ $ladder_srpr_weights = [
 ];
 
 function recalc_srpr($ladder_id) {
+  if ($ladder_id == 9) {
+    recalc_af_9();
+    return;
+  }
+
   global $ladder_srpr_weights;
   $weights = $ladder_srpr_weights[$ladder_id];
 
@@ -247,5 +323,59 @@ function recalc_srpr($ladder_id) {
   foreach ($entries as $entry) {
     db_insert('phpbb_f0_champs_10', array_merge($entry, ['rank' => $rank]));
     $rank++;
+  }
+}
+
+function recalc_srpr_9() {
+  $ladder_id = 9;
+
+  $result = db_query("
+    SELECT
+      MAX(value) AS value,
+      user_id,
+      $ladder_id as ladder_id,
+      champ_type
+    FROM phpbb_f0_champs_10
+    WHERE champ_type = 't' AND ladder_id IN (4, 5, 8)
+    GROUP by user_id
+    ORDER BY 1 DESC
+  ");
+
+  $entries = [];
+  $rank = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+    $entries []= array_merge($row, ['rank' => $rank]);
+    $rank++;
+  }
+
+  db_delete_by('phpbb_f0_champs_10', ['ladder_id' => $ladder_id, 'champ_type' => 't']);
+  foreach ($entries as $entry) {
+    db_insert('phpbb_f0_champs_10', $entry);
+  }
+}
+
+function recalc_srpr_totals() {
+  $result = db_query("
+    SELECT
+      SUM(value) AS value,
+      user_id,
+      0 as ladder_id,
+      champ_type
+    FROM phpbb_f0_champs_10
+    WHERE champ_type = 't' AND ladder_id IN (1, 2, 3, 6, 7, 9)
+    GROUP BY user_id
+    ORDER BY 1 DESC
+  ");
+
+  $entries = [];
+  $rank = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+    $entries []= array_merge($row, ['rank' => $rank]);
+    $rank++;
+  }
+
+  db_delete_by('phpbb_f0_champs_10', ['ladder_id' => 0, 'champ_type' => 't']);
+  foreach ($entries as $entry) {
+    db_insert('phpbb_f0_champs_10', $entry);
   }
 }

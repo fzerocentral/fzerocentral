@@ -120,6 +120,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   recalc_ladder_totals($ladder_id);
   recalc_af($ladder_id);
   recalc_srpr($ladder_id);
+  recalc_af_totals();
+  recalc_srpr_totals();
 
   header("Location: /ladder.php?id=$ladder_id");
 } else {
