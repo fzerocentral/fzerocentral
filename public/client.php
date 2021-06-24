@@ -80,10 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $values = [
         'ship'          => $record['ship'],
-        'platform'      => $record["platform"],
+        'platform'      => $record["platform"] ?? '',
         'videourl'      => $record["videourl"],
         'screenshoturl' => $record["screenshoturl"],
-        'notes'         => $record["notes"],
+        'notes'         => $record["notes"] ?? '',
         'value'         => extract_record_value($ladder, $current_user, $record),
       ];
 
@@ -108,7 +108,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $existing_row = db_find_by('phpbb_f0_records', $entry['key']);
 
       if ($existing_row == NULL) {
-        db_insert('phpbb_f0_records', $entry['key']);
+        db_insert(
+          'phpbb_f0_records',
+          array_merge(
+            $entry['key'],
+            ['ship' => '', 'platform' => '', 'settings' => '', 'splits' => '', 'notes' => '', 'videourl' => '', 'screenshoturl' => '']
+          )
+        );
       }
 
       $fields = record_changes($entry['values'], $existing_row);

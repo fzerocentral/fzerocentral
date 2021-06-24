@@ -1,122 +1,120 @@
-{% with { field_prefix: (sub_type ~ '-' ~ sub.cup_id ~ '-' ~ sub.course_id) } %}
-  <div class="record-row">
-    <div class="value-label">
-      {% if sub_type == 'C' %}
-        Course Time:
-      {% elseif sub_type == 'L' %}
-        Best Lap:
-      {% elseif sub_type == 'S' %}
-        Speed:
-      {% endif %}
-    </div>
-
-    <div class="value-fields">
-      {% if sub_type != "maxspeed" %}
-        <input name='records[{{ field_prefix }}][time@m]' type='text' maxlength='1' size='1' value='{{ sub.time_m }}' />
-        <input name='records[{{ field_prefix }}][time@s]' type='text' maxlength='2' size='2' value='{{ sub.time_s }}' />
-        <input name='records[{{ field_prefix }}][time@t]' type='text' maxlength='4' size='4' value='{{ sub.time_t }}' />
-      {% else %}
-        <input name='records[{{ field_prefix }}][speed]' type='text' maxlength='6' size='6' value='{{ sub.speed }}' />
-      {% endif %}
-    </div>
-
-    <!-- Ship -->
-    <div class="ship-container">
-      <label for="{{ field_prefix }}@ship"> Ship: </label>
-      {% if ladder.ships.ship %}
-        <select style="width:120px;" name="records[{{ field_prefix }}][ship]" id="{{ field_prefix }}@ship">
-          <option value=""></option>
-          {% for ship in ladder.ships.ship %}
-            {% if ship == sub.ship %}
-              <option selected value="{{ ship }}">{{ ship }}</option>
-            {% else %}
-              <option value="{{ ship }}">{{ ship }}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-      {% else %}
-      <!-- Text field (too many possible ships for a dropdown) -->
-      <input style="width:120px;" name="records[{{ field_prefix }}][ship]" id="{{ field_prefix }}@ship" type="text" size="20" value="{{ sub.ship }}" />
-      {% endif %}
-    </div>
-
-    <!-- Platform; not present in every ladder -->
-    {% if ladder.platforms.platform %}
-      <div class="platform-container">
-        <label for="{{ field_prefix }}@platform"> Platform: </label>
-
-        <select name="records[{{ field_prefix }}][platform]" id="{{ field_prefix }}@platform">
-          <option value=""></option>
-
-          {% for platform in ladder.platforms.platform %}
-            {% if platform == sub.platform %}
-              <option selected value="{{ platform }}">{{ platform }}</option>
-            {% else %}
-              <option value="{{ platform }}">{{ platform }}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-      </div>
+<div class="record-row">
+  <div class="value-label">
+    {% if sub_type == 'C' %}
+      Course Time:
+    {% elseif sub_type == 'L' %}
+      Best Lap:
+    {% elseif sub_type == 'S' %}
+      Speed:
     {% endif %}
+  </div>
 
-    <!-- Splits or comments (or neither) -->
-    <div class="splits-comments-container">
-      {% if sub_type == 'C' %}
-        <label for="{{ field_prefix }}@notes">Splits:</label>
-        <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
-      {% elseif sub_type == 'L' %}
-        <label for="{{ field_prefix }}@notes">Comments:</label>
-        <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
-      {% endif %}
+  <div class="value-fields">
+    {% if sub_type != "maxspeed" %}
+      <input name='records[{{ field_prefix }}][time@m]' type='text' maxlength='1' size='1' value='{{ sub.time_m }}' />
+      <input name='records[{{ field_prefix }}][time@s]' type='text' maxlength='2' size='2' value='{{ sub.time_s }}' />
+      <input name='records[{{ field_prefix }}][time@t]' type='text' maxlength='4' size='4' value='{{ sub.time_t }}' />
+    {% else %}
+      <input name='records[{{ field_prefix }}][speed]' type='text' maxlength='6' size='6' value='{{ sub.speed }}' />
+    {% endif %}
+  </div>
+
+  <!-- Ship -->
+  <div class="ship-container">
+    <label for="{{ field_prefix }}@ship"> Ship: </label>
+    {% if ladder.ships.ship %}
+      <select style="width:120px;" name="records[{{ field_prefix }}][ship]" id="{{ field_prefix }}@ship">
+        <option value=""></option>
+        {% for ship in ladder.ships.ship %}
+          {% if ship == sub.ship %}
+            <option selected value="{{ ship }}">{{ ship }}</option>
+          {% else %}
+            <option value="{{ ship }}">{{ ship }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    {% else %}
+    <!-- Text field (too many possible ships for a dropdown) -->
+    <input style="width:120px;" name="records[{{ field_prefix }}][ship]" id="{{ field_prefix }}@ship" type="text" size="20" value="{{ sub.ship }}" />
+    {% endif %}
+  </div>
+
+  <!-- Platform; not present in every ladder -->
+  {% if ladder.platforms.platform %}
+    <div class="platform-container">
+      <label for="{{ field_prefix }}@platform"> Platform: </label>
+
+      <select name="records[{{ field_prefix }}][platform]" id="{{ field_prefix }}@platform">
+        <option value=""></option>
+
+        {% for platform in ladder.platforms.platform %}
+          {% if platform == sub.platform %}
+            <option selected value="{{ platform }}">{{ platform }}</option>
+          {% else %}
+            <option value="{{ platform }}">{{ platform }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
     </div>
+  {% endif %}
 
-    <!-- "Add Proof" button -->
-    <div class="proof-indicator-container">
-      <a onclick='showproof("{{ field_prefix }}")'>
-        <div class="proof-indicator {{ sub.videourl == '' ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-no-video">
-          <b>
-            Add Proof
-          </b>
-        </div>
+  <!-- Splits or comments (or neither) -->
+  <div class="splits-comments-container">
+    {% if sub_type == 'C' %}
+      <label for="{{ field_prefix }}@notes">Splits:</label>
+      <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
+    {% elseif sub_type == 'L' %}
+      <label for="{{ field_prefix }}@notes">Comments:</label>
+      <input name="records[{{ field_prefix }}][notes]" id="{{ field_prefix }}@notes" type="text" size="25" value="{{ sub.notes|e('html_attr') }}" style="width:170px;" />
+    {% endif %}
+  </div>
 
-        <div class="proof-indicator {{ sub.videourl != '' and sub.verified != 1 ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-unverified">
-          <img src="images/proof_statuses/unverified-proof.png" title="Edit Proof" />
-        </div>
+  <!-- "Add Proof" button -->
+  <div class="proof-indicator-container">
+    <a onclick='showproof("{{ field_prefix }}")'>
+      <div class="proof-indicator {{ sub.videourl == '' ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-no-video">
+        <b>
+          Add Proof
+        </b>
+      </div>
 
-        <div class="proof-indicator {{ sub.videourl != '' and sub.verified == 1 ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-verified">
-          <img src="images/proof_statuses/verified-proof.png" title="Edit Proof" />
-        </div>
-      </a>
+      <div class="proof-indicator {{ sub.videourl != '' and sub.verified != 1 ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-unverified">
+        <img src="images/proof_statuses/unverified-proof.png" title="Edit Proof" />
+      </div>
+
+      <div class="proof-indicator {{ sub.videourl != '' and sub.verified == 1 ? '' : 'hidden' }}" id="{{ field_prefix }}-proof-indicator-verified">
+        <img src="images/proof_statuses/verified-proof.png" title="Edit Proof" />
+      </div>
+    </a>
+  </div>
+
+  {% if mod_mode %}
+    <!-- Deletion checkbox -->
+    <div>
+      <input name="records[{{ field_prefix }}][delete]" id="{{ field_prefix }}@delete" type="checkbox" title="Delete record" />
+      <label for="{{ field_prefix }}@delete" style="font-size:7pt;" title="Delete record">Delete</label>
     </div>
+  {% endif %}
+
+  <!-- Collapsible proof fields -->
+  <div id='{{ field_prefix }}-proof' class="proof-container">
+    Video Link:
+    <input name="records[{{ field_prefix }}][videourl]" type="text" size="32" value="{{ sub.videourl|e }}" onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')" />
+    Screenshot Link:
+    <input name="records[{{ field_prefix }}][screenshoturl]" type="text" size="16" value="{{ sub.screenshoturl|e }}" />
 
     {% if mod_mode %}
-      <!-- Deletion checkbox -->
-      <div>
-        <input name="records[{{ field_prefix }}][delete]" id="{{ field_prefix }}@delete" type="checkbox" title="Delete record" />
-        <label for="{{ field_prefix }}@delete" style="font-size:7pt;" title="Delete record">Delete</label>
-      </div>
+      <input
+        name="records[{{ field_prefix }}][verified]"
+        id="{{ field_prefix }}@verified"
+        type="checkbox"
+        onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')"
+        {% if is_verified %}checked{% endif %}
+      />
+
+      <label for='{{ field_prefix }}@verified'>Verified</label>
     {% endif %}
 
-    <!-- Collapsible proof fields -->
-    <div id='{{ field_prefix }}-proof' class="proof-container">
-      Video Link:
-      <input name="records[{{ field_prefix }}][videourl]" type="text" size="32" value="{{ sub.videourl|e }}" onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')" />
-      Screenshot Link:
-      <input name="records[{{ field_prefix }}][screenshoturl]" type="text" size="16" value="{{ sub.screenshoturl|e }}" />
-
-      {% if mod_mode %}
-        <input
-          name="records[{{ field_prefix }}][verified]"
-          id="{{ field_prefix }}@verified"
-          type="checkbox"
-          onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')"
-          {% if is_verified %}checked{% endif %}
-        />
-
-        <label for='{{ field_prefix }}@verified'>Verified</label>
-      {% endif %}
-
-      <a onclick="hideproof('{{ field_prefix }}')" style="font-size:7pt; margin-left:20px; cursor:pointer;"><b>Close</b></a>
-    </div>
+    <a onclick="hideproof('{{ field_prefix }}')" style="font-size:7pt; margin-left:20px; cursor:pointer;"><b>Close</b></a>
   </div>
-{% endwith %}
+</div>

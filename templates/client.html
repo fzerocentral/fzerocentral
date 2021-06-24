@@ -135,18 +135,18 @@
                 </div>
                 <div class="course-content">
                   {% with { course_submissions: submission.cups[cup.attributes.cupid.__toString][course.attributes.courseid.__toString] } %}
-                    {% with { sub: course_submissions.C, sub_type: 'C' } %}
+                    {% with { sub: course_submissions.C, sub_type: 'C', field_prefix: ('C-' ~ cup.attributes.cupid ~ '-' ~ course.attributes.courseid) } %}
                       {{ include('submission-entry.html') }}
                     {% endwith %}
 
                     {% if haslap %}
-                      {% with { sub: course_submissions.L, sub_type: 'L' } %}
+                      {% with { sub: course_submissions.L, sub_type: 'L', field_prefix: ('L-' ~ cup.attributes.cupid ~ '-' ~ course.attributes.courseid) } %}
                         {{ include('submission-entry.html') }}
                       {% endwith %}
                     {% endif %}
 
                     {% if hasspeed %}
-                      {% with { sub: course_submissions.S, sub_type: 'S' } %}
+                      {% with { sub: course_submissions.S, sub_type: 'S', field_prefix: ('S-' ~ cup.attributes.cupid ~ '-' ~ course.attributes.courseid) } %}
                         {{ include('submission-entry.html') }}
                       {% endwith %}
                     {% endif %}
