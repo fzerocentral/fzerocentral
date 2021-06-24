@@ -130,8 +130,16 @@ function recalc_af_user($fzaf, $number_players, $player_records, $values) {
   $counts = [];
   $total_ranks = [];
   foreach ($fzaf as $entry) {
-    $result = $player_records[$entry['cup_id']][$entry['course_id']][$entry['record_type']];
+    $result = $player_records[$entry['cup_id']][$entry['course_id']][$entry['record_type']] ?? 0;
+
+    if (!isset($counts[$entry['record_type']])) {
+      $counts[$entry['record_type']] = 0;
+    }
     $counts[$entry['record_type']]++;
+
+    if (!isset($total_ranks[$entry['record_type']])) {
+      $total_ranks[$entry['record_type']] = 0;
+    }
 
     if ($result < 1) {
       $total_ranks[$entry['record_type']] += $number_players;
@@ -198,6 +206,10 @@ function recalc_srpr($ladder_id) {
   $records = [];
   while ($row = mysqli_fetch_assoc($best_results)) {
     $best[$row['cup_id']][$row['course_id']][$row['record_type']] = intval($row['value']);
+
+    if (!isset($records[$row['record_type']])) {
+      $records[$row['record_type']] = 0;
+    }
     $records[$row['record_type']]++;
   }
 
@@ -211,6 +223,10 @@ function recalc_srpr($ladder_id) {
   $srprs = [];
   while ($row = mysqli_fetch_assoc($results)) {
     $asrpr = $best[$row['cup_id']][$row['course_id']][$row['record_type']] / $row['value'];
+
+    if (!isset($srprs[$row['user_id']])) {
+      $srprs[$row['user_id']] = 0;
+    }
     $srprs[$row['user_id']] += $asrpr * $weights[$row['record_type']] / $records[$row['record_type']];
   }
 
@@ -224,7 +240,7 @@ function recalc_srpr($ladder_id) {
     ];
   }
 
-  usort($srprs, function($a, $b) { return $a['value'] - $b['value']; });
+  usort($entries, function($a, $b) { return $a['value'] - $b['value']; });
 
   db_delete_by('phpbb_f0_champs_10', ['ladder_id' => $ladder_id, 'champ_type' => 't']);
   $rank = 1;
