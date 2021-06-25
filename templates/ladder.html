@@ -9,6 +9,20 @@
       Click on a flag to view Country ladders
     </p>
 
+    <details>
+      <summary style="cursor: pointer; text-decoration: underline">View course times</summary>
+      <div style="display: flex; gap: 40px;">
+      {% for cup in ladder.cups.cup %}
+        <p>
+          {{ cup.cupname }}<br>
+          {% for course in cup.courses.course %}
+          <a href="/course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}">{{ course.name }}</a><br>
+          {% endfor %}
+        </p>
+      {% endfor %}
+      </div>
+    </details>
+
     <p><a href="/client.php?ladder={{ ladder_id }}">Add your times</a></p>
   </div>
 

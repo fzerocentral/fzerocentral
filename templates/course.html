@@ -1,55 +1,76 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
-  <p style="font-weight: bold; text-align: center">
-    {{ ladder.ladder_name|e }} - {{ course.name }}
-  </p>
-</div>
+  <div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+    <p style="font-weight: bold; text-align: center">
+      F-Zero {{ ladder.ladder_name|e }} - {{ cup.cupname|e }} - {{ course.name|e }}
+    </p>
 
-<table class='scoreboard'>
-  <thead>
-    <tr>
-      <td colspan='2'>Player</td>
-      <td>Course</td>
-      <td>Lap</td>
-    </tr>
-  </thead>
+    <p>Times in <a style='color:#339900'>green</a> were updated in the last week.</p>
+    <p>Times in <a style='color:#666666;'>grey</a> have not been updated in over a month.</p>
 
-  <tbody class='entries'>
-    {% for entry in entries %}
+    <p><a href="/ladder.php?id={{ ladder_id }}">Go back to ladder</a></p>
+    <details>
+      <summary style="cursor: pointer; text-decoration: underline">View course times</summary>
+      <div style="display: flex; gap: 40px;">
+        {% for cup in ladder.cups.cup %}
+          <p>
+            {{ cup.cupname }}<br>
+            {% for course in cup.courses.course %}
+            <a href="/course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}">{{ course.name }}</a><br>
+            {% endfor %}
+          </p>
+        {% endfor %}
+      </div>
+    </details>
+
+    <p><a href="/client.php?ladder={{ ladder_id }}">Add your times</a></p>
+
+    <!--<p>Use <img src="images/lightning.gif"> to compare yourself to any player</p>-->
+  </div>
+
+  <table class='scoreboard'>
+    <thead>
       <tr>
-        <td>
-          {{ entry.position}}.
-        </td>
-        <td>
-          {{ entry.location|flag }}
-          <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ entry.username|e }}</a>
-        </td>
-        <td>
-            <div class='course-value'>
-              <span>{{ entry.course_value | format_time }}</span>
-              <img src="{{ entry.course_ship_image|e }}" />
-              <span>{{ entry.course_platform }}</span>
-            </div>
-        </td>
-        <td>
-            {% if ladder.haslap != 'No' %}
-            <div class='lap-value'>
-              <span>{{ entry.lap_value|format_time }}</span>
-              <img src="{{ entry.lap_ship_image|e }}" />
-            </div>
-            {% endif %}
-
-            <div class='splits'>
-              {{ record.C.notes|e }}
-            </div>
-          </div>
-        </td>
+        <td colspan='2'>Player</td>
+        <td>Course</td>
+        <td>Lap</td>
       </tr>
-    {% endfor %}
+    </thead>
 
-  </tbody>
-</table>
+    <tbody class='entries'>
+      {% for entry in entries %}
+        <tr>
+          <td>
+            {{ entry.position}}.
+          </td>
+          <td>
+            {{ entry.location|flag }}
+            <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ entry.username|e }}</a>
+          </td>
+          <td>
+              <div class='course-value'>
+                <span>{{ entry.course_value | format_time }}</span>
+                <img src="{{ entry.course_ship_image|e }}" />
+                <span>{{ entry.course_platform }}</span>
+              </div>
+          </td>
+          <td>
+              {% if ladder.haslap != 'No' %}
+              <div class='lap-value'>
+                <span>{{ entry.lap_value|format_time }}</span>
+                <img src="{{ entry.lap_ship_image|e }}" />
+              </div>
+              {% endif %}
 
+              <div class='splits'>
+                {{ record.C.notes|e }}
+              </div>
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
 {% endblock %}

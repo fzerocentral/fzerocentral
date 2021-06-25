@@ -39,7 +39,7 @@
           {% else %}
             <div>
               {% for position in [1, 2, 3, 4, 5] %}
-                <span>x
+                <span>
                   {{ position }})
                   <a href='viewplayer.php?ladder={{ ladder }}&user={{ leaderboard.lap[ladder][position].user_id }}'>
                     {{ leaderboard.time[ladder][position].username|e }}
