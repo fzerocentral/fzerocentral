@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div style="font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px">
+    <p style="font-weight: bold; text-align: center">
+      F-Zero {{ ladder.ladder_name|e }} Ladder latest submissions
+    </p>
+
+    <p><a href="/ladder.php?id={{ ladder_id }}">Go back to ladder</a></p>
+  </div>
+
+  <table class='scoreboard'>
+    <thead>
+      <tr>
+        <td colspan='2'>Player</td>
+        <td>Cup</td>
+        <td>Course</td>
+        <td>Type</td>
+        <td>Record</td>
+        <td>Rank</td>
+        <td>Ship</td>
+        <td>Platform</td>
+        <td>Proof</td>
+        <td>Date</td>
+      </tr>
+    </thead>
+
+    <tbody class='entries'>
+      {% for entry in entries %}
+        <tr>
+          <td>{{ entry.position }}</td>
+          <td>
+            {{ entry.location|flag }}
+
+            <a href='/viewplayer.php?ladder={{ ladder_id }}&user={{ entry.user_id }}'>{{ entry.username|e }}</a>
+          </td>
+          <td>{{ entry.cup.cupname|e }}</td>
+          <td>{{ entry.course.name|e }}</td>
+          <td>
+            {% if entry.record_type == 'C' %}
+              Course time
+            {% elseif entry.record_type == 'L' %}
+              Best lap
+            {% elseif entry.record_type == 'S' %}
+              Max speed
+            {% endif %}
+          </td>
+          <td>
+            {% if entry.record_type == 'S' %}
+              {{ entry.value }}
+            {% else %}
+              {{ entry.value|format_time }}
+            {% endif %}
+          </td>
+          <td>{{ 1 }}</td>
+          <td><img src="{{ entry.ship_image|e }}" /></td>
+          <td>{{ entry.platform }}</td>
+          <td>{% if entry.has_proof %}{{ entry|proof_link }}{% endif %}</td>
+          <td>{{ entry.last_change }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
