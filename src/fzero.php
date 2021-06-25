@@ -20,6 +20,27 @@ function format_time($time, $timeformat) {
   return sprintf("%d'%02d\"%03d", $minutes, $seconds, $thousands);
 }
 
+function ladder_game($ladder_id) {
+  return [
+    1 => 'snes',
+    2 => 'x',
+    3 => 'mv',
+    4 => 'gx',
+    5 => 'gx',
+    6 => 'gpl',
+    7 => 'climax',
+    8 => 'gx',
+    11 => 'gx',
+    12 => 'gx',
+    13 => 'gpl',
+    14 => 'climax',
+    15 => 'climax',
+    16 => 'x',
+    17 => 'x',
+    18 => 'x',
+  ][$ladder_id];
+}
+
 function ladder_pal_ratio($ladder) {
   if ($ladder->palpossible == "Yes") {
     return $ladder->pal_numerator / $ladder->pal_denominator;

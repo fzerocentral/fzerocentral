@@ -117,24 +117,17 @@
       <a class="logo-menu-item" style="left: 222; top: 95;" href="/championships_ladder.php">Championships</a>
       <a class="logo-menu-item" style="left: 210; top: 120;" href="/viewtopic.php?t=14180">Players Photo Album</a>
 
-      <!-- Selected game, if any; up to 1 is displayed -->
-      <div id="SelectedForums">
-        {% if selected_game %}
-          <div id='f4-4'>
-            <img src="/images/selected_game.gif">
-            <img src="/images/selected_game_{{ selected_game }}.gif" alt="F-Zero GX">
-          </div>
-        {% endif %}
-      </div>
-
-      <!-- Unselected games; all 6 display if no game selected, 5 if a game is selected -->
       <div id="UnSelectedForums">
         <img src="/images/choose_game.gif">
         <div>
           {% for game in ['climax', 'gpl', 'mv', 'x', 'gx', 'snes'] %}
-            {% if game != selected_game %}
+            {% if game == selected_game %}
               <a id="f4-3" href="/game.php?id={{ game }}">
-                <img src="/images/unselected_game_{{ game }}.gif" srco="/images/selected_game_gx.gif" alt="F-Zero {{ game }}">
+                <img src="/images/selected_game_{{ game }}.gif" alt="F-Zero {{ game }}">
+              </a>
+            {% else %}
+              <a id="f4-3" href="/game.php?id={{ game }}">
+                <img src="/images/unselected_game_{{ game }}.gif" alt="F-Zero {{ game }}">
               </a>
             {% endif %}
           {% endfor %}

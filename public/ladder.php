@@ -13,7 +13,6 @@ if (isset($_GET['country'])) {
   $country_filter = '1=1';
 }
 
-
 $entries = [];
 // AF
 $result = db_query("
@@ -61,4 +60,5 @@ echo $template->render([
   'ladder' => $ladder,
   'ladder_id' => $ladder_id,
   'current_user' => $current_user,
+  'selected_game' => ladder_game($ladder_id),
 ]);
