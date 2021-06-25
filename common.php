@@ -26,6 +26,16 @@ class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
         $flag = $country == '' ? 'undefined' : strtolower($country);
         return "<img class='flag' src='images/flags/$flag.gif' title='$country' /></a>";
       }, ['is_safe' => ['html']]),
+      new \Twig\TwigFilter('proof_link', function($record, $prefix = '') {
+        if ($record["${prefix}verified"]) {
+          $url = "/images/proof_statuses/verified-proof.png";
+        } else {
+          $url = "/images/proof_statuses/unverified-proof.png";
+        }
+
+        $proof = htmlspecialchars($record["${prefix}videourl"]);
+        return "<a href='$proof'><img src='$url' /></a>";
+      }, ['is_safe' => ['html']]),
     ];
   }
 }

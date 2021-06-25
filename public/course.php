@@ -28,7 +28,17 @@ $result = db_query("
     lap.videourl AS lap_videourl,
     lap.screenshoturl AS lap_screenshoturl,
     lap.verified AS lap_verified,
-    TO_DAYS(CURDATE()) - TO_DAYS(lap.last_change) as lap_age
+    TO_DAYS(CURDATE()) - TO_DAYS(lap.last_change) as lap_age,
+
+    speed.value AS speed_value,
+    speed.ship AS speed_ship,
+    speed.platform AS speed_platform,
+    speed.notes AS speed_notes,
+    speed.videourl AS speed_videourl,
+    speed.screenshoturl AS speed_screenshoturl,
+    speed.verified AS speed_verified,
+    TO_DAYS(CURDATE()) - TO_DAYS(lap.last_change) as speed_age
+
   FROM phpbb_f0_records course
   JOIN phpbb_users USING (user_id)
   LEFT JOIN phpbb_f0_records lap ON (
@@ -37,6 +47,13 @@ $result = db_query("
     course.course_id = lap.course_id AND
     course.user_id = lap.user_id AND
     lap.record_type = 'L'
+  )
+  LEFT JOIN phpbb_f0_records speed ON (
+    course.ladder_id = speed.ladder_id AND
+    course.cup_id = speed.cup_id AND
+    course.course_id = speed.course_id AND
+    course.user_id = speed.user_id AND
+    speed.record_type = 'S'
   )
   WHERE course.ladder_id = $ladder_id
     AND course.cup_id = $cup_id
@@ -53,6 +70,10 @@ while ($row = mysqli_fetch_assoc($result)) {
       'position' => $index,
       'course_ship_image' => ship_image_url($row['course_ship']),
       'lap_ship_image' => ship_image_url($row['lap_ship']),
+      'speed_ship_image' => ship_image_url($row['speed_ship']),
+      'course_has_proof' => $row['course_videourl'] != '' || $row['course_screenshoturl'] != '',
+      'lap_has_proof' => $row['lap_videourl'] != '' || $row['lap_screenshoturl'] != '',
+      'speed_has_proof' => $row['speed_videourl'] != '' || $row['speed_screenshoturl'] != '',
     ]
   );
   $index += 1;

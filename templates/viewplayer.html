@@ -12,6 +12,9 @@
   <thead>
     <tr>
       <td>{{ cup.cupname|e }}</td>
+      <td>Course time</td>
+      <td>Best lap</td>
+      {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
       <td></td>
     </tr>
   </thead>
@@ -24,28 +27,36 @@
             <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ course.name|e }}</a>
           </td>
           <td>
-            <div class='player-ladder-score'>
-              <div class='course-label'>
-                Course time:
-              </div>
-              <div class='course-value'>
-                <span>{{ record.C.value | format_time }}</span>
-                <img src="{{ record.C.ship_image|e }}" />
-              </div>
-
-              {% if ladder.haslap != 'No' %}
-              <div class='lap-label'>
-                Lap time:
-              </div>
-              <div class='lap-value'>
-                <span>{{ record.L.value|format_time }}</span>
-                <img src="{{ record.L.ship_image|e }}" />
-              </div>
-
-              <div class='splits'>
-                {{ record.C.notes|e }}
-              </div>
+            <span>{{ record.C.value | format_time }}</span>
+            <img src="{{ record.C.ship_image|e }}" />
+            {% if record.C.has_proof %}
+              {{ record.C | proof_link }}
+            {% endif %}
+          </td>
+          <td>
+            {% if ladder.haslap == 'Yes' %}
+              <span>{{ record.L.value|format_time }}</span>
+              <img src="{{ record.L.ship_image|e }}" />
+              {% if record.L.has_proof %}
+                {{ record.L | proof_link }}
               {% endif %}
+            {% endif %}
+          </td>
+          {% if ladder.hasspeed == 'Yes' %}
+            <td>
+              <span>{{ record.S.value }}</span>
+              <img src="{{ record.S.ship_image|e }}" />
+              {% if record.S.has_proof %}
+                {{ record.S | proof_link }}
+              {% endif %}
+            </td>
+          {% endif %}
+          <td>
+            <div class='splits'>
+              Splits: {{ record.C.notes|e }}
+            </div>
+            <div class='comments'>
+              Comment: {{ record.L.notes|e }}
             </div>
           </td>
         </tr>
@@ -54,27 +65,19 @@
     <tr>
       <td>{{ cup.cupname|e }} totals</td>
       <td>
-        <div class='player-ladder-score'>
-          <div class='course-label'>
-            Course total:
-          </div>
-          <div class='course-value'>
-            <span>{{ totals[cup.attributes.cupid.__toString].C|format_time }}</span>
-          </div>
-
-          {% if ladder.haslap != 'No' %}
-          <div class='lap-label'>
-            Lap total:
-          </div>
-          <div class='lap-value'>
-            <span>{{ totals[cup.attributes.cupid.__toString].L|format_time }}</span>
-          </div>
-
-          <div class='splits'>
-          </div>
-          {% endif %}
-        </div>
+        <span>{{ totals[cup.attributes.cupid.__toString].C|format_time }}</span>
       </td>
+      <td>
+        {% if ladder.haslap == 'Yes' %}
+          <span>{{ totals[cup.attributes.cupid.__toString].L|format_time }}</span>
+        {% endif %}
+      </td>
+      {% if ladder.hasspeed == 'Yes' %}
+        <td>
+          <span>{{ totals[cup.attributes.cupid.__toString].S|format_time }}</span>
+        </td>
+      {% endif %}
+      <td></td>
     </tr>
   </tbody>
 
@@ -83,18 +86,32 @@
 
 <table class='scoreboard'>
   <thead>
-    <tr><td>Totals</td><td></td></tr>
+    <tr>
+      <td>Totals</td>
+      <td>Course time</td>
+      <td>Best lap</td>
+      {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
+      <td></td>
+    </tr>
   </thead>
 
   <tbody class='entries'>
     <tr>
       <td>{{ ladder.ladder_name|e }} totals</td>
       <td>
-        <div>Course total: {{ totals[0].C | format_time }}</div>
-        {% if ladder.haslap != 'No' %}
-          <div>Lap total: {{ totals[0].L | format_time }}</div>
+        {{ totals[0].C | format_time }}
+      </td>
+      <td>
+        {% if ladder.haslap == 'Yes' %}
+          {{ totals[0].L | format_time }}
         {% endif %}
       </td>
+      {% if ladder.hasspeed == 'Yes' %}
+        <td>
+          {{ totals[0].S | format_time }}
+        </td>
+      {% endif %}
+      <td></td>
     </tr>
   </tbody>
 </table>

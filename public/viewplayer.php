@@ -30,7 +30,10 @@ $totals = [];
 while ($row = mysqli_fetch_assoc($result)) {
   $entries[$row['cup_id']][$row['course_id']][$row['record_type']]= array_merge(
     $row,
-    ['ship_image' => ship_image_url($row['ship'])]
+    [
+      'ship_image' => ship_image_url($row['ship']),
+      'has_proof' => $row['videourl'] != '' || $row['screenshoturl'] != '',
+    ]
   );
 
   $totals[$row['cup_id']][$row['record_type']] += $row['value'];

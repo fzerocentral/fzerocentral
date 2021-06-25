@@ -1007,6 +1007,11 @@ div.ladder-leaders > div > div > span {
   padding: 10px;
 }
 
+.page-player-ladder .main-content {
+  max-width: 960px;
+  margin: 0px auto;
+}
+
 .page-player-ladder .player-ladder-score {
   display: grid;
   grid-template-areas:

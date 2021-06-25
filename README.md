@@ -35,6 +35,33 @@ The `record_type` can be:
 - `L`: the best lap time
 - `S`: max speed during the whole course
 
+Each player submits their times to a course (on a cup on a ladder). Each entry
+is composed of the best total course time, the best lap, and potentially the
+max speed (`record_type`). These three can be achieved in independent runs, so
+we store proofs and verification status for each of the three separately.
+
+The player also has the ability to enter their splits (the time each lap took),
+and a comment. These are not per record type, but per course. The database is a
+bit weird in that it stores the comment in the `notes` field for the best lap
+entry, and the splits in the `notes` field for the total course time entry. The
+`notes` field in the max speed entry is, from what I understand, left empty.
+
+There's also a `splits` column in each of these entries, but I don't think it
+was being used. It looks something like this (some columns were omitted for
+readability):
+
+```
+| course_id | user_id | record_type | value | verified | videourl | notes        |
+| 1         | 1       | "C"         | 3000  | 1        | http://  | splits here  |
+| 1         | 1       | "L"         | 1000  | 0        |          | comment here |
+| 1         | 1       | "S"         | 1000  | 0        | http://  | unused       |
+```
+
+The splits/comment should probably be stored somewhere else. This structure has
+the downside of players being unable to enter comments when the ladder does not
+support the best lap record type, and it's generally a bit weird to fetch
+information.
+
 ### `phpbb_f0_totals`
 
 Stores the total time it took for each player to complete each cup. Also, the total
