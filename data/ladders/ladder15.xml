@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
 <ladder_name>Climax Survival</ladder_name>
-<description>&lt;ul&gt;&lt;li&gt;Submit your Climax Survival Mode times on this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;The same general Climax &lt;a href="/viewtopic.php?t=824"&gt;rules&lt;/a&gt; apply to this ladder&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=climax" target="_blank"&gt;Time Submission Rules&lt;/a&gt; &lt;b&gt;(ESPECIALLY IF USING EMULATOR)&lt;/b&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
 <hasspeed>No</hasspeed>
 <haslap>No</haslap>
 <hassettings>No</hassettings>
@@ -9,7 +9,7 @@
 <graphics_available>Yes</graphics_available>
 <palpossible>No</palpossible>
 <cups>
-	<cup cupid="1">   
+	<cup cupid="1">
 		<cupname>Tour</cupname>
 		<courses>
 			<course courseid="1">
@@ -17,7 +17,7 @@
 			</course>
 		</courses>
 	</cup>
-	<cup cupid="2">   
+	<cup cupid="2">
 		<cupname>Challenge</cupname>
 		<courses>
 			<course courseid="1">
@@ -25,7 +25,7 @@
 			</course>
 		</courses>
 	</cup>
-	<cup cupid="3">   
+	<cup cupid="3">
 		<cupname>Battle</cupname>
 		<courses>
 			<course courseid="1">
@@ -33,7 +33,7 @@
 			</course>
 		</courses>
 	</cup>
-	<cup cupid="4">   
+	<cup cupid="4">
 		<cupname>Violence</cupname>
 		<courses>
 			<course courseid="1">

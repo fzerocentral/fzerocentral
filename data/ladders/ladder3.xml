@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
 	<ladder_name>Maximum Velocity</ladder_name>
-	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=188"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;/ul&gt;</description>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=mv" target="_blank"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;/ul&gt;</description>
 	<hasspeed>No</hasspeed>
 	<haslap>Yes</haslap>
 	<hassettings>No</hassettings>
@@ -9,7 +9,7 @@
 	<palpossible>No</palpossible>
 	<graphics_available>Yes</graphics_available>
  <cups>
-  <cup cupid="1">   
+  <cup cupid="1">
    <cupname>Pawn Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -29,7 +29,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="2">   
+  <cup cupid="2">
    <cupname>Knight Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -49,7 +49,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="3">   
+  <cup cupid="3">
    <cupname>Bishop Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -69,7 +69,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="4">   
+  <cup cupid="4">
    <cupname>Queen Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -89,7 +89,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="5">   
+  <cup cupid="5">
    <cupname>Championship</cupname>
    <courses>
 	<course courseid="1">
