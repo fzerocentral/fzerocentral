@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
 	<ladder_name>GX Open</ladder_name>
-	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=13683"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - but snaking and spaceflying ARE allowed in this ladder.&lt;/li&gt;&lt;/ul&gt;</description>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=gx" target="_blank"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - but snaking and spaceflying ARE allowed in this ladder.&lt;/li&gt;&lt;/ul&gt;</description>
 	<hasspeed>Yes</hasspeed>
 	<haslap>Yes</haslap>
 	<hassettings>Yes</hassettings>
@@ -9,7 +9,7 @@
 	<palpossible>No</palpossible>
 	<graphics_available>Yes</graphics_available>
  <cups>
-  <cup cupid="1">   
+  <cup cupid="1">
    <cupname>Ruby Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -29,7 +29,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="2">   
+  <cup cupid="2">
    <cupname>Sapphire Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -49,7 +49,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="3">   
+  <cup cupid="3">
    <cupname>Emerald Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -69,7 +69,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="4">   
+  <cup cupid="4">
    <cupname>Diamond Cup</cupname>
    <courses>
 	<course courseid="1">
@@ -89,7 +89,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="5">   
+  <cup cupid="5">
    <cupname>AX Cup</cupname>
    <courses>
 	<course courseid="1">

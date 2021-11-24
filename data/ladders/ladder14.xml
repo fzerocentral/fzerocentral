@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
  <ladder_name>Climax Zero Test</ladder_name>
- <description>&lt;ul&gt;&lt;li&gt;Submit your Climax Zero Test times on this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;The same general Climax &lt;a href="/viewtopic.php?t=824"&gt;rules&lt;/a&gt; apply to this ladder&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+ <description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=climax" target="_blank"&gt;Time Submission Rules&lt;/a&gt; &lt;b&gt;(ESPECIALLY IF USING EMULATOR)&lt;/b&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
  <hasspeed>No</hasspeed>
  <haslap>No</haslap>
  <hassettings>No</hassettings>
@@ -9,7 +9,7 @@
 <graphics_available>Yes</graphics_available>
   <palpossible>No</palpossible>
  <cups>
-  <cup cupid="1">   
+  <cup cupid="1">
    <cupname>Class C</cupname>
    <courses>
  <course courseid="1">
@@ -41,7 +41,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="2">   
+  <cup cupid="2">
    <cupname>Class B</cupname>
    <courses>
  <course courseid="1">
@@ -73,7 +73,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="3">   
+  <cup cupid="3">
    <cupname>Class A</cupname>
    <courses>
  <course courseid="1">
@@ -105,7 +105,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="4">   
+  <cup cupid="4">
       <cupname>Class S</cupname>
    <courses>
  <course courseid="1">
@@ -139,45 +139,45 @@
   </cup>
  </cups>
  <ships>
-  <ship>Dragon Bird Ex</ship> 
-  <ship>Mad Wolf</ship> 
-  <ship>Space Angler</ship> 
-  <ship>Night Thunder</ship> 
-  <ship>Red Gazelle</ship> 
-  <ship>Mighty Typhoon</ship> 
-  <ship>Mighty Hurricane</ship> 
-  <ship>Queen Meteor</ship> 
-  <ship>King Meteor</ship> 
-  <ship>Super Piranha</ship> 
-  <ship>Wonder Wasp</ship> 
-  <ship>Great Star</ship> 
-  <ship>Crazy Bear</ship> 
-  <ship>Elegance Liberty</ship> 
-  <ship>Astro Robin</ship> 
-  <ship>White Cat</ship> 
-  <ship>Golden Fox</ship> 
-  <ship>Dragon Bird</ship> 
-  <ship>Blue Falcon</ship> 
-  <ship>Blue Falcon 2</ship> 
-  <ship>Red Bull</ship> 
-  <ship>Wild Goose</ship> 
-  <ship>Fire Stingray</ship> 
-  <ship>Panzer Emerald</ship> 
-  <ship>Death Anchor</ship> 
-  <ship>Hyper Death Anchor</ship> 
-  <ship>Deep Claw</ship> 
-  <ship>Big Fang</ship> 
-  <ship>Moon Shadow</ship> 
-  <ship>Sonic Phantom</ship> 
-  <ship>Iron Tiger</ship> 
-  <ship>Green Panther</ship> 
-  <ship>Wild Boar</ship> 
-  <ship>Twin Noritta</ship> 
-  <ship>Soldier Anchor</ship> 
-  <ship>Blood Hawk</ship> 
-  <ship>Black Bull</ship> 
-  <ship>Hyper Speeder</ship> 
-  <ship>Little Wyvern</ship> 
+  <ship>Dragon Bird Ex</ship>
+  <ship>Mad Wolf</ship>
+  <ship>Space Angler</ship>
+  <ship>Night Thunder</ship>
+  <ship>Red Gazelle</ship>
+  <ship>Mighty Typhoon</ship>
+  <ship>Mighty Hurricane</ship>
+  <ship>Queen Meteor</ship>
+  <ship>King Meteor</ship>
+  <ship>Super Piranha</ship>
+  <ship>Wonder Wasp</ship>
+  <ship>Great Star</ship>
+  <ship>Crazy Bear</ship>
+  <ship>Elegance Liberty</ship>
+  <ship>Astro Robin</ship>
+  <ship>White Cat</ship>
+  <ship>Golden Fox</ship>
+  <ship>Dragon Bird</ship>
+  <ship>Blue Falcon</ship>
+  <ship>Blue Falcon 2</ship>
+  <ship>Red Bull</ship>
+  <ship>Wild Goose</ship>
+  <ship>Fire Stingray</ship>
+  <ship>Panzer Emerald</ship>
+  <ship>Death Anchor</ship>
+  <ship>Hyper Death Anchor</ship>
+  <ship>Deep Claw</ship>
+  <ship>Big Fang</ship>
+  <ship>Moon Shadow</ship>
+  <ship>Sonic Phantom</ship>
+  <ship>Iron Tiger</ship>
+  <ship>Green Panther</ship>
+  <ship>Wild Boar</ship>
+  <ship>Twin Noritta</ship>
+  <ship>Soldier Anchor</ship>
+  <ship>Blood Hawk</ship>
+  <ship>Black Bull</ship>
+  <ship>Hyper Speeder</ship>
+  <ship>Little Wyvern</ship>
  </ships>
  <platforms>
   <platform>GBA</platform>

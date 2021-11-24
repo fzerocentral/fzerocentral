@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
  <ladder_name>GX Story Mode - Snaking</ladder_name>
- <description>&lt;ul&gt;&lt;li&gt;Submit your Story Mode times on this ladder, you can compete on any difficulty setting.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - but snaking IS allowed in this ladder.&lt;/li&gt;&lt;li&gt;All times in this ladder must be set while at 0% settings&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
+ <description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=gx" target="_blank"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;Always save proof - save a ghost and replay of your best times.&lt;/li&gt;&lt;li&gt;Don't cheat - but snaking IS allowed in this ladder.&lt;/li&gt;&lt;li&gt;All times in this ladder must be set while at 0% settings&lt;/li&gt;&lt;li&gt;This Ladder does not count towards your championship ladder rank&lt;/li&gt;&lt;/ul&gt;</description>
  <hasspeed>No</hasspeed>
  <haslap>No</haslap>
  <hassettings>No</hassettings>
@@ -9,7 +9,7 @@
 <graphics_available>Yes</graphics_available>
   <palpossible>No</palpossible>
  <cups>
-  <cup cupid="1">   
+  <cup cupid="1">
    <cupname>Normal</cupname>
    <courses>
  <course courseid="1">
@@ -41,7 +41,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="2">   
+  <cup cupid="2">
    <cupname>Hard</cupname>
    <courses>
  <course courseid="1">
@@ -73,7 +73,7 @@
     </course>
    </courses>
   </cup>
-  <cup cupid="3">   
+  <cup cupid="3">
    <cupname>Very Hard</cupname>
    <courses>
  <course courseid="1">

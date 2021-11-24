@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <game>
 <ladder_name>X Death Race</ladder_name>
-	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/viewtopic.php?t=826"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;All European PAL times are converted to NTSC using the formula NTSC = (PAL / 6) * 5 and the converse PAL = (NTSC * 6) / 5&lt;/li&gt;&lt;/ul&gt;</description>
+	<description>&lt;ul&gt;&lt;li&gt;Please read the &lt;a href="/rules.php?game=x" target="_blank"&gt;Time Submission Rules&lt;/a&gt; before submitting your times to this ladder.&lt;/li&gt;&lt;li&gt;Any track without a time will be given a default Ferris Beuller time for the total calculations.&lt;/li&gt;&lt;li&gt;All European PAL times are converted to NTSC using the formula NTSC = (PAL / 6) * 5 and the converse PAL = (NTSC * 6) / 5&lt;/li&gt;&lt;/ul&gt;</description>
 <hasspeed>no</hasspeed>
 <haslap>no</haslap>
 <hassettings>no</hassettings>
