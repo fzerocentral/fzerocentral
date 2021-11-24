@@ -271,12 +271,12 @@ div.postbody_root, div.postbody_reply {
 	color: black;
 	font-family: "Verdana", "Courier New", Arial, Helvetica, sans-serif;
 	background-color : #F7F7F7;
-	
+
 	display: flex;
 	flex-direction: column;
 	/* Allow absolute positioning of adminbars relative to this postbody */
 	position: relative;
-	
+
 	padding: 12px 35px 28px 35px;
 	border-radius: 8px;
 }
@@ -334,10 +334,10 @@ div.post_main_column {
 
 div.post_info {
   flex-grow: 1;
-  
+
   display: flex;
   flex-direction: column;
-  
+
 	font-size:  8pt;
 	white-space: nowrap;
 	text-align: right;
@@ -392,10 +392,10 @@ div.post_part_nt {			/* hide user info for empty posts */
 #mfomenu {
   display: flex;
   flex-wrap: wrap;
-  
+
   margin: 10px;
   padding: 0;
-  
+
   /* Make the menus pop over the other header stuff, not under */
   z-index: 1;
   /* Ensure the z-index is passed to descendants */
@@ -415,10 +415,10 @@ div.post_part_nt {			/* hide user info for empty posts */
 
 #mfomenu li ul {
   display: none;
-  
+
   /* Don't push other elements when a sub-menu pops up */
   position: absolute;
-  
+
   white-space: nowrap;
   background-color: #000033;
   padding: 0.5em 0;
@@ -457,7 +457,7 @@ div.adminbar {
   to move between the left and right sides. JS also determines the position
   from top. */
   left: 0px;
-  
+
   /* Hidden by default; Javascript will un-hide for admin users */
   visibility: hidden;
   white-space: nowrap;
@@ -748,7 +748,7 @@ div.home-page-box-body, div.home-page-box-without-header {
   background-color: white;
   font-family: Verdana;
   font-size: 0.8em;
-  
+
   padding: 8px;
   box-shadow: 4px 4px 8px 0 hsla(0, -1%, -1%, 0.6);
 }
@@ -792,7 +792,7 @@ div.home-page-ladders-text {
 div.home-page-ladder-group > div.body {
   /* Hide until hover. This makes the menus basically inaccessible on mobile,
   but in this case it's not the worst thing ever because you can still access
-  individual ladders from ladderhome. */ 
+  individual ladders from ladderhome. */
   display: none;
   /* Pop-over menu; don't push other elements. */
   position: absolute;
@@ -800,7 +800,7 @@ div.home-page-ladder-group > div.body {
   z-index: 1;
   /* Position at bottom of parent element. */
   top: 100%;
-  
+
   padding: 3px 12px;
 }
 div.home-page-ladder-group:hover,
@@ -1079,4 +1079,10 @@ div.ladder-leaders > div > div > span {
 .page-ladder .main-content {
   max-width: 960px;
   margin: 0px auto;
+}
+
+.page-rules .rules-text {
+  background-color: hsl(0, 0%, 90%);
+  padding: 20px;
+  border-radius: 20px;
 }

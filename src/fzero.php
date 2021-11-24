@@ -105,6 +105,13 @@ function ship_image_url($ship_name) {
   return "/images/ships/$ship_filename";
 }
 
+function FserverGame($game_shortcode) {
+  $file = __DIR__ . "/../data/games/$game_shortcode.xml";
+  $game = simplexml_load_file($file);
+
+  return $game;
+}
+
 function FserverLadder($ladder_id) {
   $file = __DIR__ . "/../data/ladders/ladder$ladder_id.xml";
   $ladder = simplexml_load_file($file);

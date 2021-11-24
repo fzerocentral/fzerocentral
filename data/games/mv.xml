@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<game>
+  <name>F-Zero: Maximum Velocity</name>
+  <rules_template>rules/mv.html</rules_template>
+</game>
