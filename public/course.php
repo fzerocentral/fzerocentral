@@ -94,7 +94,7 @@ foreach ($cup->courses->course as $course) {
 }
 
 $template = $twig->load('course.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-player-ladder',
   'PAGE_TITLE' => 'Player ladder scores',
   'username' => $username,

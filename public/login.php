@@ -33,14 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Location: /');
 
   } else {
-    echo $template->render([
+    echo render_template($template, [
       'page_class' => 'page-login',
       'PAGE_TITLE' => 'Login',
       'error' => 'Wrong username or password',
     ]);
   }
 } else {
-  echo $template->render([
+  echo render_template($template, [
     'page_class' => 'page-login',
     'PAGE_TITLE' => 'Login',
   ]);

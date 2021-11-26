@@ -46,3 +46,8 @@ $twig = new \Twig\Environment($loader, [
       'debug' => true,
 ]);
 $twig->AddExtension(new Project_Twig_Extension());
+
+function render_template ($template, $args) {
+  $args['fzero_css_mtime'] = filemtime('fzero.css');
+  return $template->render($args);
+}

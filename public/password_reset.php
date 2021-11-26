@@ -37,13 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
   }
 
-  echo $template->render([
+  echo render_template($template, [
     'page_class' => 'page-password-reset',
     'PAGE_TITLE' => 'Reset your password',
     'sent' => true,
   ]);
 } else {
-  echo $template->render([
+  echo render_template($template, [
     'page_class' => 'page-password-reset',
     'PAGE_TITLE' => 'Reset your password',
   ]);
