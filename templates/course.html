@@ -52,7 +52,7 @@
           </td>
           <td>
             <span>{{ entry.course_value | format_time }}</span>
-            <img src="{{ entry.course_ship_image|e }}" />
+            <img src="{{ entry.course_ship_image|e }}" title="{{ entry.course_ship }}" />
             {% if entry.course_has_proof %}
               {{ entry | proof_link("course_") }}
             {% endif %}
@@ -61,7 +61,7 @@
           <td>
             {% if ladder.haslap == 'Yes' %}
               <span>{{ entry.lap_value|format_time }}</span>
-              <img src="{{ entry.lap_ship_image|e }}" />
+              <img src="{{ entry.lap_ship_image|e }}" title="{{ entry.lap_ship }}" />
               {% if entry.lap_has_proof %}
                 {{ entry | proof_link("lap_") }}
               {% endif %}
@@ -70,7 +70,7 @@
           {% if ladder.hasspeed == 'Yes' %}
             <td>
               <span>{{ entry.speed_value }}</span>
-              <img src="{{ entry.speed_ship_image|e }}" />
+              <img src="{{ entry.speed_ship_image|e }}" title="{{ entry.speed_ship }}" />
               {% if entry.speed_has_proof %}
                 {{ entry | proof_link("speed_") }}
               {% endif %}

@@ -28,7 +28,7 @@
           </td>
           <td>
             <span>{{ record.C.value | format_time }}</span>
-            <img src="{{ record.C.ship_image|e }}" />
+            <img src="{{ record.C.ship_image|e }}" title="{{ record.C.ship }}" />
             {% if record.C.has_proof %}
               {{ record.C | proof_link }}
             {% endif %}
@@ -36,7 +36,7 @@
           <td>
             {% if ladder.haslap == 'Yes' %}
               <span>{{ record.L.value|format_time }}</span>
-              <img src="{{ record.L.ship_image|e }}" />
+              <img src="{{ record.L.ship_image|e }}" title="{{ record.L.ship }}" />
               {% if record.L.has_proof %}
                 {{ record.L | proof_link }}
               {% endif %}
@@ -45,7 +45,7 @@
           {% if ladder.hasspeed == 'Yes' %}
             <td>
               <span>{{ record.S.value }}</span>
-              <img src="{{ record.S.ship_image|e }}" />
+              <img src="{{ record.S.ship_image|e }}" title="{{ record.S.ship }}" />
               {% if record.S.has_proof %}
                 {{ record.S | proof_link }}
               {% endif %}
