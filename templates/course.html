@@ -48,7 +48,7 @@
           </td>
           <td>
             {{ entry.location|flag }}
-            <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ entry.username|e }}</a>
+            <a href='viewplayer.php?ladder={{ ladder_id }}&user={{ entry.user_id }}'>{{ entry.username|e }}</a>
           </td>
           <td>
             <span>{{ entry.course_value | format_time }}</span>
