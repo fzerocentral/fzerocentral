@@ -118,7 +118,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $template = $twig->load('overall_ladder.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-overall-ladder',
   'PAGE_TITLE' => 'Overall Ladder',
   'entries' => $fz,

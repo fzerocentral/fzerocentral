@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $submission = FserverGetUserData($ladder_id, $user_id, $current_user, $ladder);
 
   $template = $twig->load('client.html');
-  echo $template->render([
+  echo render_template($template, [
     'page_class' => 'page-client',
     'PAGE_TITLE' => $current_user['username'] . "'s F-Zero " . $ladder->ladder_name . " Times",
     'current_user' => $current_user,

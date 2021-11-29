@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 $ladder = FserverLadder($ladder_id);
 
 $template = $twig->load('viewplayer.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-player-ladder',
   'PAGE_TITLE' => 'Player ladder scores',
   'username' => $username,

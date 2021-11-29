@@ -99,7 +99,7 @@ foreach ($ladders as $ladder) {
 }
 
 $template = $twig->load('game.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-game',
   'PAGE_TITLE' => "$game Home",
   'ladders' => $ladders,

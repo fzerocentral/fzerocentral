@@ -133,7 +133,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $template = $twig->load('player.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-player-summary',
   'PAGE_TITLE' => 'Player summary',
   'username' => $username,

@@ -27,7 +27,7 @@ foreach ([1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18] as $ladder_id)
 }
 
 $template = $twig->load('championships_ladder.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-championships-ladder',
   'PAGE_TITLE' => 'Championships Ladder',
   'leaderboard' => $leaderboard,

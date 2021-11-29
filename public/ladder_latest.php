@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $template = $twig->load('ladder_latest.html');
-echo $template->render([
+echo render_template($template, [
   'page_class' => 'page-ladder-latest',
   'PAGE_TITLE' => $ladder->ladder_name . " Ladder",
   'entries' => $entries,
