@@ -52,7 +52,7 @@
             {% endif %}
           </td>
           <td>{{ 1 }}</td>
-          <td><img src="{{ entry.ship_image|e }}" /></td>
+          <td><img src="{{ entry.ship_image|e }}" title="{{ entry.ship }}" /></td>
           <td>{{ entry.platform }}</td>
           <td>{% if entry.has_proof %}{{ entry|proof_link }}{% endif %}</td>
           <td>{{ entry.last_change }}</td>
