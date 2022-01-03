@@ -54,8 +54,8 @@
           <td>{{ entry.last_change }}</td>
           <td>{{ entry.af }}</td>
           <td>{{ entry.srpr }}</td>
-          <td>{{ entry.time|format_time }}</td>
-          <td>{{ entry.lap|format_time }}</td>
+          <td>{{ entry.time|format_time(ladder.timeformat) }}</td>
+          <td>{{ entry.lap|format_time(ladder.timeformat) }}</td>
         </tr>
       {% endfor %}
     </tbody>

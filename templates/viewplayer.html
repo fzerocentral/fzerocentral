@@ -27,7 +27,7 @@
             <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ course.name|e }}</a>
           </td>
           <td>
-            <span>{{ record.C.value | format_time }}</span>
+            <span>{{ record.C.value|format_time(ladder.timeformat) }}</span>
             <img src="{{ record.C.ship_image|e }}" title="{{ record.C.ship }}" />
             {% if record.C.has_proof %}
               {{ record.C | proof_link }}
@@ -35,7 +35,7 @@
           </td>
           <td>
             {% if ladder.haslap == 'Yes' %}
-              <span>{{ record.L.value|format_time }}</span>
+              <span>{{ record.L.value|format_time(ladder.timeformat) }}</span>
               <img src="{{ record.L.ship_image|e }}" title="{{ record.L.ship }}" />
               {% if record.L.has_proof %}
                 {{ record.L | proof_link }}
@@ -65,16 +65,16 @@
     <tr>
       <td>{{ cup.cupname|e }} totals</td>
       <td>
-        <span>{{ totals[cup.attributes.cupid.__toString].C|format_time }}</span>
+        <span>{{ totals[cup.attributes.cupid.__toString].C|format_time(ladder.timeformat) }}</span>
       </td>
       <td>
         {% if ladder.haslap == 'Yes' %}
-          <span>{{ totals[cup.attributes.cupid.__toString].L|format_time }}</span>
+          <span>{{ totals[cup.attributes.cupid.__toString].L|format_time(ladder.timeformat) }}</span>
         {% endif %}
       </td>
       {% if ladder.hasspeed == 'Yes' %}
         <td>
-          <span>{{ totals[cup.attributes.cupid.__toString].S|format_time }}</span>
+          <span>{{ totals[cup.attributes.cupid.__toString].S }}</span>
         </td>
       {% endif %}
       <td></td>
@@ -99,16 +99,16 @@
     <tr>
       <td>{{ ladder.ladder_name|e }} totals</td>
       <td>
-        {{ totals[0].C | format_time }}
+        {{ totals[0].C | format_time(ladder.timeformat) }}
       </td>
       <td>
         {% if ladder.haslap == 'Yes' %}
-          {{ totals[0].L | format_time }}
+          {{ totals[0].L | format_time(ladder.timeformat) }}
         {% endif %}
       </td>
       {% if ladder.hasspeed == 'Yes' %}
         <td>
-          {{ totals[0].S | format_time }}
+          {{ totals[0].S }}
         </td>
       {% endif %}
       <td></td>

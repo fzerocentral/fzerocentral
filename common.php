@@ -20,7 +20,12 @@ if (isset($_SESSION['current_user_id'])) {
 class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
   public function getFilters() {
     return [
-      new \Twig\TwigFilter('format_time', function($v) { return format_time($v, ''); }),
+      new \Twig\TwigFilter('format_time', function($value, $time_format = '') {
+         return format_time($value, $time_format);
+      }),
+      new \Twig\TwigFilter('format_time_part', function($value, $part_name, $time_format = '') {
+         return format_time_part($value, $part_name, $time_format);
+      }),
       new \Twig\TwigFilter('flag', function($country) {
         $country = htmlspecialchars($country);
         $flag = $country == '' ? 'undefined' : strtolower($country);
@@ -28,13 +33,19 @@ class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
       }, ['is_safe' => ['html']]),
       new \Twig\TwigFilter('proof_link', function($record, $prefix = '') {
         if ($record["${prefix}verified"]) {
-          $url = "/images/proof_statuses/verified-proof.png";
+          $icon_url = "/images/proof_statuses/verified-proof.png";
         } else {
-          $url = "/images/proof_statuses/unverified-proof.png";
+          $icon_url = "/images/proof_statuses/unverified-proof.png";
         }
 
-        $proof = htmlspecialchars($record["${prefix}videourl"]);
-        return "<a href='$proof'><img src='$url' /></a>";
+        $proof_url = $record["${prefix}videourl"];
+        if (!isset(parse_url($proof_url)["scheme"])) {
+          // Proof URLs are generally external links. Don't let scheme-less
+          // URLs be interpreted as relative internal links.
+          $proof_url = "https://{$proof_url}";
+        }
+        $proof_url = htmlspecialchars($proof_url);
+        return "<a href='$proof_url'><img src='$icon_url' /></a>";
       }, ['is_safe' => ['html']]),
     ];
   }

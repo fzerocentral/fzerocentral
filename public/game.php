@@ -92,7 +92,12 @@ foreach ($ladders as $ladder) {
         AND phpbb_f0_totals.user_id = $current_user_id
     ");
     $row = mysqli_fetch_assoc($result);
-    $my_times[$ladder] = ['time' => format_time($row['time'], ''), 'lap' => format_time($row['lap'], '')];
+
+    $ladder_timeformat = FserverLadder($ladder)->timeformat;
+    $my_times[$ladder] = [
+      'time' => format_time($row['time'], $ladder_timeformat),
+      'lap' => format_time($row['lap'], $ladder_timeformat),
+    ];
   }
 
   $active_players[$ladder] = FserverGetActivePlayers($ladder);

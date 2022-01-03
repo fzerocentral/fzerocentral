@@ -81,7 +81,8 @@ $result = db_query("
 
 $total_c = [];
 while ($row = mysqli_fetch_assoc($result)) {
-  $total_c[$row['ladder_id']] = format_time($row['time'], '');
+  $ladder = FserverLadder($row['ladder_id']);
+  $total_c[$row['ladder_id']] = format_time($row['time'], $ladder->timeformat);
 }
 
 // Lap Totals
@@ -93,7 +94,8 @@ $result = db_query("
 
 $total_l = [];
 while ($row = mysqli_fetch_assoc($result)) {
-  $total_l[$row['ladder_id']] = format_time($row['lap'], '');
+  $ladder = FserverLadder($row['ladder_id']);
+  $total_l[$row['ladder_id']] = format_time($row['lap'], $ladder->timeformat);
 }
 
 // Course Ranks
