@@ -48,7 +48,7 @@
             {% if entry.record_type == 'S' %}
               {{ entry.value }}
             {% else %}
-              {{ entry.value|format_time }}
+              {{ entry.value|format_time(ladder.timeformat) }}
             {% endif %}
           </td>
           <td>{{ 1 }}</td>
