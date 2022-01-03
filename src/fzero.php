@@ -20,6 +20,29 @@ function format_time($time, $timeformat) {
   return sprintf("%d'%02d\"%03d", $minutes, $seconds, $thousands);
 }
 
+function format_time_part($value, $part_name, $timeformat) {
+  if ($value == '') {
+    // Missing times should have their fields blank
+    return '';
+  }
+
+  if ($part_name == 'Seconds') {
+    // 1'02"345, not 1'2"345
+    return sprintf("%02d", $value);
+  }
+  if ($part_name == 'Subseconds') {
+    if ($timeformat == 'Hundredths') {
+      // 1'23"04, not 1'23"4
+      return sprintf("%02d", $value);
+    }
+    else {
+      // 1'23"045, not 1'23"45
+      return sprintf("%03d", $value);
+    }
+  }
+  return $value;
+}
+
 function ladder_game($ladder_id) {
   return [
     1 => 'snes',

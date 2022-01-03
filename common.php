@@ -23,6 +23,9 @@ class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
       new \Twig\TwigFilter('format_time', function($value, $time_format = '') {
          return format_time($value, $time_format);
       }),
+      new \Twig\TwigFilter('format_time_part', function($value, $part_name, $time_format = '') {
+         return format_time_part($value, $part_name, $time_format);
+      }),
       new \Twig\TwigFilter('flag', function($country) {
         $country = htmlspecialchars($country);
         $flag = $country == '' ? 'undefined' : strtolower($country);
