@@ -2,9 +2,10 @@
 
 require_once '../common.php';
 
-$game = $_GET['id'];
+$game_shortcode = $_GET['id'];
+$game = FserverGame($game_shortcode);
 
-switch ($game) {
+switch ($game_shortcode) {
 case 'gx':
   $ladders = [4, 5, 8, 11, 12];
   break;
@@ -106,12 +107,13 @@ foreach ($ladders as $ladder) {
 $template = $twig->load('game.html');
 echo render_template($template, [
   'page_class' => 'page-game',
-  'PAGE_TITLE' => "$game Home",
+  'PAGE_TITLE' => "$game->name Home",
   'ladders' => $ladders,
   'leaderboard' => $leaderboard,
   'ladder_types' => $ladder_types,
   'my_times' => $my_times,
   'active_players' => $active_players,
-  'selected_game' => $game,
+  'selected_game' => $game_shortcode,
   'current_user' => $current_user,
+  'see_also' => $game->home_see_also,
 ]);
