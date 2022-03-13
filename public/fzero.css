@@ -116,8 +116,7 @@ th.thTop	 { border-width: 1px 0px 0px 0px; text-align : center;}
 th.thCornerL { border-width: 0px 0px 0px 0px;  text-align : center;}
 th.thCornerR { border-width: 1px 1px 0px 0px;  text-align : center;  }
 
-/* The largest text used in the index page title and toptic title etc. */
-.maintitle,h1,h2	{	font-weight: bold; 	font-size: 22px; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	text-decoration: none; 	line-height : 120%; 	color : #CCCCCC;}
+h1,h2	{	font-weight: bold; 	font-size: 22px; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	text-decoration: none; 	line-height: 120%; 	color: black;}
 
 
 /* General text */
