@@ -116,8 +116,7 @@ th.thTop	 { border-width: 1px 0px 0px 0px; text-align : center;}
 th.thCornerL { border-width: 0px 0px 0px 0px;  text-align : center;}
 th.thCornerR { border-width: 1px 1px 0px 0px;  text-align : center;  }
 
-/* The largest text used in the index page title and toptic title etc. */
-.maintitle,h1,h2	{	font-weight: bold; 	font-size: 22px; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	text-decoration: none; 	line-height : 120%; 	color : #CCCCCC;}
+h1,h2	{	font-weight: bold; 	font-size: 22px; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	text-decoration: none; 	line-height: 120%; 	color: black;}
 
 
 /* General text */
@@ -1005,6 +1004,14 @@ div.ladder-leaders > div > div > span {
 .my-times .ladder-home-section-body {
   display: flex;
   padding: 10px;
+}
+
+.see-also {
+  background-color: #ebf4fe;
+  font-family: Verdana;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .page-player-ladder .main-content {

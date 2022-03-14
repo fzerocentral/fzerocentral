@@ -2,4 +2,14 @@
 <game>
   <name>F-Zero GX</name>
   <rules_template>rules/gx.html</rules_template>
+  <home_see_also>
+    <link>
+      <display>Combined leaderboard</display>
+      <url>https://docs.google.com/spreadsheets/d/10mZeQrMLaaPMdC0ZeKR2Wk1XtzICG2n4XTw9yyx-dKw/edit#gid=488310816</url>
+    </link>
+    <link>
+      <display>Per-machine records (Max speed)</display>
+      <url>https://docs.google.com/spreadsheets/d/17DqpOEgzh0RqSKZ-5q5kanhI3uRhQ6w0xo4GTJO5cQI/edit</url>
+    </link>
+  </home_see_also>
 </game>

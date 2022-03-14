@@ -96,4 +96,18 @@
       </div>
     </div>
   {% endfor %}
+
+  {% if see_also %}
+    <div class='see-also'>
+      <h2>See also</h2>
+      <ul>
+        {% for link in see_also.link %}
+          <li>
+            <a href="{{ link.url }}">{{ link.display }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
 {% endblock %}
