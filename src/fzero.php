@@ -109,7 +109,7 @@ function user_to_ntsc_speed($ladder, $user, $value) {
   if (user_prefers_pal($user)) {
     $value = round($value * ladder_pal_ratio($ladder));
   }
-  return $time;
+  return $value;
 }
 
 function ship_image_url($ship_name) {
