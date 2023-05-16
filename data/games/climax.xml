@@ -2,4 +2,10 @@
 <game>
   <name>F-Zero Climax</name>
   <rules_template>rules/climax.html</rules_template>
+  <home_see_also>
+    <link>
+      <display>World records spreadsheet</display>
+      <url>https://docs.google.com/spreadsheets/d/1XRaYihHPsIR8KYE68zYrcbY95BPIrToFIwBbhS_FIx4/edit</url>
+    </link>
+  </home_see_also>
 </game>
