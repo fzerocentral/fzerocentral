@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
-$template->display([
+echo render_template($template, [
   'page_class' => 'page-password-change',
   'PAGE_TITLE' => 'Change your password',
   'error' => $error,
