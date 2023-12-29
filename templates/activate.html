@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="section-box">
+  {% if post_request %}
+
+    {% if error %}
+
+      <p>{{ error|e }}</p>
+
+    {% else %}
+
+      <p>Activated. You should be able to <a href='/login.php'>log in</a>! Once you do, try checking out your profile page, and submitting some times to the ladders.</p>
+
+    {% endif %}
+
+  {% else %}
+    <p class='header'>
+      Account activation
+    </p>
+
+    <form method='post'>
+      <input type='hidden' name='activation_key' value='{{ activation_key }}' />
+      <p><input type='submit' value='Click to activate your account' /></p>
+    </form>
+
+  {% endif %}
+</div>
+
+{% endblock %}

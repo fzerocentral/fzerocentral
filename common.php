@@ -2,13 +2,11 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/src/fzero.php';
+require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/email.php';
 require_once __DIR__ . '/urls.php';
 
-$config = parse_ini_file('config.ini', true);
-
-db_open();
 
 session_start();
 
@@ -58,7 +56,25 @@ $twig = new \Twig\Environment($loader, [
 ]);
 $twig->AddExtension(new Project_Twig_Extension());
 
-function render_template ($template, $args) {
+
+function render_template($template, $args) {
   $args['fzero_css_mtime'] = filemtime('fzero.css');
   return $template->render($args);
+}
+
+function render_message($message, $is_html = false) {
+  global $twig;
+
+  $template = $twig->load('message.html');
+  if ($is_html) {
+    // Assume that appropriate parts of the message have been escaped in
+    // advance.
+    $safe_message = $message;
+  }
+  else {
+    $safe_message = htmlspecialchars($message);
+  }
+  return render_template($template, [
+    'safe_message' => $safe_message,
+  ]);
 }

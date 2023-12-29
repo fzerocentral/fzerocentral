@@ -1037,29 +1037,40 @@ div.ladder-leaders > div > div > span {
   font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px;
 }
 
-.page-login .section-box.login {
+p.header {
+  font-weight: bold;
   text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.page-login .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
-
-.page-password-reset .section-box.password-reset {
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.page-login, .page-register, .page-password-change {
+  & .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
 }
 
+.page-login .section-box.login,
+.page-activate .section-box,
+.page-activation-resend .section-box,
+.page-password-reset .section-box.password-reset,
 .page-password-change .section-box.password-change {
   text-align: center;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
-.page-password-change .error { background-color: pink; border: 1px solid red; padding: 3px 0px; }
+
+.page-register .section-box.register {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-register img.registration-quiz {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid lightgray;
+}
+
 
 .page-client .record-row {
   display: grid;
