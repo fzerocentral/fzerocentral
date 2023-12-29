@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="section-box">
+  <p class='header'>
+    Your user profile
+  </p>
+
+  <form method='post'>
+    <p>
+      Location:
+      <input type='text' name='location' value='{{ location }}' />
+    </p>
+    <p>
+      <input type='submit' value='Save location' />
+    </p>
+    <p>This is shown as a flag on the ladders, if the location name matches a flag in FZC's files.</p>
+  </form>
+
+  <hr />
+
+  <p>
+    Email address: {{ email_address }}
+    <br />
+    Contact the admin if you'd like to change this.
+  </p>
+
+  <p>Date registered: {{ registration_date }}</p>
+
+  <p>Also see <a href='/player.php?id={{ user_id }}'>your player profile</a></p>
+</div>
+
+{% endblock %}
