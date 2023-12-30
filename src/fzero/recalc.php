@@ -141,6 +141,12 @@ function recalc_af($ladder_id) {
     db_insert('phpbb_f0_champs_10', array_merge($entry, ['rank' => $rank]));
     $rank++;
   }
+
+  if (in_array($ladder_id, [4, 5, 8])) {
+    // After recalc of one of the individual GX ladders, recalc the overall GX
+    // pseudo-ladder
+    recalc_af_9();
+  }
 }
 
 function recalc_af_user($fzaf, $number_players, $player_records, $values) {
@@ -264,7 +270,7 @@ $ladder_srpr_weights = [
 
 function recalc_srpr($ladder_id) {
   if ($ladder_id == 9) {
-    recalc_af_9();
+    recalc_srpr_9();
     return;
   }
 
@@ -323,6 +329,12 @@ function recalc_srpr($ladder_id) {
   foreach ($entries as $entry) {
     db_insert('phpbb_f0_champs_10', array_merge($entry, ['rank' => $rank]));
     $rank++;
+  }
+
+  if (in_array($ladder_id, [4, 5, 8])) {
+    // After recalc of one of the individual GX ladders, recalc the overall GX
+    // pseudo-ladder
+    recalc_srpr_9();
   }
 }
 
