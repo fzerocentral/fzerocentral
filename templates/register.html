@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if sending_email %}
+
+  <div class="section-box">
+    <p>An activation email should have been sent to the email address you provided. Please follow the instructions there to complete registration.</p>
+  </div>
+
+{% else %}
+
+  <div class="section-box register">
+    <p class='header'>
+      Register an account
+    </p>
+
+    {% if errors %}
+      {% for error in errors %}
+        <p class='error'>{{ error|e }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {# Client-side validation here only covers some common errors; server side has full validation #}
+    <form method='post'>
+      <p>Username: <input type='text' name='username' value='{{ previous_values.username }}' required /></p>
+
+      <p>Email address: <input type='email' name='email' value='{{ previous_values.email }}' required /></p>
+
+      <p>
+        Password:
+        <input type='password' name='password' minlength='{{ password_min_length }}' required />
+      </p>
+      <p>
+        Password confirmation:
+        <input type='password' name='password_confirmation' minlength='{{ password_min_length }}' required />
+      </p>
+
+      <img class='registration-quiz' src='images/registration_quiz.jpg' alt='Registration quiz' />
+      <p>
+        Quiz: Among the original F-Zero pilots, which one is NOT shown above?:
+        <input type='text' name='quiz' required />
+      </p>
+
+      <p><input type='submit' value='Register' /></p>
+    </form>
+  </div>
+
+{% endif %}
+
+{% endblock %}

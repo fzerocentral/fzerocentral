@@ -1,0 +1,7 @@
+Hi {{ username }},
+
+Visit this link to complete activation of your F-Zero Central account: {{ activation_url }}
+
+The activation link will expire in 7 days.
+
+If you didn't request this, please ignore this email.

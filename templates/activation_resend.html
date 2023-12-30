@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="section-box">
+  {% if post_request %}
+
+    <p>An activation email should have been sent to the email address you provided. Please follow the instructions there. (If you don't get an email, even after waiting several minutes and checking spam, it might mean there is no account using this email address.)</p>
+
+  {% else %}
+    <p class='header'>
+      Resend activation email
+    </p>
+
+    <form method='post'>
+      <p>Email address: <input type='email' name='email' /></p>
+      <p><input type='submit' value='Send' /></p>
+    </form>
+
+  {% endif %}
+</div>
+
+{% endblock %}
