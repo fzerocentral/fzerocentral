@@ -3,6 +3,29 @@
 This repository contains a rewritten version of the website without the phpbb
 forum dependency.
 
+Installation requires PHP and MariaDB.
+
+
+## Config
+
+You must create a `config.ini` file at the root of the repo and define certain variables in it. Example contents:
+
+```
+[app]
+base_url = http://127.0.0.1:8000
+hmac_key = "around50randomlettersnumbersandsymbols^+_(&@-!*)"
+debug = true
+
+[database]
+host = localhost
+username = root
+password = mypassword
+name = mydatabase
+debug = true
+```
+
+There's also an `[email]` section which only the production environment needs to define. Development environments can set app -> debug to `true` to have email contents output to the file `log/debug_emails.log`, instead of sending actual emails.
+
 
 ## Database
 
@@ -21,6 +44,14 @@ The website requires the following tables:
   - `username`
 
 At some point, these will be renamed and simplified to remove the phpbb ties.
+
+### Migrations
+
+The files under the `migrations` directory keep track of database schema changes made since this repo was created.
+
+If someone else added migration files, you can check what you need to run to get your schema up to date by running `php migrations/pending.php`. Then to actually run the migrations: `php migrations/run.php`. (These scripts work by using a `schema_migrations` table to track which migrations have run in a particular database.)
+
+If you're changing the schema, you should add one or more migration files to the `migrations` directory. Be sure to start the filename with the current date and time, mimicking the other filenames' format, to ensure that alphabetizing the filenames puts the migrations in the order they should be run.
 
 ### `phpbb_f0_records`
 
