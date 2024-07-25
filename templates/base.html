@@ -136,11 +136,13 @@
       </div>
     </div>
 
-    <div style='color: black; background-color: #F8DE7E; padding: 10px; font-size: 10pt'>
-      <p style='margin: 0px;'>
-        Registration is available again as of December 2023!
-      </p>
-    </div>
+    {% if notice_bar_message %}
+      <div style='color: black; background-color: #F8DE7E; padding: 10px; font-size: 10pt'>
+        <p style='margin: 0px;'>
+          {{ notice_bar_message }}
+        </p>
+      </div>
+    {% endif %}
 
     <!-- Bar for social media icons + game specific buttons -->
     <div id="button-bar">
