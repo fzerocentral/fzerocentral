@@ -15,6 +15,7 @@ You must create a `config.ini` file at the root of the repo and define certain v
 base_url = http://127.0.0.1:8000
 hmac_key = "around50randomlettersnumbersandsymbols^+_(&@-!*)"
 debug = true
+notice_bar_message = "This message appears on a bar above the social media buttons. If this variable is omitted entirely, the bar won't show."
 
 [database]
 host = localhost

@@ -58,7 +58,16 @@ $twig->AddExtension(new Project_Twig_Extension());
 
 
 function render_template($template, $args) {
+  global $config;
+
+  // The notice bar message, if specified, appears on a bar above the social
+  // media buttons bar. It's specified in config.
+  if (array_key_exists('notice_bar_message', $config['app'])) {
+    $args['notice_bar_message'] = $config['app']['notice_bar_message'];
+  }
+
   $args['fzero_css_mtime'] = filemtime('fzero.css');
+
   return $template->render($args);
 }
 
