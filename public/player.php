@@ -185,5 +185,4 @@ echo render_template($template, [
       7 => 'CLMX',
     ],
   ],
-  'current_user' => $current_user,
 ]);

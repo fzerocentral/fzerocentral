@@ -58,7 +58,9 @@ $twig->AddExtension(new Project_Twig_Extension());
 
 
 function render_template($template, $args) {
-  global $config;
+  global $config, $current_user;
+
+  $args['current_user'] = $current_user;
 
   // The notice bar message, if specified, appears on a bar above the social
   // media buttons bar. It's specified in config.

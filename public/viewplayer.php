@@ -51,5 +51,4 @@ echo render_template($template, [
   'ladder_id' => $ladder_id,
   'entries' => $entries,
   'totals' => $totals,
-  'current_user' => $current_user,
 ]);

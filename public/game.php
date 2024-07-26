@@ -114,6 +114,5 @@ echo render_template($template, [
   'my_times' => $my_times,
   'active_players' => $active_players,
   'selected_game' => $game_shortcode,
-  'current_user' => $current_user,
   'see_also' => $game->home_see_also,
 ]);

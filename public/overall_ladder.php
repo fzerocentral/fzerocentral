@@ -133,6 +133,5 @@ echo render_template($template, [
     'overall_gpl'   => "overall_ladder.php?g=6&key=${key}",
     'overall_clmx'  => "overall_ladder.php?g=7&key=${key}",
   ],
-  'current_user' => $current_user,
 ]);
 ?>
