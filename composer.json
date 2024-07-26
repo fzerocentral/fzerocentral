@@ -5,7 +5,7 @@
   "homepage": "https://fzerocentral.org",
   "require": {
     "twig/twig": "^3.0",
-    "aws/aws-sdk-php": "^3.184",
+    "mailjet/mailjet-apiv3-php": "^1.6.0",
     "symfony/yaml": "^5.3"
   }
 }

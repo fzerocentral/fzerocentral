@@ -3,7 +3,11 @@
 This repository contains a rewritten version of the website without the phpbb
 forum dependency.
 
-Installation requires PHP and MariaDB.
+Installation requirements:
+
+- PHP
+- MariaDB
+- PHP packages; see `composer.json`
 
 
 ## Config
