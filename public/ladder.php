@@ -59,6 +59,5 @@ echo render_template($template, [
   'entries' => $entries,
   'ladder' => $ladder,
   'ladder_id' => $ladder_id,
-  'current_user' => $current_user,
   'selected_game' => ladder_game($ladder_id),
 ]);

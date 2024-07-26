@@ -149,7 +149,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   echo render_template($template, [
     'page_class' => 'page-client',
     'PAGE_TITLE' => $current_user['username'] . "'s F-Zero " . $ladder->ladder_name . " Times",
-    'current_user' => $current_user,
     'ladder' => $ladder,
     'hasspeed' => $ladder->hasspeed == "Yes",
     'haslap' => $ladder->haslap == "Yes",

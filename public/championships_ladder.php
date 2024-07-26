@@ -31,6 +31,5 @@ echo render_template($template, [
   'page_class' => 'page-championships-ladder',
   'PAGE_TITLE' => 'Championships Ladder',
   'leaderboard' => $leaderboard,
-  'current_user' => $current_user,
   'ladders' => $ladders,
 ]);

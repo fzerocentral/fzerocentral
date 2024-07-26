@@ -106,5 +106,4 @@ echo render_template($template, [
   'course_id' => $course_id,
   'entries' => $entries,
   'totals' => $totals,
-  'current_user' => $current_user,
 ]);
