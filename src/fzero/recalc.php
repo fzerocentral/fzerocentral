@@ -107,7 +107,9 @@ function recalc_af($ladder_id) {
       ORDER BY ladder_id, cup_id, course_id, record_type, value DESC, user_id
   ");
 
+  // Maps user+cup+course+type to value
   $player_records = [];
+  // Maps cup+course+type to descending values
   $values = [];
   while ($row = mysqli_fetch_assoc($player_records_result)) {
     $player_records[$row['user_id']][$row['cup_id']][$row['course_id']][$row['record_type']] = intval($row['value']);
@@ -165,15 +167,21 @@ function recalc_af_user($fzaf, $number_players, $player_records, $values) {
     }
 
     if ($result < 1) {
-      $total_ranks[$entry['record_type']] += $number_players;
+      // This player has no record on this course; treat it as if they were
+      // last place
+      $number_players_this_course = count(
+        $values[$entry['cup_id']][$entry['course_id']][$entry['record_type']]);
+      $total_ranks[$entry['record_type']] += $number_players_this_course;
     } else {
+      // This player has a record on this course; count the number of records
+      // that are better, then add 1 to get the player's rank on this course
       $betters = count(
         array_filter(
           $values[$entry['cup_id']][$entry['course_id']][$entry['record_type']],
-          function($value) use($result) { return $value <= $result; }
+          function($value) use($result) { return $value < $result; }
         )
       );
-      $total_ranks[$entry['record_type']] += $betters;
+      $total_ranks[$entry['record_type']] += ($betters + 1);
     }
   }
 
