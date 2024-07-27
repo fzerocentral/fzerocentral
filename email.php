@@ -3,14 +3,11 @@
 require_once 'config.php';
 require_once 'common.php';
 require_once 'logging.php';
-use Aws\Ses\SesClient;
-use Aws\Exception\AwsException;
+use \Mailjet\Resources;
 
 
-function send_email($recipients, $template, $subject, $params) {
+function send_email($recipient_addresses, $template, $subject, $params) {
   global $config, $twig;
-
-  $sender_email = "F-Zero Central <" . $config['email']['sender_address'] . ">";
 
   $plaintext_body = $twig->load("$template.txt")->render($params);
   $html_body = $twig->load("$template.html")->render($params);
@@ -25,39 +22,47 @@ function send_email($recipients, $template, $subject, $params) {
     return true;
   }
 
-  $ses = new SesClient([
-    'version' => '2010-12-01',
-    'region'  => $config['email']['aws_region'],
-    'credentials' => [
-      'key' => $config['email']['aws_access_key_id'],
-      'secret' => $config['email']['aws_secret_access_key'],
-    ],
-  ]);
+  // https://github.com/mailjet/mailjet-apiv3-php?tab=readme-ov-file#client--call-configuration-specifics
+  $mj = new \Mailjet\Client(
+    $config['email']['mj_api_public_key'],
+    $config['email']['mj_api_private_key'],
+    true,
+    ['version' => 'v3.1'],
+  );
 
-  try {
-    $result = $ses->sendEmail([
-      'Destination' => ['ToAddresses' => $recipients],
-      'ReplyToAddresses' => [$sender_email],
-      'Source' => $sender_email,
-      'Message' => [
-        'Body' => [
-          'Html' => [
-            'Charset' => 'UTF-8',
-            'Data' => $html_body,
-          ],
-          'Text' => [
-            'Charset' => 'UTF-8',
-            'Data' => $plaintext_body,
-          ],
+  // https://dev.mailjet.com/email/guides/getting-started/#send-your-first-email
+  // https://dev.mailjet.com/email/reference/send-emails/
+  $recipients = array_map(
+    function($addr) {
+      return ['Email' => $addr];
+    },
+    $recipient_addresses,
+  );
+  $api_request_body = [
+    'Messages' => [
+      [
+        'From' => [
+          'Email' => $config['email']['sender_address'],
+          'Name' => "F-Zero Central"
         ],
-        'Subject' => [
-          'Charset' => 'UTF-8',
-          'Data' => $subject,
-        ],
-      ],
-    ]);
-    return true;
-  } catch (AwsException $e) {
-    return $e->getAwsErrorMessage();
+        'To' => $recipients,
+        'Subject' => $subject,
+        'TextPart' => $plaintext_body,
+        'HTMLPart' => $html_body,
+      ]
+    ]
+  ];
+
+  // Send
+  $response = $mj->post(Resources::$Email, ['body' => $api_request_body]);
+
+  if (!$response->success()) {
+    $data = $response->getData();
+    $error_code = $data['Messages'][0]['Errors'][0]['ErrorCode'];
+
+    // Error codes at the bottom here:
+    // https://dev.mailjet.com/email/guides/send-api-v31/
+    die(
+      "There was a problem with sending the email: Error code " . $error_code);
   }
 }
