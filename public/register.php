@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $render_args['previous_values'] = $_POST;
   }
   elseif ($email_validation_result === EmailValidation::AlreadyInUse) {
-    send_registration_email_in_use_email($email);
+    send_email_address_in_use_email($email);
 
     $render_args['sending_email'] = true;
   }
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Send activation email
     $activation_key = create_activation_key($user_id);
-    send_activation_email($email, $activation_key);
+    send_activation_email($user_id, $activation_key);
     $render_args['sending_email'] = true;
   }
 }

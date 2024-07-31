@@ -64,10 +64,12 @@ function get_user_by_field($field_name, $value, $case_sensitive) {
     $field = "LOWER({$field_name})";
     $escaped_value = db_escape_string(strtolower($value));
   }
+  // Add more fields here if needed.
   $result = db_query("
     SELECT
       phpbb_users.user_id,
       phpbb_users.username,
+      phpbb_users.user_email,
       phpbb_users.user_active
     FROM phpbb_users
     WHERE {$field} = '{$escaped_value}'
@@ -163,13 +165,13 @@ function validate_password(
 }
 
 
-function send_registration_email_in_use_email($email) {
+function send_email_address_in_use_email($email) {
   $user = get_user_by_field('user_email', $email, false);
 
   send_email(
     [$email],
-    'registration_email_in_use_email',
-    'Registration request: email address is already in use',
+    'email_address_in_use_email',
+    'FZC account notice: email address is already in use',
     [
       'username' => $user['username'],
       'reset_url' => url("/password_reset.php"),
@@ -247,12 +249,12 @@ function verify_activation_key($activation_key) {
 }
 
 
-function send_activation_email($email, $activation_key) {
-  $user = get_user_by_field('user_email', $email, false);
+function send_activation_email($user_id, $activation_key) {
+  $user = get_user_by_field('user_id', $user_id, false);
   $url_safe_activation_key = urlencode($activation_key);
 
   send_email(
-    [$email],
+    [$user['user_email']],
     'activation_email',
     'Activating your FZC account',
     [

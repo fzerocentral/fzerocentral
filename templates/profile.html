@@ -21,9 +21,13 @@
   <hr />
 
   <p>
+    Username: {{ current_user.username }}
+    (<a href='/username_change.php'>Change</a>)
+  </p>
+
+  <p>
     Email address: {{ email_address }}
-    <br />
-    Contact the admin if you'd like to change this.
+    (<a href='/email_change.php'>Change</a>)
   </p>
 
   <p>Date registered: {{ registration_date }}</p>

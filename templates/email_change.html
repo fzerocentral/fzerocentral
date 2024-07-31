@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="section-box">
+  {% if is_sending_email %}
+
+    <p>A reactivation email should have been sent to {{ desired_email }}. If you didn't get an email, please contact an admin for help.</p>
+
+  {% else %}
+    <p class='header'>
+      Change your email address
+    </p>
+
+    <p>Your current email address is: {{ current_email }}</p>
+
+    <p>Once you submit this form, we'll need to verify your new email address. To do that, your account will be temporarily deactivated, and we'll send a reactivation email to your new email address. So, double-check that you've entered your new email address correctly.</p>
+
+    {% if errors %}
+      {% for error in errors %}
+        <p class='error'>{{ error|e }}</p>
+      {% endfor %}
+    {% endif %}
+
+    <form method='post'>
+      <p>New email address: <input type='email' name='email' value='{{ previous_values.email }}' required /></p>
+      <p><input type='submit' value='Submit' /></p>
+    </form>
+
+  {% endif %}
+</div>
+
+{% endblock %}

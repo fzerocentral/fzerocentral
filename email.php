@@ -14,7 +14,7 @@ function send_email($recipient_addresses, $template, $subject, $params) {
 
   if ($config['app']['debug']) {
     // Write emails to a text file instead of sending
-    $recipients_str = implode(', ', $recipients);
+    $recipients_str = implode(', ', $recipient_addresses);
     log_entry(
       'debug_emails.log',
       "{$recipients_str}\n-----\n{$subject}"

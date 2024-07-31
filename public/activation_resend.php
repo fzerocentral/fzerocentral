@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $user = get_user_by_field('user_email', $email, false);
   if ($user) {
     $activation_key = create_activation_key($user['user_id']);
-    send_activation_email($email, $activation_key);
+    send_activation_email($user['user_id'], $activation_key);
   }
   // Else, send no email (to be consistent with reset-password). Another
   // reasonable action here would be to send a notice email saying that
