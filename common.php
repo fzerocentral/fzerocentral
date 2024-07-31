@@ -10,10 +10,17 @@ require_once __DIR__ . '/urls.php';
 
 session_start();
 
-if (isset($_SESSION['current_user_id'])) {
-  $current_user_id = intval($_SESSION['current_user_id']);
-  $current_user = mysqli_fetch_assoc(db_query("SELECT * FROM phpbb_users WHERE phpbb_users.user_id = $current_user_id"));
+
+function get_current_user_from_db() {
+  global $current_user_id, $current_user;
+
+  if (isset($_SESSION['current_user_id'])) {
+    $current_user_id = intval($_SESSION['current_user_id']);
+    $current_user = mysqli_fetch_assoc(db_query("SELECT * FROM phpbb_users WHERE phpbb_users.user_id = $current_user_id"));
+  }
 }
+get_current_user_from_db();
+
 
 class Project_Twig_Extension extends \Twig\Extension\AbstractExtension {
   public function getFilters() {
