@@ -9,8 +9,14 @@ use \Mailjet\Resources;
 function send_email($recipient_addresses, $template, $subject, $params) {
   global $config, $twig;
 
+  // txt template required, html template optional.
   $plaintext_body = $twig->load("$template.txt")->render($params);
-  $html_body = $twig->load("$template.html")->render($params);
+  try {
+    $html_body = $twig->load("$template.html")->render($params);
+  }
+  catch (\Twig\Error\LoaderError $e) {
+    $html_body = NULL;
+  }
 
   if ($config['app']['debug']) {
     // Write emails to a text file instead of sending
@@ -32,25 +38,37 @@ function send_email($recipient_addresses, $template, $subject, $params) {
 
   // https://dev.mailjet.com/email/guides/getting-started/#send-your-first-email
   // https://dev.mailjet.com/email/reference/send-emails/
+  $message = [
+    'From' => [
+      'Email' => $config['email']['sender_address'],
+      'Name' => "F-Zero Central"
+    ],
+    'Subject' => $subject,
+    'TextPart' => $plaintext_body,
+  ];
+
+  if ($html_body !== NULL) {
+    $message['HTMLPart'] = $html_body;
+  }
+  // Else, we only give a txt version to Mailjet, which is OK.
+
   $recipients = array_map(
     function($addr) {
       return ['Email' => $addr];
     },
     $recipient_addresses,
   );
+  // If there are multiple recipients, there is no use case where we'd want
+  // to have the recipients seeing each other's email addresses.
+  if (count($recipients) > 1) {
+    $message['Bcc'] = $recipients;
+  }
+  else {
+    $message['To'] = $recipients;
+  }
+
   $api_request_body = [
-    'Messages' => [
-      [
-        'From' => [
-          'Email' => $config['email']['sender_address'],
-          'Name' => "F-Zero Central"
-        ],
-        'To' => $recipients,
-        'Subject' => $subject,
-        'TextPart' => $plaintext_body,
-        'HTMLPart' => $html_body,
-      ]
-    ]
+    'Messages' => [$message],
   ];
 
   // Send

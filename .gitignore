@@ -2,3 +2,4 @@
 /cache/*
 /config.ini
 /log/*
+/templates/untracked/*
