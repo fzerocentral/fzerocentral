@@ -2,4 +2,10 @@
 <game>
   <name>F-Zero: GP Legend</name>
   <rules_template>rules/gpl.html</rules_template>
+  <home_see_also>
+    <link>
+      <display>Speedrun.com rankings for e-Reader tracks</display>
+      <url>https://www.speedrun.com/fzgpl/levels</url>
+    </link>
+  </home_see_also>
 </game>
