@@ -73,7 +73,7 @@ function ladder_pal_ratio($ladder) {
 }
 
 function user_prefers_pal($user) {
-  preg_match('/F0Pal/', $user['user_interests']);
+  return preg_match('/F0Pal/', $user['user_interests']);
 }
 
 function ntsc_to_user_time($ladder, $user, $time) {
