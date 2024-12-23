@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
   <name>F-Zero</name>
-  <rules_template>rules/snes.html</rules_template>
+  <rules_file>snes.md</rules_file>
 </game>

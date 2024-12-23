@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
   <name>F-Zero: GP Legend</name>
-  <rules_template>rules/gpl.html</rules_template>
+  <rules_file>gpl.md</rules_file>
   <home_see_also>
     <link>
       <display>Speedrun.com rankings for e-Reader tracks</display>
