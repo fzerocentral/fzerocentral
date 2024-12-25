@@ -1,5 +1,3 @@
-1. Turbo Controllers are banned from being used on the Ladder as they present the player with an unfair advantage. Players are reminded that if they have any times set with a turbo controller they must change them immediately.
-
 1. FZC only accepts times set on the Super Nintendo Entertainment System / Super Famicom, Wii Virtual Console, Wii U Virtual Console, 3DS Virtual Console, SNES/SFC Mini and Nintendo Switch Online service SNES App versions of the game. Flashcarts are allowed for the SNES version for save state usage, and times using this have to follow the Save State Rules below.
 
     - "Save state" refers to any kind of save state from a SNES/SFC game saver, restore point from a Wii U VC, and suspend point from a SNES/SFC Mini and the Nintendo Switch SNES App.

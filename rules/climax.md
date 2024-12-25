@@ -1,5 +1,3 @@
-1. Turbo Controllers are banned from being used on the Ladder as they present the player with an unfair advantage. Players are reminded that if they have any times set with a turbo controller they must change them immediately.
-
 1. FZC accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game and the Wii U Virtual Console using the standard rules for all games. Emulators are allowed in this game due to the fact it is very hard to obtain the game cartridge these days due to it's original limited release but need an additional set of rules to ensure people playing under these conditions have a setup as close as possible to people playing with Official Releases. see Emulator Rules below for a detailed explanation of the rules applying to Emulator users.
 
 1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition it's not meant for teams. Only submit times that are shown on your records screen.

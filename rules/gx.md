@@ -6,8 +6,6 @@
 
     - Falling off course immediately after the lap begins in a specific way that makes the machine be restored right before the start/finish line, completing the lap in potentially under 4 seconds - [Video Demonstration](https://www.youtube.com/watch?v=4DO1HFK9j_c)
 
-1. Turbo Controllers are banned from being used on any of the three F-ZERO GX Ladders, as they present the player with an unfair advantage. **Players are reminded that if they have any times set with a turbo controller, they must change them immediately.**
-
 1. Players should add in their comments if they played in 50Hz. Times set in 50Hz are not accepted as a "world record", since any version of the game supports 60Hz.
 
 1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition; it's not meant for teams.

@@ -1,5 +1,3 @@
-1. Turbo Controllers are banned from being used on the Ladder as they present the player with an unfair advantage. Players are reminded that if they have any times set with a turbo controller they must change them immediately.
-
 1. Times set on Maximum Velocity using the multiplayer link are not allowed to be submitted on FZC. The reason is due to the chance to gain a large amount of "speed bumps" by your friend which would enable you to get a faster time than is possible when racing against the COM.
 
 1. Players are reminded that FZC only accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game, the 3DS Ambassador Program version and the Wii U Virtual Console version.

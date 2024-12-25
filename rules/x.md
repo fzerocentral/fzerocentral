@@ -1,5 +1,3 @@
-1. Turbo Controllers are banned from being used on the FZX Ladder as they present the player with an unfair advantage. **Players are reminded that if they have any times set with a turbo controller they must change them immediately.**
-
 1. FZC only accepts times set with the Nintendo 64 game cartridge, the Wii Virtual Console version, the Wii U Virtual Console version, and the Nintendo Switch Online version. Unofficial emulators and flashcarts are not allowed (except flashcarts for the Expansion Kit courses - see below).
 
 1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition it's not meant for team
