@@ -1,5 +1,3 @@
-## Rules for All Three Ladders
-
 1. Course Times and Speeds must be obtained using Time Attack mode. Lap Times must be obtained with either Time Attack mode or Practice mode with CPUs off.
 
 1. If you have the Restore feature turned on in practice mode to set a fast lap, the following exploits cannot be used:

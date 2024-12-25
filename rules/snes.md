@@ -1,13 +1,8 @@
-(Note: The use of the phrase "save state" in the following text refers to any kind of save state from a SNES/SFC game saver, restore point from a WiiUVC, and suspend point from a SNES/SFC Mini and Nintendo Switch SNES App)
-
-Any players who do not adhere to the following rules are subject to having their times removed from the ladder.
-
-
-## Basic Ladder Rules
-
 1. Turbo Controllers are banned from being used on the Ladder as they present the player with an unfair advantage. Players are reminded that if they have any times set with a turbo controller they must change them immediately.
 
-1. FZC only accepts times set on the Super Nintendo Entertainment System/ Super Famicom, Wii Virtual Console, WiiU Virtual Console, 3DS Virtual Console, SNES/SFC Mini and Nintendo Switch Online service SNES App versions of the game. Flashcarts are allowed for the SNES version for savestate usage and times using this have to follow the savestate rules.
+1. FZC only accepts times set on the Super Nintendo Entertainment System / Super Famicom, Wii Virtual Console, Wii U Virtual Console, 3DS Virtual Console, SNES/SFC Mini and Nintendo Switch Online service SNES App versions of the game. Flashcarts are allowed for the SNES version for save state usage, and times using this have to follow the Save State Rules below.
+
+    - "Save state" refers to any kind of save state from a SNES/SFC game saver, restore point from a Wii U VC, and suspend point from a SNES/SFC Mini and the Nintendo Switch SNES App.
 
 1. The use of cheat devices such as Action Replay, Game Genie, ect. are forbidden on the ladder.
 

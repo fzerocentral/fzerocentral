@@ -1,5 +1,3 @@
-## Basic Ladder Rules
-
 1. Turbo Controllers are banned from being used on the Ladder as they present the player with an unfair advantage. Players are reminded that if they have any times set with a turbo controller they must change them immediately.
 
 1. Players are reminded that FZC only accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game and the Wii U Virtual Console version. Flashcart users must follow the savestate rules when using a savestate or restore point.

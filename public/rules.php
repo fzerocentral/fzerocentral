@@ -7,8 +7,10 @@ $game_shortcode = $_GET['game'];
 $game = FserverGame($game_shortcode);
 $this_game_rules_markdown = file_get_contents(
   __DIR__ . '/../rules/' . $game->rules_file);
+$all_games_rules_markdown = file_get_contents(
+  __DIR__ . '/../rules/all.md');
 $rules_html = Markdown::defaultTransform(
-  $this_game_rules_markdown);
+  $all_games_rules_markdown . "\n\n" . $this_game_rules_markdown);
 
 $template = $twig->load('rules.html');
 echo render_template($template, [
