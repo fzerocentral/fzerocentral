@@ -4,8 +4,6 @@
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC or save-states for mGBA are not to be misused. See Save State Rules below for a detailed explaination.
 
-1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
 
 ## F-Zero Climax Emulator Rules
 

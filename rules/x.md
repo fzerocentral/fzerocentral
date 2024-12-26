@@ -4,8 +4,6 @@
 
 1. Modifying and/or tinkering with the hardware to improve your times is prohibited. things like the Crooked Cartridge glitch (pulling the cart out a bit from the N64 while still playing) and altering the controllers with things such as Lego to make a turbo button are banned. if you have times set using these kind of modifications, they should be changed inmediately.
 
-1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
 
 ## Save State Rules for Runs Submitted to Ladder
 

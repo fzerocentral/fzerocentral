@@ -12,8 +12,6 @@
 
     - NOTE: An exception has been made to F-ZERO GX, as Action Replay is the only method available to unlock the Japanese AX event parts. Players should use the AR only once to unlock them.
 
-1. FZC reserves the right to request proof of your times. Proof could be requested at random, or if there's a concern that false times might have been submitted. Any requests for proof will be handled by a member of the F-ZERO Staff.
-
 1. Emulators (such as Dolphin) are not allowed.
 
 ### Additional Rules for USB/SD Loaders

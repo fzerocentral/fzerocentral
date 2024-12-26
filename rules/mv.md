@@ -6,8 +6,6 @@
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC and Flash cartridge (if that's a possibility) are not to be misused\*. If it is suspected that any cheat devices have been used and/or restore points have been misused, that player will have their times removed from the ladder.
 
-1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
 \*Restore points may only be used to attempt fast laps and for infinite lives in Grand Prix mode. This means you can set a restore point **before entering** a fast lap or you can set a restore point **before the timer** in a five lap race **starts**. Misuse of restore points constitutes as using a restore point **after entering** a fast lap or **after the timer** of a five lap race **starts**. Even if a restore point is activated in only the first frame of the fast lap or five lap, your time will be removed, no exceptions. If a player is found abusing the restore point mechanic, their times will be subject to immediate removal from the ladder.
 
 

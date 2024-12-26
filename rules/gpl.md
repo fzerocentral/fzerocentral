@@ -4,8 +4,6 @@
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC are not to be misused*. If it is suspected that any cheat devices have been used and/or restore points have been misused, that player will have their times removed from the ladder.
 
-1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
 1. Using Lightning Volute Two Technique (LVTT) to score multiple laps at the goal is banned. Players aren't allowed to submit times using LVTT to multi-lap, and any times suspected of multi-lapping will be deleted. This applies not just to Lightning Volute 2 but also Mute City Expansion Park 1 and 2.
 
 1. Lap Inversion (using LVTT while going backwards) to score forwards laps while going backwards is banned. Players aren't allowed to submit times using lap inversion to backwards-lap, and any times suspected of backwards-lapping will be deleted.
