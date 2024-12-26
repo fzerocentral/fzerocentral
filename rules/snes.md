@@ -6,8 +6,6 @@
 
 1. On the NTSC version of the game (This rule does not apply to the PAL version), pausing during the middle of a run is not allowed. For fast laps, pausing the game before entering the lap is fine. The reason for this rule is explained in greater detail [here](https://fzerocentral.org/viewtopic.php?t=13945). This rule only applies to times set after 5 November 2014.
 
-1. Finally, NO CHEATING of any kind will be tolerated. If you are found to be cheating, it will result in immediate removal of all your times from the SNES ladder. Any other times you have submitted to FZC will also be subject to removal.
-
 
 ## Save State Rules for Runs Submitted to Ladder
 

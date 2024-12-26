@@ -6,8 +6,6 @@
 
 1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
 
-1. Finally, NO CHEATING of any kind will be tolerated and will result in immediate removal from the ladders and will also be considered for immediate removal in other F-Zero Ladders on FZC.
-
 
 ## Save State Rules for Runs Submitted to Ladder
 

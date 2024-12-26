@@ -16,8 +16,6 @@
 
 1. Emulators (such as Dolphin) are not allowed.
 
-1. Finally, NO CHEATING of any kind will be tolerated and will result in immediate removal from the ladders. Cheaters will also be considered for immediate removal from other F-ZERO Ladders on FZC.
-
 ### Additional Rules for USB/SD Loaders
 
 Due to the nature of how USB/SD loaders work, a few extra rules are needed to ensure no players obtain unexpected advantages over Disc users.
