@@ -1,14 +1,10 @@
 1. FZC only accepts times set with the Nintendo 64 game cartridge, the Wii Virtual Console version, the Wii U Virtual Console version, and the Nintendo Switch Online version. Unofficial emulators and flashcarts are not allowed (except flashcarts for the Expansion Kit courses - see below).
 
-1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition it's not meant for team
-
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. If it is suspected that a cheat device has been used then that player will have their times removed from the ladder.
 
 1. Modifying and/or tinkering with the hardware to improve your times is prohibited. things like the Crooked Cartridge glitch (pulling the cart out a bit from the N64 while still playing) and altering the controllers with things such as Lego to make a turbo button are banned. if you have times set using these kind of modifications, they should be changed inmediately.
 
 1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
-1. Multiple accounts for the same player are not allowed, neither are joint accounts.
 
 1. Finally, NO CHEATING of any kind will be tolerated and will result in immediate removal from the ladders and will also be considered for immediate removal in other F-Zero Ladders on FZC.
 

@@ -1,12 +1,10 @@
 1. Players are reminded that FZC only accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game and the Wii U Virtual Console version. Flashcart users must follow the savestate rules when using a savestate or restore point.
 
-1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition it's not meant for teams. Only submit times that are shown on your records screen.
+1. Only submit times that are shown on your records screen.
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC are not to be misused*. If it is suspected that any cheat devices have been used and/or restore points have been misused, that player will have their times removed from the ladder.
 
 1. FZC reserves the right to request proof of your times. Proof could be requested at random or a concern that false times may have been submitted. Video proof is the preferred standard but understand that some people are unable to make videos, so photo proof of the records screen is accepted as well. Any requests for proof will be handled by a member of the F-Zero Staff.
-
-1. Multiple accounts for the same player are not allowed, neither are joint accounts.
 
 1. Finally, NO CHEATING of any kind will be tolerated and will result in immediate removal from the ladders and will also be considered for immediate removal in other F-Zero Ladders on FZC.
 

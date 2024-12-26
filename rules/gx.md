@@ -8,15 +8,11 @@
 
 1. Players should add in their comments if they played in 50Hz. Times set in 50Hz are not accepted as a "world record", since any version of the game supports 60Hz.
 
-1. Submit times only achieved by yourself, don't submit times that have been achieved by a number of people. It is an individual competition; it's not meant for teams.
-
 1. The use of cheat devices such as Action Replay are forbidden on all of the ladders. If it is suspected that a cheat device has been used, then that player will have their times removed from the ladder.
 
     - NOTE: An exception has been made to F-ZERO GX, as Action Replay is the only method available to unlock the Japanese AX event parts. Players should use the AR only once to unlock them.
 
 1. FZC reserves the right to request proof of your times. Proof could be requested at random, or if there's a concern that false times might have been submitted. Any requests for proof will be handled by a member of the F-ZERO Staff.
-
-1. Multiple accounts for the same player are not allowed, neither are joint accounts.
 
 1. Emulators (such as Dolphin) are not allowed.
 
