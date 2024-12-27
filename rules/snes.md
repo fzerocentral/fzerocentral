@@ -44,21 +44,3 @@ Use of a save state must be shown in the recording before the start of the lap:
 - for the Nintendo Switch Online SNES App, this means showing the Save States Menu before picking the corresponding Save State
 
 \*FZC Bests/World Records submitted to FZC previous to the date of March 1st 2013 do not need to adhere by the requirements of 'full video proof.'
-
-
-## F-Zero Central Ladder Guidelines
-
-[Read here](/guidelines.php) - these are not enforceable rules, but guidelines for all players to follow.
-
-
-## Change log
-
-Changes from December 2024 onward can be viewed here: [https://github.com/fzerocentral/fzerocentral/commits/main/rules/snes.md](https://github.com/fzerocentral/fzerocentral/commits/main/rules/snes.md)
-
-### 23 Mar 2021
-
-Added "Flashcart" to the accepted methods officially.
-
-### 28 Aug 2020
-
-Improved wording on the 'public video proof' rule.

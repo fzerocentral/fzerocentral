@@ -59,25 +59,3 @@ Requirements of 'Full Video Proof:'
 1. The video must always be available to the public. If at any point you remove your video for any to see, FZC reserves the right to take down your time associated with that video.
 
 \*FZC Bests/World Records submitted to FZC previous to the date of March 1st 2013 do not need to adhere by the requirements of 'Full Video Proof.'
-
-
-## F-Zero Central Ladder Guidelines
-
-[Read here](/guidelines.php) - these are not enforceable rules, but guidelines for all players to follow.
-
-
-## Change log
-
-Changes from December 2024 onward can be viewed here: [https://github.com/fzerocentral/fzerocentral/commits/main/rules/climax.md](https://github.com/fzerocentral/fzerocentral/commits/main/rules/climax.md)
-
-### 23rd March 2021
-
-added Flashcarts to the rules.
-
-### 6th September 2020
-
-The emulator proof rules have been changed to use the newly available Platform and Video Link fields. [Thread](https://fzerocentral.org/viewtopic.php?t=14382)
-
-### 30th August 2020
-
-Updated the rules for usage of save states/restore points.You must now add your save state/restore point before the countdown of the 3-lap attempt first starts, and for fast-laps before exceeding 1200km/h, not while in boost state and before entering the Fast-Lap. A topic for the discussion can be found [here](https://fzerocentral.org/viewtopic.php?t=14381).

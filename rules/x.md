@@ -84,13 +84,3 @@ Requirements of 'Full Video Proof:'
 1. The video must always be available to the public. If at any point you remove your video for any too see, FZC witholds the right to take down your time associated with that video.
 
 \*FZC Bests/World Records submitted to FZC previous to the date of March 1st 2013 do not need to adhere by the requirements of 'Full Video Proof.'
-
-
-## F-Zero Central Ladder Guidelines
-
-[Read here](/guidelines.php) - these are not enforceable rules, but guidelines for all players to follow.
-
-
-## Change log
-
-Changes from December 2024 onward can be viewed here: [https://github.com/fzerocentral/fzerocentral/commits/main/rules/x.md](https://github.com/fzerocentral/fzerocentral/commits/main/rules/x.md)
