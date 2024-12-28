@@ -35,6 +35,7 @@ $ferris_beuller_id = 222;
 
 function recalc_ladder_totals($ladder_id) {
   global $ferris_beuller_id;
+  $ladder_id = intval($ladder_id);
 
   db_delete_by('phpbb_f0_totals', ['ladder_id' => $ladder_id]);
 
@@ -81,6 +82,8 @@ function recalc_ladder_totals($ladder_id) {
 }
 
 function recalc_af($ladder_id) {
+  $ladder_id = intval($ladder_id);
+
   if ($ladder_id == 9) {
     recalc_af_9();
     return;
@@ -277,6 +280,8 @@ $ladder_srpr_weights = [
 ];
 
 function recalc_srpr($ladder_id) {
+  $ladder_id = intval($ladder_id);
+
   if ($ladder_id == 9) {
     recalc_srpr_9();
     return;
