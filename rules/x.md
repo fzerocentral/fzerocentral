@@ -1,15 +1,21 @@
-1. FZC only accepts times set with the Nintendo 64 game cartridge, the Wii Virtual Console version, the Wii U Virtual Console version, and the Nintendo Switch Online version. Unofficial emulators and flashcarts are not allowed (except flashcarts for the Expansion Kit courses - see below).
+1. Accepted ways to play:
+
+    - The original Nintendo 64 game cartridge
+    - The Wii Virtual Console release
+    - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
+    - The Switch Online release - the **Save State Rules** below apply to suspend points
+    - (**Expansion Kit Ladder only**) A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Flashcart Rules** and **Save State Rules** below
+
+    Unofficial emulators are not allowed. Flashcarts are not allowed for ladders other than the Expansion Kit Ladder.
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. If it is suspected that a cheat device has been used then that player will have their times removed from the ladder.
 
 1. Modifying and/or tinkering with the hardware to improve your times is prohibited. things like the Crooked Cartridge glitch (pulling the cart out a bit from the N64 while still playing) and altering the controllers with things such as Lego to make a turbo button are banned. if you have times set using these kind of modifications, they should be changed inmediately.
 
 
-## Save State Rules for Runs Submitted to Ladder
+## Save State Rules
 
-These rules apply to the Wii U Virtual Console and Nintendo Switch Online releases.
-
-For practice, save states may be used however a player likes. However when submitting runs to the FZC ladder or for WR, save states may only be used as described below. If save states are used anywhere else other than as described below, the player doing so will have their associated time removed.
+When submitting runs to the FZC ladder, save states, restore points, etc. may only be used as described below.
 
 **3-Laps:** Before the timer of the 3-lap attempt first starts.
 

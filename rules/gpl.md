@@ -1,8 +1,13 @@
-1. Players are reminded that FZC only accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game and the Wii U Virtual Console version. Flashcart users must follow the savestate rules when using a savestate or restore point.
+1. Accepted ways to play:
+
+    - The original GBA game cartridge
+    - A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Save State Rules** below
+    - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
+    - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
 
 1. Only submit times that are shown on your records screen.
 
-1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC are not to be misused*. If it is suspected that any cheat devices have been used and/or restore points have been misused, that player will have their times removed from the ladder.
+1. The use of cheat devices such as Action Replay are forbidden on the ladder.
 
 1. Using Lightning Volute Two Technique (LVTT) to score multiple laps at the goal is banned. Players aren't allowed to submit times using LVTT to multi-lap, and any times suspected of multi-lapping will be deleted. This applies not just to Lightning Volute 2 but also Mute City Expansion Park 1 and 2.
 
@@ -10,7 +15,10 @@
 
 1. Players are not allowed to submit times of 0 seconds on the Zero Test ladder, regardless of how 0 seconds was achieved. This applies not only to B2, but also to C1, C3, C7, C9, B7, A6, and S4.
 
-\*Restore points may only be used to attempt fast laps and for infinite lives in Grand Prix mode. This means you can set a restore point **before entering** a fast lap or you can set a restore point **before the timer** in a five lap race **starts**. Misuse of restore points constitutes as using a restore point **after entering** a fast lap or **after the timer** of a five lap race **starts**. Even if a restore point is activated in only the first frame of the fast lap or five lap, your time will be removed, no exceptions. If a player is found abusing the restore point mechanic, their times will be subject to immediate removal from the ladder.
+
+## Save State Rules
+
+Save states, restore points, etc. may only be used to attempt fast laps and for infinite lives in Grand Prix mode. This means you can set a save state **before entering** a fast lap or you can set a save state **before the timer** in a five lap race **starts**. Misuse of save states constitutes as using a save state **after entering** a fast lap or **after the timer** of a five lap race **starts**.
 
 
 ## FZC Best and World Record Submission Rules

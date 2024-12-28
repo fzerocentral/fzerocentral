@@ -1,15 +1,21 @@
-1. FZC only accepts times set on the Super Nintendo Entertainment System / Super Famicom, Wii Virtual Console, Wii U Virtual Console, 3DS Virtual Console, SNES/SFC Mini and Nintendo Switch Online service SNES App versions of the game. Flashcarts are allowed for the SNES version for save state usage, and times using this have to follow the Save State Rules below.
+1. Accepted ways to play:
 
-    - "Save state" refers to any kind of save state from a SNES/SFC game saver, restore point from a Wii U VC, and suspend point from a SNES/SFC Mini and the Nintendo Switch SNES App.
+    - The original Super Nintendo / Super Famicom game cartridge
+    - A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Save State Rules** below
+    - The Wii Virtual Console release
+    - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
+    - The 3DS Virtual Console release - the **Save State Rules** below apply to restore points
+    - The Super Nintendo / Super Famicom Mini console - the **Save State Rules** below apply to suspend points and rewinds
+    - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
 
 1. The use of cheat devices such as Action Replay, Game Genie, ect. are forbidden on the ladder.
 
 1. On the NTSC version of the game (This rule does not apply to the PAL version), pausing during the middle of a run is not allowed. For fast laps, pausing the game before entering the lap is fine. The reason for this rule is explained in greater detail [here](https://fzerocentral.org/viewtopic.php?t=13945). This rule only applies to times set after 5 November 2014.
 
 
-## Save State Rules for Runs Submitted to Ladder
+## Save State Rules
 
-For practice, save states may be used however a player likes. However when submitting runs to the FZC ladder or for WR, save states may only be used as described below. If save states are used anywhere else other than as described below, the player doing so will have their associated time removed.
+When submitting runs to the FZC ladder, save states, restore points, etc. may only be used as described below.
 
 **5-Laps:** Before the timer of the 5-lap attempt first starts.
 

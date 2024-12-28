@@ -1,10 +1,19 @@
-1. Players are reminded that FZC only accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game, the 3DS Ambassador Program version and the Wii U Virtual Console version.
+1. Accepted ways to play:
+
+    - The original GBA game cartridge
+    - A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Save State Rules** below
+    - The 3DS Ambassador Program release
+    - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
+    - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
 
 1. Only submit times that are shown on your records screen.
 
-1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC and Flash cartridge (if that's a possibility) are not to be misused\*. If it is suspected that any cheat devices have been used and/or restore points have been misused, that player will have their times removed from the ladder.
+1. The use of cheat devices such as Action Replay are forbidden on the ladder.
 
-\*Restore points may only be used to attempt fast laps and for infinite lives in Grand Prix mode. This means you can set a restore point **before entering** a fast lap or you can set a restore point **before the timer** in a five lap race **starts**. Misuse of restore points constitutes as using a restore point **after entering** a fast lap or **after the timer** of a five lap race **starts**. Even if a restore point is activated in only the first frame of the fast lap or five lap, your time will be removed, no exceptions. If a player is found abusing the restore point mechanic, their times will be subject to immediate removal from the ladder.
+
+## Save State Rules
+
+Save states, restore points, etc. may only be used to attempt fast laps and for infinite lives in Grand Prix mode. This means you can set a save state **before entering** a fast lap or you can set a save state **before the timer** in a five lap race **starts**. Misuse of save states constitutes as using a save state **after entering** a fast lap or **after the timer** of a five lap race **starts**.
 
 
 ## FZC Best and World Record Submission Rules

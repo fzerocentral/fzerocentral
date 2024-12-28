@@ -1,3 +1,10 @@
+1. Accepted ways to play:
+
+    - The original GameCube game disc
+    - A USB or SD loader, with an unaltered ISO of the original game - see the **USB/SD Loader Rules** below
+
+    Emulators (such as Dolphin) are not allowed.
+
 1. Course Times and Speeds must be obtained using Time Attack mode. Lap Times must be obtained with either Time Attack mode or Practice mode with CPUs off.
 
 1. If you have the Restore feature turned on in practice mode to set a fast lap, the following exploits cannot be used:
@@ -12,9 +19,8 @@
 
     - NOTE: An exception has been made to F-ZERO GX, as Action Replay is the only method available to unlock the Japanese AX event parts. Players should use the AR only once to unlock them.
 
-1. Emulators (such as Dolphin) are not allowed.
 
-### Additional Rules for USB/SD Loaders
+## USB/SD Loader Rules
 
 Due to the nature of how USB/SD loaders work, a few extra rules are needed to ensure no players obtain unexpected advantages over Disc users.
 

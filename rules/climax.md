@@ -1,13 +1,21 @@
-1. FZC accepts times set with the game cartridge, Flash cartridge ("Flashcart") with an unaltered ROM of the original game and the Wii U Virtual Console using the standard rules for all games. Emulators are allowed in this game due to the fact it is very hard to obtain the game cartridge these days due to it's original limited release but need an additional set of rules to ensure people playing under these conditions have a setup as close as possible to people playing with Official Releases. see Emulator Rules below for a detailed explanation of the rules applying to Emulator users.
+1. Accepted ways to play:
+
+    - The original GBA game cartridge
+    - A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Save State Rules** below
+    - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
+    - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
+    - Specific versions of the mGBA emulator, with an unaltered ROM of the original game - see the **Emulator Rules** and **Save State Rules** below
+
+    The original release of F-Zero Climax in 2004 was very limited, making game cartridges difficult to acquire, especially as more time passed. Additionally, the Wii U VC release was Japan-only and region-locked. So in 2020, FZC began allowing the mGBA emulator for F-Zero Climax to address the accessibility issues. Although the worldwide Switch Online release in 2024 eased the accessibility situation, mGBA is still allowed (again, governed by the Emulator Rules below).
 
 1. Only submit times that are shown on your records screen.
 
-1. The use of cheat devices such as Action Replay are forbidden on the ladder. Restore points on the Wii U VC or save-states for mGBA are not to be misused. See Save State Rules below for a detailed explaination.
+1. The use of cheat devices such as Action Replay are forbidden on the ladder.
 
 
-## F-Zero Climax Emulator Rules
+## Emulator Rules
 
-Because of the nature of unofficial Emulators, some extra rules are needed to allow times set when using them and prevent abuse or cheating as much as possible.
+Because of the nature of unofficial Emulators, some extra rules are needed to allow times set when using them. These rules are intended to prevent abuse or cheating as much as possible, and to ensure the fairest competition possible with runs done on official platforms.
 
 The following are rules to be followed when setting times in F-Zero Climax while playing on emulator:
 
@@ -35,9 +43,9 @@ And furthermore, instructions for setting up the emulator:
 1. (Optional) If you want to use an existing save data with everything unlocked, you can download the following file and place it in the same folder as your ROM with the same name as your ROM: [https://drive.google.com/file/d/16BbTwqw1vAPY2U8EUfa3ueQ0g-h2BJOz/view?usp=sharing](https://drive.google.com/file/d/16BbTwqw1vAPY2U8EUfa3ueQ0g-h2BJOz/view?usp=sharing)
 
 
-## Save State Rules for Runs Submitted to Ladder
+## Save State Rules
 
-When submitting runs to the FZC ladder, save states or restore points may only be used as described below. If save states/restore points are used anywhere else other than as described below, the player doing so will have their associated time removed.
+When submitting runs to the FZC ladder, save states, restore points, etc. may only be used as described below.
 
 **3-Laps:** Before the countdown of the 3-lap attempt first starts.
 
