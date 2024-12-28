@@ -86,6 +86,7 @@
  <platforms>
   <platform>GBA</platform>
 	<platform>Wii U VC</platform>
+	<platform>Switch Online</platform>
 	<platform>mGBA 0.8.x</platform>
  </platforms>
 </game>
