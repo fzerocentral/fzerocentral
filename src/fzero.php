@@ -126,15 +126,28 @@ function ship_image_url($ship_name) {
 }
 
 function FserverGame($game_shortcode) {
+  // Only allow letters/numbers, not stuff like slashes and double-dots.
+  if (!ctype_alnum($game_shortcode)) {
+    die("Invalid game shortcode: $game_shortcode");
+  }
+
   $file = __DIR__ . "/../data/games/$game_shortcode.xml";
   $game = simplexml_load_file($file);
+  if ($game === false) {
+    die("Unsupported game shortcode: $game_shortcode");
+  }
 
   return $game;
 }
 
 function FserverLadder($ladder_id) {
+  $ladder_id = intval($ladder_id);
+
   $file = __DIR__ . "/../data/ladders/ladder$ladder_id.xml";
   $ladder = simplexml_load_file($file);
+  if ($ladder === false) {
+    die("Unsupported ladder ID: $ladder_id");
+  }
 
   return $ladder;
 }
@@ -168,6 +181,8 @@ function FserverGetActivePlayers($ladder_id) {
 
 function FserverGetUserData($ladder_id, $user_id, $current_user, $ladder) {
   global $db;
+  $ladder_id = intval($ladder_id);
+  $user_id = intval($user_id);
 
   $output = [
     'user_id' => $user_id,
