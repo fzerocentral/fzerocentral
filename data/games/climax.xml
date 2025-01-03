@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <game>
   <name>F-Zero Climax</name>
-  <rules_template>rules/climax.html</rules_template>
   <home_see_also>
     <link>
       <display>World records spreadsheet</display>

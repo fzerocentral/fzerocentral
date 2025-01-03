@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="rules-content">
+    <h1>{{ PAGE_TITLE }}</h1>
+
+    {{ rules_html|raw }}
+
+    <h2>F-Zero Central Ladder Guidelines</h2>
+
+    <p>
+      <a href="/guidelines.php">Read here</a> - these are not enforceable rules, but guidelines for all players to follow.
+    </p>
+
+    <h2>Change log</h2>
+
+    <h3>Changes from December 2024 onward</h3>
+    <ul>
+      <li>
+         <p><a href="https://github.com/fzerocentral/fzerocentral/commits/main/rules/all.md">Rules for all games</a></p>
+      </li>
+      <li>
+         <p><a href="https://github.com/fzerocentral/fzerocentral/commits/main/rules/{{ game_shortcode }}.md">Rules specific to {{ game_name }}</a></p>
+      </li>
+    </ul>
+
+    {{ old_changelog_html|raw }}
+  </div>
+{% endblock %}

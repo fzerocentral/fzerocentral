@@ -1106,3 +1106,31 @@ p.header {
   padding: 20px;
   border-radius: 20px;
 }
+.page-rules .rules-content h1 {
+  text-align: center;
+  font-size: 32px;
+}
+.page-rules .rules-content h2 {
+  text-align: center;
+  margin-top: 1em;
+  border-top: 1px solid lightgray;
+  padding-top: 1em;
+}
+.page-rules .rules-content h3 {
+  margin-top: 1.5em;
+}
+.page-rules .rules-content p {
+  font-family: Arial;
+}
+.page-rules .rules-content ul,
+.page-rules .rules-content ol {
+  /*
+  Goals:
+  - Don't have the top-level lists be too far indented from top-level
+    paragraphs, since sometimes rules just start with a list instead of
+    being preceded by text.
+  - Don't have second-level lists by too far indented from top-level lists,
+    or it'll look uneven.
+  */
+  padding-left: 25px;
+}
