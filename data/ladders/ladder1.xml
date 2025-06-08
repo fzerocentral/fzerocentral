@@ -79,4 +79,13 @@
 	<ship>Wild Goose</ship>
 	<ship>Fire Stingray</ship>
 	</ships>
+  <platforms>
+   <platform>Cartridge</platform>
+   <platform>Flashcart</platform>
+	 <platform>Switch Online</platform>
+	 <platform>Wii VC</platform>
+	 <platform>Wii U VC</platform>
+	 <platform>3DS VC</platform>
+	 <platform>SNES Mini</platform>
+  </platforms>
 </game>
