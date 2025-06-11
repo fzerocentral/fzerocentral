@@ -16,7 +16,6 @@
         <td>Course</td>
         <td>Type</td>
         <td>Record</td>
-        <td>Rank</td>
         <td>Ship</td>
         <td>Platform</td>
         <td>Proof</td>
@@ -51,7 +50,6 @@
               {{ entry.value|format_time(ladder.timeformat) }}
             {% endif %}
           </td>
-          <td>{{ 1 }}</td>
           <td><img src="{{ entry.ship_image|e }}" title="{{ entry.ship }}" /></td>
           <td>{{ entry.platform }}</td>
           <td>{% if entry.has_proof %}{{ entry|proof_link }}{% endif %}</td>
