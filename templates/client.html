@@ -211,10 +211,63 @@
     return;
   }
 
+  function validateRecords(event) {
+    let recordRows = document.querySelectorAll('div.record-row');
+
+    for (let recordRow of recordRows) {
+      let platformField = recordRow.querySelector('.platform-container select');
+      let valueFields =
+        recordRow.querySelector('div.value-fields').querySelectorAll('input');
+
+      if (platformField.value !== '') {
+        // Platform is filled in.
+        continue;
+      }
+
+      // Platform is not filled in. We want to require it for any new/updated
+      // record from now on, so we proceed to check if we have such a
+      // record.
+      // Specifically, by checking if the value or the platform is being
+      // updated, we should cover all relevant cases.
+      //
+      // Note that checking this only in Javascript means it can be defeated
+      // with inspect element. Though, if someone really took the trouble to
+      // do that to avoid specifying a platform, that would be annoying
+      // but not site-breaking.
+
+      for (let field of [platformField, ...valueFields]) {
+        if (field.value != field.dataset.originalValue) {
+          // Value or platform has been changed, and platform is blank as
+          // established above. Therefore we prevent submission.
+          event.preventDefault();
+
+          // This is an ancestor element
+          let courseContainer = recordRow.closest('div.course-container');
+          let courseName =
+            courseContainer.querySelector('div.course-name').textContent.trim();
+          // This has a colon at the end, but we don't bothering trimming it
+          // since it's OK for our alert string purposes.
+          let recordTypeWithColon =
+            recordRow.querySelector('div.value-label').textContent.trim();
+          window.alert(
+            `${courseName} - ${recordTypeWithColon} Please specify a platform.`);
+
+          return;
+        }
+      }
+
+      // If reached here, no platforms are blank for the records we're
+      // concerned with, so submission can proceed.
+    }
+  }
+
   function togglePal() {
     if (confirm("You will lose unsaved edits. OK?")) {
       location.href = '/f0/toggle_pal.php?ladder={{ ladder_id }}&user={{ user_id }}';
     }
   }
+
+  let form = document.querySelector('form[name="user_data"]');
+  form.addEventListener('submit', validateRecords);
 </script>
 {% endblock %}
