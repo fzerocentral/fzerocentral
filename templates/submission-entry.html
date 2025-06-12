@@ -59,6 +59,18 @@
           <option value="{{ platform }}">{{ platform }}</option>
         {% endif %}
       {% endfor %}
+
+      {% if ladder.obsolete_platforms %}
+        <optgroup label="Obsolete">
+          {% for platform in ladder.obsolete_platforms.platform %}
+            {% if platform == sub.platform %}
+              <option selected value="{{ platform }}">{{ platform }}</option>
+            {% else %}
+              <option value="{{ platform }}">{{ platform }}</option>
+            {% endif %}
+          {% endfor %}
+        </optgroup>
+      {% endif %}
     </select>
   </div>
 
