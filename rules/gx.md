@@ -2,8 +2,9 @@
 
     - The original GameCube game disc
     - A USB or SD loader, with an unaltered ISO of the original game - see the **USB/SD Loader Rules** below
+    - The Switch Online release on the Switch 2 - the **Save State Rules** below apply to suspend points
 
-    Emulators (such as Dolphin) are not allowed.
+    Unofficial emulators (such as Dolphin) are not allowed.
 
 1. Course Times and Speeds must be obtained using Time Attack mode. Lap Times must be obtained with either Time Attack mode or Practice mode with CPUs off.
 
@@ -42,6 +43,15 @@ Rules regarding usage of the game:
 1. Additional proof for times will be required in the form of Replay files. through testing, it's been determined that Replay files will only sync with game versions that don't have any modifications to machine stats. this ensures players won't be editing the game's files. as a side effect, Story Mode times set on USB/SD Loaders won't be allowed because this form of proof can't be obtained from that mode.
 
 1. USB/SD Loader software such as Nintendont usually comes with functionality for cheat codes. make sure they are turned off when setting times. you're allowed to unlock the Event Parts (Gold Parts) in the same way it is done with Action Replay.
+
+
+## Save State Rules
+
+When submitting runs to the FZC ladder, save states, restore points, etc. may only be used as described below.
+
+**3-Laps:** Before the timer of the 3-lap attempt first starts.
+
+**Fast Laps:** Before Boost Power and/or any advanced technique is performed that leads into the fast lap being attempted. For example, if the lap setup involves spaceflying, the save state must be made on the ground before the snaking and flying movements of the setup.
 
 
 ## Max Speed Ladder
