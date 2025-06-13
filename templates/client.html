@@ -51,6 +51,12 @@
     padding-right: 10px;
   }
 
+  div.record-row {
+    display: grid;
+    margin-bottom: 2px;
+    grid-template: auto auto / repeat(6, auto);
+  }
+
   div.record-row > div {
     padding: 0 3px;
   }
@@ -68,7 +74,22 @@
   div.record-row > div.value-fields {
     /* Ensure the space for the fields is the same width, whether it's a time
        or a speed. */
-    width: 120px;
+    width: 100px;
+  }
+
+  /* Sizing for small input fields in particular seems to vary quite a bit
+     between browsers when relying on the 'size' attribute. So we use styling instead. */
+  input.value-1ch {
+    width: 20px;
+  }
+  input.value-2ch {
+    width: 27px;
+  }
+  input.value-3ch {
+    width: 34px;
+  }
+  input.value-4ch {
+    width: 41px;
   }
 
   div.record-row > div.splits-comments-container {
@@ -96,6 +117,17 @@
     display: inline-block;
     font-size: 7pt;
     cursor: pointer;
+  }
+
+  div.proof-container {
+    padding: 2px;
+    border: 1px solid #b53b35;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: #fffada;
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    display: none;
   }
   div.proof-indicator.hidden {
     display: none;
