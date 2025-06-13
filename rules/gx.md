@@ -25,7 +25,7 @@
 
 Due to the nature of how USB/SD loaders work, a few extra rules are needed to ensure no players obtain unexpected advantages over Disc users.
 
-Methods of USB/SD Loading allowed:
+Alternative game loading methods allowed:
 
 1. HDD or USB stick plugged to the back of a Wii
 1. SD Card inserted in the front slot of a Wii
@@ -33,8 +33,9 @@ Methods of USB/SD Loading allowed:
 1. GCLoader Drive Replacement installed on GameCube
 1. SD Card inserted in the front slot of a Wii U
 1. HDD or USB stick plugged to a USB port on a Wii U
+1. Self-burned disc (not a USB/SD loader, but we group it here because similar concerns apply)
 
-Only these methods have been verified by the Staff and enough testing has been conducted to ensure times set using them are identical to times set with a Disc.
+Only these methods have been verified by the Staff and enough testing has been conducted to ensure times set using them are identical to times set with a Disc. If you use any of these loading methods, specify a Platform of "USB/SD Loader" when submitting records.
 
 Rules regarding usage of the game:
 
