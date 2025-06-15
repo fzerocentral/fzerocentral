@@ -33,53 +33,91 @@
     <thead>
       <tr>
         <td colspan='2'>Player</td>
-        <td>Course time</td>
-        <td>Best lap</td>
-        {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
-        <td></td>
+        <td colspan='2'>Course time</td>
+        {% if ladder.haslap == 'Yes' %}
+          <td colspan='2'>Best lap</td>
+        {% endif %}
+        {% if ladder.hasspeed == 'Yes' %}
+          <td colspan='2'>Max speed</td>
+        {% endif %}
+        <td>Notes</td>
       </tr>
     </thead>
 
     <tbody class='entries'>
       {% for entry in entries %}
         <tr>
-          <td>
+
+          <td class="position">
             {{ entry.position}}.
           </td>
+
           <td>
             {{ entry.location|flag }}
             <a href='viewplayer.php?ladder={{ ladder_id }}&user={{ entry.user_id }}'>{{ entry.username|e }}</a>
           </td>
+
           <td>
-            <span>{{ entry.course_value|format_time(ladder.timeformat) }}</span>
-            <img src="{{ entry.course_ship_image|e }}" title="{{ entry.course_ship }}" />
-            {% if entry.course_has_proof %}
-              {{ entry | proof_link("course_") }}
-            {% endif %}
-            <span>{{ entry.course_platform }}</span>
+            {{ entry.course_value|format_time(ladder.timeformat) }}
           </td>
-          <td>
-            {% if ladder.haslap == 'Yes' %}
-              <span>{{ entry.lap_value|format_time(ladder.timeformat) }}</span>
-              <img src="{{ entry.lap_ship_image|e }}" title="{{ entry.lap_ship }}" />
-              {% if entry.lap_has_proof %}
-                {{ entry | proof_link("lap_") }}
+
+          <td class="record-details">
+            <div class="record-ship-proof">
+              <img src="{{ entry.course_ship_image|e }}" title="{{ entry.course_ship }}" />
+              {% if entry.course_has_proof %}
+                {{ entry | proof_link("course_") }}
               {% endif %}
-            {% endif %}
+            </div>
+            <div class="record-platform" title="Platform this record was achieved on">
+              {{ entry.course_platform }}
+            </div>
           </td>
-          {% if ladder.hasspeed == 'Yes' %}
+
+          {% if ladder.haslap == 'Yes' %}
             <td>
-              <span>{{ entry.speed_value }}</span>
-              <img src="{{ entry.speed_ship_image|e }}" title="{{ entry.speed_ship }}" />
-              {% if entry.speed_has_proof %}
-                {{ entry | proof_link("speed_") }}
-              {% endif %}
+              {{ entry.lap_value|format_time(ladder.timeformat) }}
+            </td>
+
+            <td class="record-details">
+              <div class="record-ship-proof">
+                <img src="{{ entry.lap_ship_image|e }}" title="{{ entry.lap_ship }}" />
+                {% if entry.lap_has_proof %}
+                  {{ entry | proof_link("lap_") }}
+                {% endif %}
+              </div>
+              <div class="record-platform" title="Platform this record was achieved on">
+                {{ entry.lap_platform }}
+              </div>
             </td>
           {% endif %}
-          <td>
-            {% if entry.course_notes != '' %}<div>{{ entry.course_notes|e }}</div>{% endif %}
-            {% if entry.lap_notes != '' %}<div>{{ entry.lap_notes|e }}</div>{% endif %}
+
+          {% if ladder.hasspeed == 'Yes' %}
+            <td>
+              {{ entry.speed_value }}
+            </td>
+
+            <td class="record-details">
+              <div class="record-ship-proof">
+                <img src="{{ entry.speed_ship_image|e }}" title="{{ entry.speed_ship }}" />
+                {% if entry.speed_has_proof %}
+                  {{ entry | proof_link("speed_") }}
+                {% endif %}
+              </div>
+              <div class="record-platform" title="Platform this record was achieved on">
+                {{ entry.speed_platform }}
+              </div>
+            </td>
+          {% endif %}
+
+          <td class="notes">
+            {% if entry.course_notes != '' %}
+              <div>{{ entry.course_notes|e }}</div>
+            {% endif %}
+            {% if entry.lap_notes != '' %}
+              <div>{{ entry.lap_notes|e }}</div>
+            {% endif %}
           </td>
+
         </tr>
       {% endfor %}
 

@@ -180,9 +180,13 @@
   <ship>Little Wyvern</ship>
  </ships>
  <platforms>
-  <platform>GBA</platform>
-	<platform>Wii U VC</platform>
+  <platform>Cartridge</platform>
+  <platform>Flashcart</platform>
 	<platform>Switch Online</platform>
+	<platform>Wii U VC</platform>
 	<platform>mGBA 0.8.x</platform>
  </platforms>
+ <obsolete_platforms>
+	<platform>GBA</platform>
+ </obsolete_platforms>
 </game>

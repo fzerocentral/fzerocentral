@@ -110,4 +110,11 @@
   <ship>Fighting Comet</ship>
   <ship>Jet Vermilion</ship>
  </ships>
+ <platforms>
+  <platform>Cartridge</platform>
+  <platform>Flashcart</platform>
+  <platform>Switch Online</platform>
+  <platform>Wii U VC</platform>
+  <platform>3DS VC</platform>
+ </platforms>
 </game>

@@ -109,4 +109,9 @@
  <ships>
   <ship>Blue Falcon</ship>
  </ships>
+ <platforms>
+  <platform>Disc</platform>
+  <platform>USB/SD Loader</platform>
+	<platform>Switch Online</platform>
+ </platforms>
 </game>

@@ -51,6 +51,12 @@
     padding-right: 10px;
   }
 
+  div.record-row {
+    display: grid;
+    margin-bottom: 2px;
+    grid-template: auto auto / repeat(6, auto);
+  }
+
   div.record-row > div {
     padding: 0 3px;
   }
@@ -68,7 +74,22 @@
   div.record-row > div.value-fields {
     /* Ensure the space for the fields is the same width, whether it's a time
        or a speed. */
-    width: 120px;
+    width: 100px;
+  }
+
+  /* Sizing for small input fields in particular seems to vary quite a bit
+     between browsers when relying on the 'size' attribute. So we use styling instead. */
+  input.value-1ch {
+    width: 20px;
+  }
+  input.value-2ch {
+    width: 27px;
+  }
+  input.value-3ch {
+    width: 34px;
+  }
+  input.value-4ch {
+    width: 41px;
   }
 
   div.record-row > div.splits-comments-container {
@@ -96,6 +117,17 @@
     display: inline-block;
     font-size: 7pt;
     cursor: pointer;
+  }
+
+  div.proof-container {
+    padding: 2px;
+    border: 1px solid #b53b35;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: #fffada;
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    display: none;
   }
   div.proof-indicator.hidden {
     display: none;
@@ -211,10 +243,71 @@
     return;
   }
 
+  function validateRecords(event) {
+    let recordRows = document.querySelectorAll('div.record-row');
+
+    for (let recordRow of recordRows) {
+      let platformField = recordRow.querySelector('.platform-container select');
+      let valueFields =
+        recordRow.querySelector('div.value-fields').querySelectorAll('input');
+
+      let potentialError = null;
+      if (platformField.value === '') {
+        potentialError = "Please specify a platform.";
+      }
+      else if (platformField.value === 'GBA') {
+        potentialError = "GBA is a legacy platform choice for this ladder. Please choose either Cartridge or Flashcart instead.";
+      }
+      else {
+        // Platform is filled in with a non-legacy value, so none of our
+        // error checks apply.
+        continue;
+      }
+
+      // Platform is not filled in with a non-legacy value. We want to require
+      // that for any new/updated record from now on, so we proceed to check
+      // if we have such a record.
+      // Specifically, by checking if the value or the platform is being
+      // updated, we should cover all relevant cases.
+      //
+      // Note that checking this only in Javascript means it can be defeated
+      // with inspect element. Though, if someone really took the trouble to
+      // do that to specify a blank or GBA platform, that would be annoying
+      // but not site-breaking.
+
+      for (let field of [platformField, ...valueFields]) {
+        if (field.value != field.dataset.originalValue) {
+          // Value or platform has been changed, and platform is blank as
+          // established above. Therefore we prevent submission.
+          event.preventDefault();
+
+          // This is an ancestor element
+          let courseContainer = recordRow.closest('div.course-container');
+          let courseName =
+            courseContainer.querySelector('div.course-name').textContent.trim();
+          // This has a colon at the end, but we don't bothering trimming it
+          // since it's OK for our alert string purposes.
+          let recordTypeWithColon =
+            recordRow.querySelector('div.value-label').textContent.trim();
+          window.alert(
+            `${courseName} - ${recordTypeWithColon} ${potentialError}`);
+
+          return;
+        }
+      }
+
+      // If reached here, no platforms are blank for the records we're
+      // concerned with, so submission can proceed.
+    }
+  }
+
   function togglePal() {
     if (confirm("You will lose unsaved edits. OK?")) {
       location.href = '/f0/toggle_pal.php?ladder={{ ladder_id }}&user={{ user_id }}';
     }
   }
+
+  let form = document.querySelector('form[name="user_data"]');
+  form.addEventListener('submit', validateRecords);
 </script>
 {% endblock %}

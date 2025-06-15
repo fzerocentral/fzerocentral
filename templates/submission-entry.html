@@ -11,13 +11,17 @@
 
   <div class="value-fields">
     {% if sub_type != "S" %}
-      <input name='records[{{ field_prefix }}][time@m]' type='text' maxlength='1' size='1' value='{{ sub.time_m }}' />
+      <input name='records[{{ field_prefix }}][time@m]' type='text' class='value-1ch' maxlength='1' value='{{ sub.time_m }}' data-original-value='{{ sub.time_m }}' />
 
-      <input name='records[{{ field_prefix }}][time@s]' type='text' maxlength='2' size='2' value='{{ sub.time_s|format_time_part("Seconds") }}' />
+      {% with { value: sub.time_s|format_time_part("Seconds") } %}
+        <input name='records[{{ field_prefix }}][time@s]' type='text' class='value-2ch' maxlength='2' value='{{ value }}' data-original-value='{{ value }}' />
+      {% endwith %}
 
-      <input name='records[{{ field_prefix }}][time@t]' type='text' maxlength='4' size='4' value='{{ sub.time_t|format_time_part("Subseconds", ladder.timeformat) }}' />
+      {% with { value: sub.time_t|format_time_part("Subseconds", ladder.timeformat) } %}
+        <input name='records[{{ field_prefix }}][time@t]' type='text' class='value-3ch' maxlength='3' value='{{ value }}' data-original-value='{{ value }}' />
+      {% endwith %}
     {% else %}
-      <input name='records[{{ field_prefix }}][speed]' type='text' maxlength='6' size='6' value='{{ sub.speed }}' />
+      <input name='records[{{ field_prefix }}][speed]' type='text' class='value-4ch' maxlength='4' value='{{ sub.speed }}' data-original-value='{{ sub.speed }}' />
     {% endif %}
   </div>
 
@@ -41,24 +45,34 @@
     {% endif %}
   </div>
 
-  <!-- Platform; not present in every ladder -->
-  {% if ladder.platforms.platform %}
-    <div class="platform-container">
-      <label for="{{ field_prefix }}@platform"> Platform: </label>
+  <!-- Platform -->
+  <div class="platform-container">
+    <label for="{{ field_prefix }}@platform"> Platform: </label>
 
-      <select name="records[{{ field_prefix }}][platform]" id="{{ field_prefix }}@platform">
-        <option value=""></option>
+    <select name="records[{{ field_prefix }}][platform]" id="{{ field_prefix }}@platform" data-original-value="{{ sub.platform }}">
+      <option value=""></option>
 
-        {% for platform in ladder.platforms.platform %}
-          {% if platform == sub.platform %}
-            <option selected value="{{ platform }}">{{ platform }}</option>
-          {% else %}
-            <option value="{{ platform }}">{{ platform }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-  {% endif %}
+      {% for platform in ladder.platforms.platform %}
+        {% if platform == sub.platform %}
+          <option selected value="{{ platform }}">{{ platform }}</option>
+        {% else %}
+          <option value="{{ platform }}">{{ platform }}</option>
+        {% endif %}
+      {% endfor %}
+
+      {% if ladder.obsolete_platforms %}
+        <optgroup label="Obsolete">
+          {% for platform in ladder.obsolete_platforms.platform %}
+            {% if platform == sub.platform %}
+              <option selected value="{{ platform }}">{{ platform }}</option>
+            {% else %}
+              <option value="{{ platform }}">{{ platform }}</option>
+            {% endif %}
+          {% endfor %}
+        </optgroup>
+      {% endif %}
+    </select>
+  </div>
 
   <!-- Splits or comments (or neither) -->
   <div class="splits-comments-container">
@@ -101,9 +115,9 @@
   <!-- Collapsible proof fields -->
   <div id='{{ field_prefix }}-proof' class="proof-container">
     Video Link:
-    <input name="records[{{ field_prefix }}][videourl]" type="text" size="32" value="{{ sub.videourl|e }}" onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')" />
+    <input name="records[{{ field_prefix }}][videourl]" type="text" size="45" value="{{ sub.videourl|e }}" onchange="updateProofIndicator('{{ field_prefix }}', '{{ mod_mode }}')" />
     Screenshot Link:
-    <input name="records[{{ field_prefix }}][screenshoturl]" type="text" size="16" value="{{ sub.screenshoturl|e }}" />
+    <input name="records[{{ field_prefix }}][screenshoturl]" type="text" size="30" value="{{ sub.screenshoturl|e }}" />
 
     {% if mod_mode %}
       <input

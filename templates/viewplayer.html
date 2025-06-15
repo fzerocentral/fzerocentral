@@ -12,10 +12,14 @@
   <thead>
     <tr>
       <td>{{ cup.cupname|e }}</td>
-      <td>Course time</td>
-      <td>Best lap</td>
-      {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
-      <td></td>
+      <td colspan="3">Course time</td>
+      {% if ladder.haslap == 'Yes' %}
+        <td colspan="3">Best lap</td>
+      {% endif %}
+      {% if ladder.hasspeed == 'Yes' %}
+        <td colspan="2">Max speed</td>
+      {% endif %}
+      <td>Notes</td>
     </tr>
   </thead>
 
@@ -26,37 +30,83 @@
           <td>
             <a href='course.php?ladder={{ ladder_id }}&cup={{ cup.attributes.cupid }}&course={{ course.attributes.courseid }}'>{{ course.name|e }}</a>
           </td>
+
           <td>
-            <span>{{ record.C.value|format_time(ladder.timeformat) }}</span>
-            <img src="{{ record.C.ship_image|e }}" title="{{ record.C.ship }}" />
-            {% if record.C.has_proof %}
-              {{ record.C | proof_link }}
-            {% endif %}
+            {{ record.C.value|format_time(ladder.timeformat) }}
           </td>
-          <td>
-            {% if ladder.haslap == 'Yes' %}
-              <span>{{ record.L.value|format_time(ladder.timeformat) }}</span>
-              <img src="{{ record.L.ship_image|e }}" title="{{ record.L.ship }}" />
-              {% if record.L.has_proof %}
-                {{ record.L | proof_link }}
+
+          <td class="record-details">
+            <div class="record-ship-proof">
+              <img src="{{ record.C.ship_image|e }}" title="{{ record.C.ship }}" />
+              {% if record.C.has_proof %}
+                {{ record.C | proof_link }}
               {% endif %}
-            {% endif %}
+            </div>
+            <div class="record-platform" title="Platform this record was achieved on">
+              {{ record.C.platform }}
+            </div>
           </td>
-          {% if ladder.hasspeed == 'Yes' %}
+
+          <td class="record-rank-date">
+            <div class="record-rank" title="Ranking of this record">
+              {{ record.C.rank }} / {{ record.C.player_count}}
+            </div>
+            <div class="record-date" title="{{ record.C.last_change }}">
+              {{ record.C.date }}
+            </div>
+          </td>
+
+          {% if ladder.haslap == 'Yes' %}
             <td>
-              <span>{{ record.S.value }}</span>
-              <img src="{{ record.S.ship_image|e }}" title="{{ record.S.ship }}" />
-              {% if record.S.has_proof %}
-                {{ record.S | proof_link }}
-              {% endif %}
+              {{ record.L.value|format_time(ladder.timeformat) }}
+            </td>
+
+            <td class="record-details">
+              <div class="record-ship-proof">
+                <img src="{{ record.L.ship_image|e }}" title="{{ record.L.ship }}" />
+                {% if record.L.has_proof %}
+                  {{ record.L | proof_link }}
+                {% endif %}
+              </div>
+              <div class="record-platform" title="Platform this record was achieved on">
+                {{ record.L.platform }}
+              </div>
+            </td>
+
+            <td class="record-rank-date">
+              <div class="record-rank" title="Ranking of this record">
+                {{ record.L.rank }} / {{ record.L.player_count}}
+              </div>
+              <div class="record-date" title="{{ record.L.last_change }}">
+                {{ record.L.date }}
+              </div>
             </td>
           {% endif %}
-          <td>
+
+          {% if ladder.hasspeed == 'Yes' %}
+            <td>
+              {{ record.S.value }}
+            </td>
+
+            <td class="record-details">
+              <div class="record-ship-proof">
+                <img src="{{ record.S.ship_image|e }}" title="{{ record.S.ship }}" />
+                {% if record.S.has_proof %}
+                  {{ record.S | proof_link }}
+                {% endif %}
+              </div>
+              <div class="record-platform" title="Platform this record was achieved on">
+                {{ record.S.platform }}
+              </div>
+            </td>
+          {% endif %}
+
+          <td class="notes">
             <div class='splits'>
-              Splits: {{ record.C.notes|e }}
+              {{ record.C.notes|e }}
             </div>
             <div class='comments'>
-              Comment: {{ record.L.notes|e }}
+              {{ record.L.notes|e }}
             </div>
           </td>
         </tr>
@@ -67,15 +117,20 @@
       <td>
         <span>{{ totals[cup.attributes.cupid.__toString].C|format_time(ladder.timeformat) }}</span>
       </td>
-      <td>
-        {% if ladder.haslap == 'Yes' %}
+      <td class="record-details"></td>
+      <td class="record-details"></td>
+      {% if ladder.haslap == 'Yes' %}
+        <td>
           <span>{{ totals[cup.attributes.cupid.__toString].L|format_time(ladder.timeformat) }}</span>
-        {% endif %}
-      </td>
+        </td>
+        <td class="record-details"></td>
+        <td class="record-details"></td>
+      {% endif %}
       {% if ladder.hasspeed == 'Yes' %}
         <td>
           <span>{{ totals[cup.attributes.cupid.__toString].S }}</span>
         </td>
+        <td class="record-details"></td>
       {% endif %}
       <td></td>
     </tr>
@@ -89,9 +144,8 @@
     <tr>
       <td>Totals</td>
       <td>Course time</td>
-      <td>Best lap</td>
+      {% if ladder.haslap == 'Yes' %}<td>Best lap</td>{% endif %}
       {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
-      <td></td>
     </tr>
   </thead>
 
@@ -101,17 +155,16 @@
       <td>
         {{ totals[0].C | format_time(ladder.timeformat) }}
       </td>
-      <td>
-        {% if ladder.haslap == 'Yes' %}
+      {% if ladder.haslap == 'Yes' %}
+        <td>
           {{ totals[0].L | format_time(ladder.timeformat) }}
-        {% endif %}
-      </td>
+        </td>
+      {% endif %}
       {% if ladder.hasspeed == 'Yes' %}
         <td>
           {{ totals[0].S }}
         </td>
       {% endif %}
-      <td></td>
     </tr>
   </tbody>
 </table>

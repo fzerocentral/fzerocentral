@@ -194,4 +194,10 @@
   <ship>Elegance Liberty</ship>
   <ship>Moon Shadow</ship>
  </ships>
+ <platforms>
+  <platform>Cartridge</platform>
+  <platform>Flashcart</platform>
+  <platform>Switch Online</platform>
+  <platform>Wii U VC</platform>
+ </platforms>
 </game>

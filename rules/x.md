@@ -3,7 +3,7 @@
     - The original Nintendo 64 game cartridge
     - The Wii Virtual Console release
     - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
-    - The Switch Online release - the **Save State Rules** below apply to suspend points
+    - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
     - (**Expansion Kit Ladder only**) A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Flashcart Rules** and **Save State Rules** below
 
     Unofficial emulators are not allowed. Flashcarts are not allowed for ladders other than the Expansion Kit Ladder.

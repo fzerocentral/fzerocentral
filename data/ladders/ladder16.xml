@@ -94,4 +94,8 @@
 <ship>Super Cat</ship>
 <ship>Custom Ship</ship>
 </ships>
+<platforms>
+ <platform>Cartridge</platform>
+ <platform>Flashcart</platform>
+</platforms>
 </game>
