@@ -5,8 +5,12 @@ require_once '../common.php';
 $ladder_id = intval($_GET['id'] ?? 0);
 $ladder = FserverLadder($ladder_id);
 
+$page_number = intval($_GET['page'] ?? 1);
+$page_number = max($page_number, 1);
+$offset = ($page_number - 1) * 100;
+
 $entries = [];
-// AF
+
 $result = db_query("
   SELECT
     phpbb_f0_records.*,
@@ -16,7 +20,7 @@ $result = db_query("
   JOIN phpbb_users USING (user_id)
   WHERE ladder_id = $ladder_id
   ORDER BY last_change DESC
-  LIMIT 100
+  LIMIT 100 OFFSET $offset
 ");
 
 $index = 1;
@@ -40,5 +44,6 @@ echo render_template($template, [
   'entries' => $entries,
   'ladder' => $ladder,
   'ladder_id' => $ladder_id,
+  'page_number' => $page_number,
   'selected_game' => ladder_game($ladder_id),
 ]);

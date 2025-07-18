@@ -868,6 +868,7 @@ div.home-page-ladder-group > div.body > a:hover {
   border: 1px black solid;
   border-radius: 10px;
   border-spacing: 0px;
+  margin-bottom: 20px;
 }
 
 /* Alternate colors between rows. */
@@ -1083,7 +1084,6 @@ div.ladder-leaders > div > div > span {
 .page-player-ladder .lap-label { grid-area: lap-label; }
 .page-player-ladder .lap-value { grid-area: lap-value; display: flex; gap: 10px; }
 .page-player-ladder .splits { grid-area: splits; }
-.page-player-ladder .scoreboard { margin-bottom: 20px; }
 
 .section-box {
   font: 10pt Verdana; background-color: #f7f7f7; padding: 10px 20px; margin-bottom: 20px; border: 1px black solid; border-radius: 10px;

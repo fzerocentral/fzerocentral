@@ -11,7 +11,7 @@
   <table class='scoreboard'>
     <thead>
       <tr>
-        <td colspan='2'>Player</td>
+        <td>Player</td>
         <td>Cup</td>
         <td>Course</td>
         <td>Type</td>
@@ -26,7 +26,6 @@
     <tbody class='entries'>
       {% for entry in entries %}
         <tr>
-          <td>{{ entry.position }}</td>
           <td>
             {{ entry.location|flag }}
 
@@ -58,4 +57,16 @@
       {% endfor %}
     </tbody>
   </table>
+
+  <div class="section-box">
+    Page:
+
+    {% if page_number > 1 %}
+      <a href="?id={{ ladder_id }}&page={{ page_number - 1 }}">{{ page_number - 1 }}</a>
+    {% endif %}
+
+    {{ page_number }}
+
+    <a href="?id={{ ladder_id }}&page={{ page_number + 1 }}">{{ page_number + 1 }}</a>
+  </div>
 {% endblock %}
