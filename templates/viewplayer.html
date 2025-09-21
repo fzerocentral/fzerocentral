@@ -142,7 +142,7 @@
 <table class='scoreboard'>
   <thead>
     <tr>
-      <td>Totals</td>
+      <td>{{ ladder.ladder_name|e }} overall stats</td>
       <td>Course time</td>
       {% if ladder.haslap == 'Yes' %}<td>Best lap</td>{% endif %}
       {% if ladder.hasspeed == 'Yes' %}<td>Max speed</td>{% endif %}
@@ -151,7 +151,7 @@
 
   <tbody class='entries'>
     <tr>
-      <td>{{ ladder.ladder_name|e }} totals</td>
+      <td>Total</td>
       <td>
         {{ totals[0].C | format_time(ladder.timeformat) }}
       </td>
@@ -163,6 +163,22 @@
       {% if ladder.hasspeed == 'Yes' %}
         <td>
           {{ totals[0].S }}
+        </td>
+      {% endif %}
+    </tr>
+
+    <tr>
+      <td>Average rank</td>
+      <td>
+        {{ average_ranks.C }}
+      </td>
+      {% if ladder.haslap == 'Yes' %}
+        <td>
+          {{ average_ranks.L }}
+        </td>
+      {% endif %}
+      {% if ladder.hasspeed == 'Yes' %}
+        <td>
         </td>
       {% endif %}
     </tr>
