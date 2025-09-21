@@ -65,6 +65,9 @@ while ($row = mysqli_fetch_assoc($player_records)) {
 // players' records of the entire ladder at once, since that
 // could be memory intensive.
 // Basically, we're closer to 2) except we do one cup at a time.
+
+$all_ranks = [];
+
 foreach ($entries as $cup_id => $cup_records) {
   $all_records_for_cup = get_all_records_for_cup($ladder_id, $cup_id);
   $better_counts = [];
@@ -87,15 +90,30 @@ foreach ($entries as $cup_id => $cup_records) {
       if ($record_type == 'S') {
         continue;
       }
+
+      $rank = $better_counts[$course_id][$record_type] + 1;
+
       $entries[$cup_id][$course_id][$record_type] = array_merge(
         $row,
         [
-          'rank' => $better_counts[$course_id][$record_type] + 1,
+          'rank' => $rank,
           'player_count' => $player_counts[$course_id][$record_type],
         ]
       );
+
+      if (!array_key_exists($record_type, $all_ranks)) {
+        $all_ranks[$record_type] = [];
+      }
+      array_push($all_ranks[$record_type], $rank);
     }
   }
+}
+
+// Average rank for each applicable record type.
+$average_ranks = [];
+foreach ($all_ranks as $record_type => $ranks_for_type) {
+  $average_ranks[$record_type] = round(
+    array_sum($ranks_for_type) / count($ranks_for_type), 3);
 }
 
 $ladder = FserverLadder($ladder_id);
@@ -109,4 +127,5 @@ echo render_template($template, [
   'ladder_id' => $ladder_id,
   'entries' => $entries,
   'totals' => $totals,
+  'average_ranks' => $average_ranks,
 ]);
