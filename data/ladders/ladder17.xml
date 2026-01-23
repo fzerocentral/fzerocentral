@@ -54,6 +54,7 @@
 </ships>
 <platforms>
  <platform>Cartridge</platform>
+ <platform>Flashcart</platform>
  <platform>Switch Online</platform>
  <platform>Wii VC</platform>
  <platform>Wii U VC</platform>
