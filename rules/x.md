@@ -1,12 +1,12 @@
 1. Accepted ways to play:
 
     - The original Nintendo 64 game cartridge
+    - A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Flashcart Rules** and **Save State Rules** below
     - The Wii Virtual Console release
     - The Wii U Virtual Console release - the **Save State Rules** below apply to restore points
     - The Switch Online release - the **Save State Rules** below apply to suspend points and rewinds
-    - (**Expansion Kit Ladder only**) A flash cartridge ("Flashcart"), with an unaltered ROM of the original game - see the **Flashcart Rules** and **Save State Rules** below
 
-    Unofficial emulators are not allowed. Flashcarts are not allowed for ladders other than the Expansion Kit Ladder.
+    Unofficial emulators (such as Mupen64) are not allowed.
 
 1. The use of cheat devices such as Action Replay are forbidden on the ladder. If it is suspected that a cheat device has been used then that player will have their times removed from the ladder.
 
@@ -20,6 +20,15 @@ When submitting runs to the FZC ladder, save states, restore points, etc. may on
 **3-Laps:** Before the timer of the 3-lap attempt first starts.
 
 **Fast Laps:** Before Boost Power and/or any advanced technique is performed that leads into the fast lap being attempted (example: the save state must be set before starting the AGG setup for a fast lap)
+
+
+## Flashcart Rules
+
+1. When playing the Expansion Kit, you must use the unmodified Japanese F-Zero X + Expansion Kit combined ROM. Other configurations, such as a regular F-Zero X ROM patched by unofficial means to add EK tracks, are not allowed. (There are known differences between even the regular Japanese ROM and the base part of the combined ROM.)
+
+1. Only the following flash carts are allowed: Everdrive 64 (v2.5, v3, X5, and X7) and 64Drive. These are the only ones tested by the community to work correctly with F-Zero X and the FZX + EK combined ROM.
+
+Proof will be handled in a similar fashion as times set on a regular cartridge, except that flashcart times may undergo tighter scrutiny, due to the easier access to cheat codes and game patches (both of which are not allowed). Video proof for all times is highly recommended.
 
 
 ## Normal X ladder and Death Race Ladder Rules
@@ -42,24 +51,6 @@ When submitting runs to the FZC ladder, save states, restore points, etc. may on
 1. Any glitches/techniques may be used except for pulling the corner of the N64 cartridge.
 
 1. Only submit times that are shown on your records screen.
-
-### Flashcart Rules
-
-Due to how difficult it is to obtain a 64DD and Expansion Kit and how much flash carts have advanced in the last decade, it's been decided that times set using one of these will be allowed with certain conditions:
-
-1. You must use either an Everdrive 64 v2.5 or v3 or a 64Drive flash cart. these are the only ones tested by the community to work correctly with the FZX + EK combined rom.
-
-1. No cheat codes are allowed. the flash carts posses cheat code functionality but it should be avoided at any cost. patches aren't allowed either.
-
-1. Only the japanese FZX + EK rom is allowed. we want to ensure there's no difference between the game played on real hardware and played with the flash carts. using the unmodified combined rom is the closest to that. also, patching a normal FZX rom with EK tracks is not allowed since there's a couple of differences between the regular rom and the combined rom.
-
-1. When using a flash cart to set times, you must mention it in the comments section.
-
-Proof will be handled in the same fashion as in the rest of the games. that means you need video proof if you get a WR time or very close to it.
-
-Video proof is important given the possibilities of modification, which means times set with a flashcart will be under tighter scrutiny.
-
-as a special note, it's still not allowed to use a flash cart with the regular tracks in the regular ladder.
 
 
 ## Jumper Ladder Rules
