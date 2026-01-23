@@ -29,8 +29,9 @@ Alternative game loading methods allowed:
 
 1. HDD or USB stick plugged to the back of a Wii
 1. SD Card inserted in the front slot of a Wii
-1. SDML adapter on Memory Card slot on GameCube
-1. GCLoader Drive Replacement installed on GameCube
+1. SDML adapter on a Memory Card slot on a GameCube
+1. GCLoader Drive Replacement installed on a GameCube
+1. FlippyDrive installed on a GameCube
 1. SD Card inserted in the front slot of a Wii U
 1. HDD or USB stick plugged to a USB port on a Wii U
 1. Self-burned disc (not a USB/SD loader, but we group it here because similar concerns apply)
