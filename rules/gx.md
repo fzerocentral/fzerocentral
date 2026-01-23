@@ -18,7 +18,7 @@
 
 1. The use of cheat devices such as Action Replay are forbidden on all of the ladders. If it is suspected that a cheat device has been used, then that player will have their times removed from the ladder.
 
-    - NOTE: An exception has been made to F-ZERO GX, as Action Replay is the only method available to unlock the Japanese AX event parts. Players should use the AR only once to unlock them.
+    - EXCEPTION: Action Replay may only be used to unlock the event-exclusive custom parts (gold colored) in the shop on your GX save file. After you buy these parts from the shop, you will not need codes to use them. See [CGN's article](https://crazygamenerd.web.fc2.com/FZGX_SP_Machines.html) about these "Special Machine Parts" for tutorials on how to access the parts, with or without AR.
 
 
 ## USB/SD Loader Rules
